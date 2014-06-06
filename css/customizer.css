@@ -1,0 +1,18 @@
+/*
+ * Theme Customizer CSS
+ *
+ */
+
+#customize-control-smartline_control_header_content,
+#customize-control-smartline_control_posts_length,
+#customize-control-smartline_control_slider_activated {
+	margin-top: 24px;
+}
+
+#customize-control-smartline_control_header_content {
+	margin-bottom: 0;
+}
+
+#accordion-section-smartline_section_upgrade .customize-control .textfield {
+	line-height: 1.5em;
+}

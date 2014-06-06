@@ -38,6 +38,9 @@ function smartline_enqueue_scripts() {
 
 	// Register and enqueue navigation.js
 	wp_enqueue_script('smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	
+	// Register and Enqueue Font
+	wp_enqueue_style('themezee_default_font', '//fonts.googleapis.com/css?family=Droid+Sans');
 
 }
 endif;

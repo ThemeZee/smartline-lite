@@ -18,6 +18,11 @@ function smartline_customize_register_options( $wp_customize ) {
         'priority' => 180
 		)
 	);
+	$wp_customize->add_section( 'smartline_section_upgrade', array(
+        'title'    => __( 'PRO Version', 'smartline-lite' ),
+        'priority' => 190
+		)
+	);
 	
 	// Add Settings and Controls for Layout
 	$wp_customize->add_setting( 'smartline_theme_options[layout]', array(
@@ -47,7 +52,7 @@ function smartline_customize_register_options( $wp_customize ) {
         'transport'         => 'refresh',
         )
     );
-    $wp_customize->add_control( new Lean_Magazine_Customize_Header_Control(
+    $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_header_content', array(
             'label' => __( 'Header Content', 'smartline-lite' ),
             'section' => 'smartline_section_options',
@@ -62,7 +67,7 @@ function smartline_customize_register_options( $wp_customize ) {
         'transport'         => 'refresh',
         )
     );
-    $wp_customize->add_control( new Lean_Magazine_Customize_Description_Control(
+    $wp_customize->add_control( new Smartline_Customize_Description_Control(
         $wp_customize, 'smartline_control_header_content_description', array(
             'label' =>  __( 'The Header Content configured below will be displayed on the right hand side of the header area.', 'smartline-lite' ),
             'section' => 'smartline_section_options',
@@ -166,7 +171,7 @@ function smartline_customize_register_options( $wp_customize ) {
         'transport'         => 'refresh',
         )
     );
-    $wp_customize->add_control( new Lean_Magazine_Customize_Header_Control(
+    $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_slider_activated', array(
             'label' => __( 'Activate Featured Post Slider', 'smartline-lite' ),
             'section' => 'smartline_section_options',
@@ -225,6 +230,54 @@ function smartline_customize_register_options( $wp_customize ) {
 			)
 		)
 	);
+	
+	
+	// Add PRO Version Section
+	$wp_customize->add_setting( 'smartline_theme_options[pro_version_label]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new Smartline_Customize_Header_Control(
+        $wp_customize, 'smartline_control_pro_version_label', array(
+            'label' => __( 'Need more features?', 'smartline-lite' ),
+            'section' => 'smartline_section_upgrade',
+            'settings' => 'smartline_theme_options[pro_version_label]',
+            'priority' => 	1
+            )
+        )
+    );
+	$wp_customize->add_setting( 'smartline_theme_options[pro_version]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new Smartline_Customize_Text_Control(
+        $wp_customize, 'smartline_control_pro_version', array(
+            'label' =>  __( 'Check out the PRO version which comes with additional features and advanced customization options.', 'smartline-lite' ),
+            'section' => 'smartline_section_upgrade',
+            'settings' => 'smartline_theme_options[pro_version]',
+            'priority' => 	2
+            )
+        )
+    );
+	$wp_customize->add_setting( 'smartline_theme_options[pro_version_button]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new Smartline_Customize_Button_Control(
+        $wp_customize, 'smartline_control_pro_version_button', array(
+            'label' => __('Learn more about the PRO Version', 'smartline-lite'),
+			'section' => 'smartline_section_upgrade',
+            'settings' => 'smartline_theme_options[pro_version_button]',
+            'priority' => 	3
+            )
+        )
+    );
 	
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';

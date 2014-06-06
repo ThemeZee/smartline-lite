@@ -40,9 +40,9 @@ function smartline_display_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php _e('Important Links:', 'smartline-lite'); ?></strong>
 				<a href="http://themezee.com/themes/smartline/" target="_blank"><?php _e('Theme Info Page', 'smartline-lite'); ?></a>
-				<a href="http://themezee.com/changelogs/" target="_blank"><?php _e('Changelog', 'smartline-lite'); ?></a>
+				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'smartline'); ?></a>
 				<a href="http://preview.themezee.com/smartline/" target="_blank"><?php _e('Theme Demo', 'smartline-lite'); ?></a>
-				<a href="http://themezee.com/docs/smartline-lite-documentation/" target="_blank"><?php _e('Theme Documentation', 'smartline-lite'); ?></a>
+				<a href="http://themezee.com/docs/smartline-documentation/" target="_blank"><?php _e('Theme Documentation', 'smartline-lite'); ?></a>
 				<a href="http://wordpress.org/support/view/theme-reviews/smartline-lite?filter=5" target="_blank"><?php _e('Rate this theme', 'smartline-lite'); ?></a>
 				
 				<span class="social-icons">
@@ -67,7 +67,7 @@ function smartline_display_theme_info_page() {
 						
 						<p class="about"><?php _e( 'Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'smartline-lite' ); ?></p>
 						<p>
-							<a href="http://themezee.com/docs/smartline-lite-documentation/" target="_blank" class="button button-secondary"><?php _e('Visit Smartline Documentation', 'smartline-lite'); ?></a>
+							<a href="http://themezee.com/docs/smartline-documentation/" target="_blank" class="button button-secondary"><?php _e('Visit Smartline Documentation', 'smartline-lite'); ?></a>
 						</p>
 					</div>
 					
@@ -81,11 +81,11 @@ function smartline_display_theme_info_page() {
 					</div>
 					
 					<div class="section">
-						<h4><?php _e( 'Full Version', 'smartline-lite' ); ?></h4>
+						<h4><?php _e( 'PRO Version', 'smartline-lite' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Need more features? Check out the full version which has additional theme options and advanced customization settings for you.', 'smartline-lite' ); ?></p>
+						<p class="about"><?php _e( 'Need more features? Check out the PRO version which comes with additional features and advanced customization options.', 'smartline-lite' ); ?></p>
 						<p>
-							<a href="http://themezee.com/themes/smartline/" target="_blank" class="button button-secondary"><?php _e('Learn more about the Full Version of Smartline', 'smartline-lite'); ?></a>
+							<a href="http://themezee.com/themes/smartline/#PROVersion-1" target="_blank" class="button button-secondary"><?php _e('Learn more about the PRO Version of Smartline', 'smartline-lite'); ?></a>
 						</p>
 					</div>
 

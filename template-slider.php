@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Slider Page
+Template Name: Post Slider
 */
 ?>
 <?php get_header(); ?>
@@ -8,6 +8,10 @@ Template Name: Slider Page
 	<div id="wrap" class="clearfix">
 		
 		<section id="content" class="primary" role="main">
+		
+		<?php // Display Featured Post Slideshow
+		get_template_part( 'featured-content-slider' );
+		?>
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post();
 
