@@ -817,6 +817,12 @@ article .wp-post-image {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.gallery-caption {
+	max-width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 0.5em 0;
+}
 
 /* Make Vidoes responsive */
 embed, iframe, object, video {
