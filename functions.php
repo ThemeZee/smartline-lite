@@ -40,7 +40,7 @@ function smartline_enqueue_scripts() {
 	wp_enqueue_script('smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
 	// Register and Enqueue Font
-	wp_enqueue_style('themezee_default_font', '//fonts.googleapis.com/css?family=Droid+Sans');
+	wp_enqueue_style('smartline-lite-default-font', '//fonts.googleapis.com/css?family=Droid+Sans');
 
 }
 endif;

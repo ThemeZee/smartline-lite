@@ -18,7 +18,7 @@ function smartline_display_category_posts_boxed($category) {
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => 4,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category
 	);
@@ -56,7 +56,7 @@ function smartline_display_category_posts_columns($category_one, $category_two) 
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => 3,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category_one
 	);
@@ -90,7 +90,7 @@ function smartline_display_category_posts_columns($category_one, $category_two) 
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => 3,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category_two
 	);
@@ -136,7 +136,7 @@ function smartline_display_category_posts_grid($category, $count = 4) {
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'showposts' => (int)$count,
-		'caller_get_posts' => 1,
+		'ignore_sticky_posts' => true,
 		'orderby' => 'date',
 		'cat' => (int)$category
 	);
