@@ -55,60 +55,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
         }
     }
 	
-	class Smartline_Customize_Font_Control extends WP_Customize_Control {
-	
-		private $fonts = false;
-		
-		public function __construct($manager, $id, $args = array(), $options = array()) {
-		
-			$this->fonts = array(
-				'Arial' => 'Arial',
-				'Alef' => 'Alef',
-				'Carme' => 'Carme',
-				'Droid Sans' => 'Droid Sans',
-				'Francois One' => 'Francois One',
-				'Josefin Slab' => 'Josefin Slab',
-				'Lobster' => 'Lobster',
-				'Luckiest Guy' => 'Luckiest Guy',
-				'Jockey One' => 'Jockey One',
-				'Maven Pro' => 'Maven Pro',
-				'Modern Antiqua' => 'Modern Antiqua',
-				'Nobile' => 'Nobile',
-				'Oswald' => 'Oswald',
-				'Permanent Marker' => 'Permanent Marker',
-				'Roboto' => 'Roboto',
-				'Share' => 'Share',
-				'Tahoma' => 'Tahoma',
-				'Ubuntu' => 'Ubuntu',
-				'Verdana' => 'Verdana');
-			parent::__construct( $manager, $id, $args );
-			
-		}
-		
-		public function render_content() {
-		
-			if( !empty($this->fonts) ) :
-            ?>
-                <label>
-                    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<div class="customize-font-select-control">
-						<select <?php $this->link(); ?>>
-							<?php
-								foreach ( $this->fonts as $k => $v )
-								{
-									printf('<option value="%s" %s>%s</option>', $k, selected($this->value(), $k, false), $v);
-								}
-							?>
-						</select>
-					</div>
-				</label>
-                
-            <?php
-			endif;
-		}
-		
-	}
-	
 endif;
 
 

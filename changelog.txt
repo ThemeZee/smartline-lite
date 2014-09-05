@@ -2,6 +2,14 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+Design Improvement Update
+[changed] new default text and title font
+[changed] background color of widget titles from gray to blue
+[changed] default color to a darker blue
+[removed] unnecessary Customizer Font control
+
 Version 1.0.1
 -----------------------------------
 [fixed] replaced deprecated caller_get_posts parameter with ignore_sticky_posts
