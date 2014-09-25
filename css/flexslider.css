@@ -71,7 +71,10 @@ html[xmlns] .zeeslides {display: block;}
 	color: #fff;
 	background: #333;
 	background: rgba(0,0,0,0.7);
-	width: 70%;
+	width: 75%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #frontpage-slider .zeeslide .slide-entry .slide-title {
 	font-family: 'Bitter', Tahoma, Verdana, Arial;
@@ -202,7 +205,7 @@ html[xmlns] .zeeslides {display: block;}
 	}
 	#frontpage-slider .zeeslide .slide-entry {
 		padding: 0.4em 0.8em;
-		width: 60%;
+		width: 65%;
 	}
 	#frontpage-slider .zeeslide .slide-entry .slide-title {
 		font-size: 1.3em;
@@ -216,7 +219,7 @@ html[xmlns] .zeeslides {display: block;}
 	}
 	#frontpage-slider .zeeslide .slide-entry {
 		padding: 1em 1.5em;
-		width: 70%;
+		width: 75%;
 	}
 	#frontpage-slider .zeeslide .slide-entry .slide-title {
 		font-size: 1.5em
@@ -230,7 +233,7 @@ html[xmlns] .zeeslides {display: block;}
 	}
 	#frontpage-slider .zeeslide .slide-entry {
 		padding: 0.4em 0.8em;
-		width: 60%;
+		width: 65%;
 	}
 	#frontpage-slider .zeeslide .slide-entry .slide-title {
 		font-size: 1.3em;
@@ -245,9 +248,60 @@ html[xmlns] .zeeslides {display: block;}
 /* Smartphones | <480px */
 @media only screen and (max-width: 30em) {
 	#frontpage-slider .zeeslide .slide-entry {
-		display: none;
+		width: 75%;
+	}
+	#frontpage-slider .zeeslide .slide-entry .slide-title {
+		font-size: 1.05em;
 	}
 	.frontpage-slider-controls .zeeflex-control-nav {
 		display: none;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav {
+		bottom: auto;
+		top: 1em;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav a {
+		margin: 0 1em 0 0;
+		width: 30px;
+		height: 30px;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav a:before {
+		margin: 0;
+		font-size: 30px;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav .zeeflex-prev {
+		right: 31px;
+	}
+}
+@media only screen and (max-width: 26em) {
+	#frontpage-slider .zeeslide .slide-entry {
+		bottom: 0.5em;
+		left: 0.5em;
+	}
+	#frontpage-slider .zeeslide .slide-entry .slide-title {
+		font-size: 1.0em;
+		font-weight: normal;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav {
+		top: 0.5em;
+		right: 0.5em;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav a {
+		margin: 0 1em 0 0;
+	}
+}
+@media only screen and (max-width: 22em) {
+	#frontpage-slider .zeeslide .slide-entry {
+		bottom: 0;
+		left: 0;
+		padding: 0.3em 0.6em;
+		width: 100%;
+	}
+	#frontpage-slider .zeeslide .slide-entry .slide-title {
+		font-size: 0.95em;
+	}
+	.frontpage-slider-controls .zeeflex-direction-nav {
+		top: 0;
+		right: 0;
 	}
 }

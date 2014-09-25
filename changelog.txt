@@ -2,6 +2,12 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[added] styling for nested menu items in custom menu widget
+[changed] moved content_width variable to theme setup function
+[fixed] featured post slider not clickable on mobile phones (added missing post title)
+
 Version 1.0.2
 -----------------------------------
 Design Improvement Update

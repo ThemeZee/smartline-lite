@@ -1,9 +1,5 @@
 <?php
 
-// Set Content Width
-if ( ! isset( $content_width ) )
-	$content_width = 860;
-
 /*==================================== THEME SETUP ====================================*/
 
 // Load default style.css and Javascripts
@@ -62,6 +58,11 @@ add_action( 'after_setup_theme', 'smartline_setup' );
 if ( ! function_exists( 'smartline_setup' ) ):
 function smartline_setup() {
 
+	// Set Content Width
+	global $content_width;
+	if ( ! isset( $content_width ) )
+		$content_width = 860;
+		
 	// init Localization
 	load_theme_textdomain('smartline-lite', get_template_directory() . '/languages' );
 
@@ -111,7 +112,7 @@ function smartline_add_image_sizes() {
 	add_image_size( 'custom_header_image', 1340, 250, true);
 
 	// Add Featured Image Size
-	add_image_size( 'featured_image', 200, 200, true);
+	add_image_size( 'featured_image', 300, 200, true);
 
 	// Add Slider Image Size
 	add_image_size( 'slider_image', 880, 350, true);
