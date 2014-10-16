@@ -2,6 +2,12 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[fixed] styling of search field for Safari
+[added] new customizer panel for theme options
+[moved] all theme settings and sections to the new panel
+
 Version 1.0.3
 -----------------------------------
 [added] styling for nested menu items in custom menu widget

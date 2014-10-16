@@ -2,7 +2,7 @@
 Theme Name: Smartline Lite
 Theme URI: http://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.0.3
+Version: 1.0.4
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -882,6 +882,7 @@ embed, iframe, object, video {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-appearance: none;
 }
 .search-form .search-submit {
 	position: absolute;
