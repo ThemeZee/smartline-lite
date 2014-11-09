@@ -6,7 +6,7 @@ class smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	function __construct() {
 
 		$widget_ops = array('classname' => 'smartline_category_posts_grid', 'description' => __('Display latest posts from category in a grid layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'smartline-lite') );
-		$this->WP_Widget('smartline_category_posts_grid', 'Category Posts Grid (Smartline)', $widget_ops);
+		$this->WP_Widget('smartline_category_posts_grid', __('Category Posts Grid (Smartline)', 'smartline-lite'), $widget_ops);
 	}
 
 	function widget($args, $instance) {

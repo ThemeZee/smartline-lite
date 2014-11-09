@@ -5,13 +5,15 @@
  */
 
 // Load Customizer Helper Functions
-require( get_template_directory() . '/inc/customizer/customizer-functions.php' );
+require( get_template_directory() . '/inc/customizer/functions/custom-controls.php' );
+require( get_template_directory() . '/inc/customizer/functions/sanitize-functions.php' );
 
 // Load Customizer Settings
-require( get_template_directory() . '/inc/customizer/customizer-header.php' );
-require( get_template_directory() . '/inc/customizer/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/customizer-slider.php' );
-require( get_template_directory() . '/inc/customizer/customizer-upgrade.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-header.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
 
 
 // Add Theme Options section to Customizer
@@ -27,35 +29,6 @@ function smartline_customize_register_options( $wp_customize ) {
 		'title'          => __( 'Theme Options', 'smartlinelite' ),
 		'description'    => '',
 	) );
-
-	// Add Section for Theme Options
-	$wp_customize->add_section( 'smartline_section_general', array(
-        'title'    => __( 'General Settings', 'smartlinelite' ),
-        'priority' => 10,
-		'panel' => 'smartline_options_panel' 
-		)
-	);
-	
-	// Add Settings and Controls for Layout
-	$wp_customize->add_setting( 'smartline_theme_options[layout]', array(
-        'default'           => 'right-sidebar',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'smartline_sanitize_layout'
-		)
-	);
-    $wp_customize->add_control( 'smartline_control_layout', array(
-        'label'    => __( 'Theme Layout', 'smartline-lite' ),
-        'section'  => 'smartline_section_general',
-        'settings' => 'smartline_theme_options[layout]',
-        'type'     => 'radio',
-		'priority' => 1,
-        'choices'  => array(
-            'left-sidebar' => __( 'Left Sidebar', 'smartline-lite' ),
-            'right-sidebar' => __( 'Right Sidebar', 'smartline-lite')
-			)
-		)
-	);
 	
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';

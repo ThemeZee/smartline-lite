@@ -6,7 +6,7 @@ class smartline_Category_Posts_Columns_Widget extends WP_Widget {
 	function __construct() {
 
 		$widget_ops = array('classname' => 'smartline_category_posts_columns', 'description' => __('Display latest posts from two specified categories. Please use this widget ONLY on Frontpage Magazine widget area.', 'smartline-lite') );
-		$this->WP_Widget('smartline_category_posts_columns', 'Category Posts Columns (Smartline)', $widget_ops);
+		$this->WP_Widget('smartline_category_posts_columns', __('Category Posts Columns (Smartline)', 'smartline-lite'), $widget_ops);
 	}
 
 	function widget($args, $instance) {

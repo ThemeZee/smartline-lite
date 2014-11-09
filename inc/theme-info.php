@@ -120,18 +120,19 @@ function smartline_display_theme_info_page() {
 
 // Add CSS for Theme Info Panel
 add_action('admin_enqueue_scripts', 'smartline_theme_info_page_css');
-function smartline_theme_info_page_css() { 
+function smartline_theme_info_page_css($hook) { 
+
+	// Load styles and scripts only on theme info page
+	if ( 'appearance_page_smartline' != $hook ) {
+		return;
+	}
 	
-	// Load styles and scripts only on themezee page
-	if ( isset($_GET['page']) and $_GET['page'] == 'smartline' ) :
-		
-		// Embed theme info css style
-		wp_enqueue_style('smartline-lite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css');
-		
-		// Register Genericons
-		wp_enqueue_style('smartline-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
-		
-	endif;
+	// Embed theme info css style
+	wp_enqueue_style('smartline-lite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css');
+	
+	// Register Genericons
+	wp_enqueue_style('smartline-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
+
 }
 
 

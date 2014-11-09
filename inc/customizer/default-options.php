@@ -2,26 +2,27 @@
 /**
  * Returns theme options
  *
- * Use sane defaults in case the user has not configured any theme options yet.
+ * Uses sane defaults in case the user has not configured any theme options yet.
  */
 
 
 // Return theme options
 function smartline_theme_options() {
     
-	// Get theme options from DB
-	$theme_options = get_option( 'smartline_theme_options' );
-    
-	// Check if user has already configured theme options
-	if ( false === $theme_options ) :
+	// Merge Theme Options Array from Database with Default Options Array
+	$theme_options = wp_parse_args( 
 		
-		// Set Default Options
-		$theme_options = smartline_default_options();
+		// Get saved theme options from WP database
+		get_option( 'smartline_theme_options', array() ), 
 		
-    endif;
-	
+		// Merge with Default Options if setting was not saved yet
+		smartline_default_options() 
+		
+	);
+
 	// Return theme options
 	return $theme_options;
+	
 }
 
 
