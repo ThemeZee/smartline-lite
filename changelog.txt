@@ -2,6 +2,14 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.5
+-----------------------------------
+[added] improved way to set sane defaults for theme options
+[added] usage of $hook variable to load theme-info.css in admin
+[changed] widget titles to be translation-ready
+[changed] structure and organization of theme files for the Customizer
+[improved] usage of proper sanitization functions for data validation 
+
 Version 1.0.4
 -----------------------------------
 [fixed] styling of search field for Safari

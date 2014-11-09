@@ -43,6 +43,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
         )
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
@@ -50,7 +51,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
             'label' => __( 'Post Images', 'smartline-lite' ),
             'section' => 'smartline_section_post',
             'settings' => 'smartline_theme_options[post_images]',
-            'priority' => 	2
+            'priority' => 2
             )
         )
     );
@@ -66,7 +67,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
-		'priority' => 2
+		'priority' => 3
 		)
 	);
 
@@ -82,7 +83,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 4
 		)
 	);
 

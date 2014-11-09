@@ -38,7 +38,7 @@ function smartline_custom_jscript_slider() {
 	
 	// Define Slider Animation
 	if( isset($theme_options['slider_animation']) ) :
-		$params['animation'] = esc_attr($theme_options['slider_animation']);
+		$params['animation'] = esc_js($theme_options['slider_animation']);
 	endif;
 	
 	// Passing Parameters to Javascript

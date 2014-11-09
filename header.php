@@ -48,7 +48,7 @@
 			</div>
 			
 			<div id="header-content" class="clearfix">
-				<?php locate_template('/inc/header-content.php', true); ?>
+				<?php get_template_part('inc/header-content'); ?>
 			</div>
 
 		</header>
