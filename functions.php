@@ -225,10 +225,20 @@ function smartline_frontpage_category_excerpt_length($length) {
     return 25;
 }
 
+
 // Change Excerpt More
 add_filter('excerpt_more', 'smartline_excerpt_more');
 function smartline_excerpt_more($more) {
-    return '';
+    
+	// Get Theme Options from Database
+	$theme_options = smartline_theme_options();
+
+	// Return Excerpt Text
+	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
+		return ' [...]';
+	else :
+		return '';
+	endif;
 }
 
 

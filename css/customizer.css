@@ -6,9 +6,13 @@
 #customize-control-smartline_control_slider_activated {
 	margin-top: 24px;
 }
+#customize-control-smartline_control_excerpt_text_headline   {
+	margin-top: 12px;
+}
 
 #customize-control-smartline_control_header_content,
 #customize-control-smartline_control_post_images,
+#customize-control-smartline_control_excerpt_text_headline,
 #customize-control-smartline_control_slider_activated  {
 	margin-bottom: 0;
 }
