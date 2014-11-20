@@ -35,9 +35,8 @@ function smartline_enqueue_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script('smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
-	// Register and Enqueue Fonts
-	wp_enqueue_style('smartline-lite-default-font', '//fonts.googleapis.com/css?family=Raleway');
-	wp_enqueue_style('smartline-lite-default-title-font', '//fonts.googleapis.com/css?family=Bitter');
+	// Register and Enqueue Font
+	wp_enqueue_style('smartline-lite-default-fonts', smartline_fonts_url(), array(), null );
 
 }
 endif;
@@ -49,6 +48,47 @@ function smartline_enqueue_comment_reply() {
 	if( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+}
+
+/*
+* Retrieve Font URL to register default Google Fonts
+* Source: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+*/
+function smartline_fonts_url() {
+    $fonts_url = '';
+	
+    /* Translators: If there are characters in your language that are not
+    * supported by Raleway, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $raleway = _x( 'on', 'Raleway font: on or off', 'smartline-lite' );
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Bitter, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $bitter = _x( 'on', 'Bitter font: on or off', 'smartline-lite' );
+ 
+    if ( 'off' !== $raleway || 'off' !== $bitter ) {
+        $font_families = array();
+ 
+        if ( 'off' !== $raleway ) {
+            $font_families[] = 'Raleway:400,700';
+        }
+ 
+        if ( 'off' !== $bitter ) {
+            $font_families[] = 'Bitter';
+        }
+ 
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+ 
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
+ 
+    return $fonts_url;
 }
 
 
