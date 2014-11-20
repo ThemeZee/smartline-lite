@@ -25,12 +25,22 @@
 	
 	<div id="header-wrap">
 	
+		<?php // Display Top Navigation
+		if ( has_nav_menu( 'secondary' ) ) : ?>
+		
 		<nav id="topnav" class="clearfix" role="navigation">
-			<?php 
-				// Get Navigation out of Theme Options
-				wp_nav_menu(array('theme_location' => 'secondary', 'container' => false, 'menu_id' => 'topnav-menu', 'echo' => true, 'fallback_cb' => '', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 1));
+			<h5 id="topnav-icon"><?php _e('Menu', 'smartline-lite'); ?></h5>
+			<?php wp_nav_menu(	array(
+				'theme_location' => 'secondary', 
+				'container' => false, 
+				'menu_id' => 'topnav-menu', 
+				'fallback_cb' => '', 
+				'depth' => 1)
+			);
 			?>
 		</nav>
+		
+		<?php endif; ?>
 	
 		<header id="header" class="clearfix" role="banner">
 
@@ -56,12 +66,20 @@
 	</div>
 	
 	<div id="navi-wrap">
+		
 		<nav id="mainnav" class="clearfix" role="navigation">
-			<?php 
-				// Get Navigation out of Theme Options
-				wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'smartline_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));
+			<h4 id="mainnav-icon"><?php _e('Menu', 'smartline-lite'); ?></h4>
+			<?php // Display Main Navigation
+				wp_nav_menu( array(
+					'theme_location' => 'primary', 
+					'container' => false, 
+					'menu_id' => 'mainnav-menu', 
+					'echo' => true, 
+					'fallback_cb' => 'smartline_default_menu')
+				);
 			?>
 		</nav>
+		
 	</div>
 	
 	<?php // Display Custom Header Image

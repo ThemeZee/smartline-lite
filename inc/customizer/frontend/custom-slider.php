@@ -1,30 +1,13 @@
 <?php 
 /***
- * Custom Javascript Options
+ * Custom Slider Parameters
  *
  * Passing Variables from custom Theme Options to the javascript files
- * of theme navigation and frontpage slider. 
+ * of featured content slider. 
  *
  */
 
-// Passing Variables to Theme Navigation ( js/navigation.js)
-add_action('wp_enqueue_scripts', 'smartline_custom_jscript_navigation');
-
-if ( ! function_exists( 'smartline_custom_jscript_navigation' ) ):
-function smartline_custom_jscript_navigation() { 
-
-	// Set Parameters array
-	$params = array(
-		'menuTitle' => __('Menu', 'smartline-lite')
-	);
-	
-	// Passing Parameters to Javascript
-	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_navigation_params', $params );
-}
-endif;
-
-
-// Passing Variables to Frontpage Slider ( js/slider.js)
+// Passing Variables to Featured Content Slider ( js/slider.js)
 add_action('wp_enqueue_scripts', 'smartline_custom_jscript_slider');
 
 if ( ! function_exists( 'smartline_custom_jscript_slider' ) ):

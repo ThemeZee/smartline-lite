@@ -2,6 +2,14 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.6
+-----------------------------------
+[added] theme option to display excerpt more text
+[changed] implementation of loading default Google Fonts
+[changed] implementation of menu icons for mobile navigation
+[fixed] line height bug for pre and code HTML tags
+[fixed] missing translations
+
 Version 1.0.5
 -----------------------------------
 [added] improved way to set sane defaults for theme options

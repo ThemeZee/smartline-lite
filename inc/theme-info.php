@@ -76,7 +76,7 @@ function smartline_display_theme_info_page() {
 						
 						<p class="about"><?php _e( 'Smartline supports the awesome Theme Customizer for all theme settings. Click "Customize Theme" to open the Customizer now.', 'smartline-lite' ); ?></p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary">Customize Theme</a>
+							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e('Customize Theme', 'smartline-lite'); ?></a>
 						</p>
 					</div>
 					
@@ -93,7 +93,7 @@ function smartline_display_theme_info_page() {
 				
 				<div class="column column-half clearfix">
 					
-					<img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="Theme Screenshot" />
+					<img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" />
 					
 				</div>
 				
