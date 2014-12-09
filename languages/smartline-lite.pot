@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Smartline\n"
+"Project-Id-Version: Smartline Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-06 13:54+0100\n"
-"PO-Revision-Date: 2014-06-06 13:54+0100\n"
+"POT-Creation-Date: 2014-12-09 14:37+0100\n"
+"PO-Revision-Date: 2014-12-09 14:37+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -59,15 +59,21 @@ msgstr ""
 msgid "Category Archives: %s"
 msgstr ""
 
-#: comments.php:13
+#: comments.php:10
 msgid "Enter password to view comments."
 msgstr ""
 
-#: comments.php:23 inc/front-page-functions.php:212 inc/template-tags.php:111
+#: comments.php:20 inc/template-tags.php:111
+#: inc/widgets/widget-category-posts-boxed.php:184
+#: inc/widgets/widget-category-posts-columns.php:204
+#: inc/widgets/widget-category-posts-grid.php:182
 msgid "One comment"
 msgstr ""
 
-#: comments.php:23 inc/front-page-functions.php:212 inc/template-tags.php:111
+#: comments.php:20 inc/template-tags.php:111
+#: inc/widgets/widget-category-posts-boxed.php:184
+#: inc/widgets/widget-category-posts-columns.php:204
+#: inc/widgets/widget-category-posts-grid.php:182
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -88,76 +94,84 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
-#: functions.php:92
+#: footer.php:16 header.php:32 header.php:71
+msgid "Menu"
+msgstr ""
+
+#: functions.php:64 functions.php:70
+msgid "on"
+msgstr ""
+
+#: functions.php:134
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:135
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:136
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:139
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:179
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:181
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 
-#: functions.php:146
+#: functions.php:188
 msgid "Magazine Front Page"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:190
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
 msgstr ""
 
-#: functions.php:180
+#: functions.php:222
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:243
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: functions.php:202
+#: functions.php:244
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:245
 msgid "Smartline"
 msgstr ""
 
-#: functions.php:242
+#: functions.php:294
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:243 functions.php:263
+#: functions.php:295 functions.php:315
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:306
 #, php-format
 msgid "<span class=\"fn\">%s</span>"
 msgstr ""
 
-#: functions.php:258
+#: functions.php:310
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:262
+#: functions.php:314
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -240,10 +254,6 @@ msgstr ""
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
-#: inc/front-page-functions.php:212 inc/template-tags.php:111
-msgid "Leave a comment"
-msgstr ""
-
 #: inc/template-tags.php:43
 #, php-format
 msgid ""
@@ -268,6 +278,12 @@ msgstr ""
 
 #: inc/template-tags.php:63
 msgid "Edit Post"
+msgstr ""
+
+#: inc/template-tags.php:111 inc/widgets/widget-category-posts-boxed.php:184
+#: inc/widgets/widget-category-posts-columns.php:204
+#: inc/widgets/widget-category-posts-grid.php:182
+msgid "Leave a comment"
 msgstr ""
 
 #: inc/template-tags.php:184
@@ -329,7 +345,7 @@ msgstr ""
 msgid "Visit Smartline Documentation"
 msgstr ""
 
-#: inc/theme-info.php:75 inc/customizer/customizer.php:17
+#: inc/theme-info.php:75 inc/customizer/customizer.php:29
 msgid "Theme Options"
 msgstr ""
 
@@ -339,7 +355,11 @@ msgid ""
 "Click \"Customize Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:84 inc/customizer/customizer.php:22
+#: inc/theme-info.php:79
+msgid "Customize Theme"
+msgstr ""
+
+#: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
 msgstr ""
 
@@ -363,156 +383,193 @@ msgstr ""
 msgid "rate it"
 msgstr ""
 
-#: inc/customizer/customizer.php:36
+#: inc/customizer/customizer.php:54
+msgid "Display Tagline beside site title."
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:14
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:29
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/customizer/customizer.php:42
+#: inc/customizer/sections/customizer-general.php:35
 msgid "Left Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:43
+#: inc/customizer/sections/customizer-general.php:36
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:57
+#: inc/customizer/sections/customizer-header.php:14
+#: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:72
+#: inc/customizer/sections/customizer-header.php:46
 msgid ""
 "The Header Content configured below will be displayed on the right hand side "
 "of the header area."
 msgstr ""
 
-#: inc/customizer/customizer.php:76
+#: inc/customizer/sections/customizer-header.php:50
 msgid "Stay hungry. Stay foolish."
 msgstr ""
 
-#: inc/customizer/customizer.php:90
+#: inc/customizer/sections/customizer-header.php:64
 msgid "Display search field on header area"
 msgstr ""
 
-#: inc/customizer/customizer.php:106
+#: inc/customizer/sections/customizer-header.php:80
 msgid "Display Social Icons on header area"
 msgstr ""
 
-#: inc/customizer/customizer.php:123
+#: inc/customizer/sections/customizer-post.php:14
+msgid "Post Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:29
 msgid "Post Length on archives"
 msgstr ""
 
-#: inc/customizer/customizer.php:129
+#: inc/customizer/sections/customizer-post.php:35
 msgid "Show full posts"
 msgstr ""
 
-#: inc/customizer/customizer.php:130
+#: inc/customizer/sections/customizer-post.php:36
 msgid "Show post summaries (excerpt)"
 msgstr ""
 
-#: inc/customizer/customizer.php:143
+#: inc/customizer/sections/customizer-post.php:51
+msgid "Post Images"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
 msgstr ""
 
-#: inc/customizer/customizer.php:159
+#: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
 msgstr ""
 
-#: inc/customizer/customizer.php:176
+#: inc/customizer/sections/customizer-post.php:100
+msgid "Excerpt More Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:115
+msgid "Display [...] after text excerpts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:14
+msgid "Post Slider"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:15
+msgid ""
+"The slideshow displays your featured posts, which you can configure on the "
+"\"Featured Content\" section above."
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:31
 msgid "Activate Featured Post Slider"
 msgstr ""
 
-#: inc/customizer/customizer.php:191
+#: inc/customizer/sections/customizer-slider.php:46
 msgid "Display Slider on Magazine Front Page template."
 msgstr ""
 
-#: inc/customizer/customizer.php:206
+#: inc/customizer/sections/customizer-slider.php:61
 msgid "Display Slider on normal blog index."
 msgstr ""
 
-#: inc/customizer/customizer.php:222
+#: inc/customizer/sections/customizer-slider.php:77
 msgid "Slider Animation"
 msgstr ""
 
-#: inc/customizer/customizer.php:228
+#: inc/customizer/sections/customizer-slider.php:83
 msgid "Horizontal Slider"
 msgstr ""
 
-#: inc/customizer/customizer.php:229
+#: inc/customizer/sections/customizer-slider.php:84
 msgid "Fade Slider"
 msgstr ""
 
-#: inc/customizer/customizer.php:244
+#: inc/customizer/sections/customizer-upgrade.php:30
 msgid "Need more features?"
 msgstr ""
 
-#: inc/customizer/customizer.php:259
+#: inc/customizer/sections/customizer-upgrade.php:46
 msgid ""
 "Check out the PRO version which comes with additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/customizer/customizer.php:274
+#: inc/customizer/sections/customizer-upgrade.php:62
 msgid "Learn more about the PRO Version"
 msgstr ""
 
-#: inc/customizer/customizer.php:299
-msgid "Display Tagline beside site title."
-msgstr ""
-
-#: inc/customizer/frontend/custom-jscript.php:18
-msgid "Menu"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-boxed.php:8
+#: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
 "Display latest posts from category in boxed layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:35
-#: inc/widgets/widget-category-posts-grid.php:38
-msgid "Please specify a category on the Category Posts Widget settings."
+#: inc/widgets/widget-category-posts-boxed.php:13
+msgid "Category Posts Boxed (Smartline)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:60
-#: inc/widgets/widget-category-posts-columns.php:63
-#: inc/widgets/widget-category-posts-grid.php:65
+#: inc/widgets/widget-category-posts-boxed.php:209
+#: inc/widgets/widget-category-posts-columns.php:230
+#: inc/widgets/widget-category-posts-grid.php:208
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:65
-#: inc/widgets/widget-category-posts-grid.php:70
+#: inc/widgets/widget-category-posts-boxed.php:215
+#: inc/widgets/widget-category-posts-grid.php:214
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:8
+#: inc/widgets/widget-category-posts-boxed.php:218
+#: inc/widgets/widget-category-posts-columns.php:239
+#: inc/widgets/widget-category-posts-columns.php:253
+#: inc/widgets/widget-category-posts-grid.php:217
+msgid "All Categories"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:11
 msgid ""
 "Display latest posts from two specified categories. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:36
-msgid "Please specify two categories on the Category Posts Widget settings."
+#: inc/widgets/widget-category-posts-columns.php:13
+msgid "Category Posts Columns (Smartline)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:68
+#: inc/widgets/widget-category-posts-columns.php:236
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:82
+#: inc/widgets/widget-category-posts-columns.php:250
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:8
+#: inc/widgets/widget-category-posts-grid.php:11
 msgid ""
 "Display latest posts from category in a grid layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:84
+#: inc/widgets/widget-category-posts-grid.php:13
+msgid "Category Posts Grid (Smartline)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:228
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:86
+#: inc/widgets/widget-category-posts-grid.php:230
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""

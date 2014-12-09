@@ -2,6 +2,12 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.7
+-----------------------------------
+[added] sane defaults for widget settings
+[improved] performance of Category Posts widgets by adding transient caching
+[updated] smartline-lite.pot language file
+
 Version 1.0.6
 -----------------------------------
 [added] theme option to display excerpt more text
