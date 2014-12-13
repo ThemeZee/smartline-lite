@@ -2,6 +2,11 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.8
+-----------------------------------
+[fixed] cache reset bug of Category Posts widgets by changing from transient caching to object caching
+[changed] responsive design of header area (center alignment on mobile devices)
+
 Version 1.0.7
 -----------------------------------
 [added] sane defaults for widget settings
