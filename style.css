@@ -205,10 +205,7 @@ input, textarea, select {
 }
 #header-content div {
 	float: right;
-	margin: -0.2em 0 -0.4em 1.5em;
-}
-#header-content #header-search #s {
-	float: right;
+	margin-left: 1.5em;
 }
 
 /* Custom Header Image */
@@ -1352,7 +1349,12 @@ embed, iframe, object, video {
 		margin-left: 67%;
 		width: 33%;
 	}
+	#logo .site-title, #logo .logo-image {
+		float: none;
+	}
 	#logo .site-description {
+		float: none;
+		margin: 0.4em 0 0 0;
 		font-size: 1.2em;
 	}
 	.widget-category-posts .type-post .post-title {
@@ -1369,7 +1371,6 @@ embed, iframe, object, video {
 		margin: 1em auto;
 	}
 	#logo .site-description {
-		margin: 0.6em 0 0 1.5em;
 		font-size: 1.1em;
 	}
 }
@@ -1381,6 +1382,7 @@ embed, iframe, object, video {
 	}
 	#header {
 		padding: 2em;
+		text-align: center;
 	}
 	#content {
 		float: none;
@@ -1395,29 +1397,32 @@ embed, iframe, object, video {
 		float: none;
 		width: 100%;
 	}
-	#logo .site-title {
-		margin-right: 1em;
-	}
-	#logo .logo-image {
-		margin-right: 2em;
+	#logo .site-title, #logo .logo-image {
+		float: none;
 	}
 	#logo .site-description {
-		float: left;
+		float: none;
 		margin: 0.4em 0 0 0;
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 	#header-content {
 		display: block;
-		padding-top: 0.5em;
+		text-align: center;
 	}
 	#header-content div {
-		float: left;
-		margin: 0 1em 0 0;
-		padding-top: 0.5em;
-	}
-	#header-content #header-search #s {
-		max-width: 100%;
 		float: none;
+		margin: 1em 0 0;
+	}
+	#header-content #header-search .search-form {
+		display: inline-block;
+		max-width: 350px;
+	}
+	#header-content #social-icons-menu li {
+		float: none;
+		display: inline-block;
+		margin: 0 1px 2px 0;
+		padding: 0;
+		background: #222;
 	}
 
 	/* Mobile Main Navigation */
@@ -1541,6 +1546,9 @@ embed, iframe, object, video {
 @media only screen and (max-width: 50em) {
 	#logo .site-title {
 		font-size: 2.3em;
+	}
+	#logo .site-description {
+		font-size: 1.1em;
 	}
 	
 	/* Mobile Top Navigation */
@@ -1700,9 +1708,6 @@ embed, iframe, object, video {
 
 /* Phablets (portrait) | <640px */
 @media only screen and (max-width: 40em) {
-	#logo .site-description {
-		font-size: 1.2em;
-	}
 	#content {
 		padding: 1em 1em 0;
 	}
@@ -1753,6 +1758,9 @@ embed, iframe, object, video {
 @media only screen and (max-width: 30em) {
 	#logo .site-title {
 		font-size: 2.0em;
+	}
+	#logo .site-description {
+		font-size: 1.0em;
 	}
 	.alignright, .alignleft {
 		float: none;
