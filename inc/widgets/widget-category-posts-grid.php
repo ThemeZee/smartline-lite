@@ -30,7 +30,9 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		$defaults = array(
 			'title'				=> '',
 			'number'			=> 6,
-			'category'			=> 0
+			'category'			=> 0,
+			'thumbnails'		=> false,
+			'category_link'		=> false
 		);
 		
 		return $defaults;
@@ -40,6 +42,8 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	// Display Widget
 	function widget($args, $instance) {
 
+		$cache = array();
+				
 		// Get Widget Object Cache
 		if ( ! $this->is_preview() ) {
 			$cache = wp_cache_get( 'widget_smartline_category_posts_grid', 'widget' );
@@ -64,16 +68,13 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		$defaults = $this->default_settings();
 		extract( wp_parse_args( $instance, $defaults ) );
 		
-		// Add Widget Title Filter
-		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
-		
 		// Output
 		echo $before_widget;
 	?>
 		<div id="widget-category-posts-grid" class="widget-category-posts clearfix">
 		
 			<?php // Display Title
-			if( !empty( $widget_title ) ) { echo $before_title . $widget_title . $after_title; }; ?>
+			$this->display_widget_title($args, $instance); ?>
 			
 			<div class="widget-category-posts-content">
 			
@@ -129,24 +130,45 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		
 				<?php // Set Variable row_open to true
 					$row_open = true;
-					
 				endif; ?>
 
-				
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php // Display small posts or big posts grid layout based on options
+				if( $thumbnails == true ) : ?>
 
-					<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_wide_thumb'); ?></a>
+					<div class="small-post-wrap">
+						
+						<article id="post-<?php the_ID(); ?>" <?php post_class('small-post clearfix'); ?>>
 
-					<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+						<?php if ( '' != get_the_post_thumbnail() ) : ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_small_thumb'); ?></a>
+						<?php endif; ?>
 
-					<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+							<div class="small-post-content">
+								<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+								<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+							</div>
 
-					<div class="entry">
-						<?php the_excerpt(); ?>
+						</article>
+						
 					</div>
+					
+				<?php else: ?>
+				
+					<article id="post-<?php the_ID(); ?>" <?php post_class('big-post'); ?>>
 
-				</article>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category_posts_wide_thumb'); ?></a>
 
+						<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+
+						<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+
+						<div class="entry">
+							<?php the_excerpt(); ?>
+						</div>
+
+					</article>
+				
+				<?php endif; ?>
 		
 				<?php // Close Row on the Grid
 				if ( $i % 2 == 1) : ?>
@@ -190,6 +212,44 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	<?php endif;
 
 	}
+	
+	// Display Widget Title
+	function display_widget_title($args, $instance) {
+		
+		// Get Sidebar Arguments
+		extract($args);
+		
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Add Widget Title Filter
+		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
+		
+		if( !empty( $widget_title ) ) :
+		
+			echo $before_title;
+			
+			// Link Category Title
+			if( $category_link == true ) : 
+			
+				$link_title = sprintf( __('View all posts from category %s', 'smartline-lite'), get_cat_name( $category ) );
+				$link_url = esc_url( get_category_link( $category ) );
+				
+				echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a>';
+				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="genericon-next"></span></a>';
+			
+			else:
+			
+				echo $widget_title;
+			
+			endif;
+			
+			echo $after_title; 
+			
+		endif;
+
+	}
 
 	function update($new_instance, $old_instance) {
 
@@ -197,6 +257,8 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		$instance['title'] = sanitize_text_field($new_instance['title']);
 		$instance['category'] = (int)$new_instance['category'];
 		$instance['number'] = (int)$new_instance['number'];
+		$instance['thumbnails'] = !empty($new_instance['thumbnails']);
+		$instance['category_link'] = !empty($new_instance['category_link']);
 		
 		$this->delete_widget_cache();
 		
@@ -234,6 +296,20 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'smartline-lite'); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 				<br/><span class="description"><?php _e('Please chose an even number (2, 4, 6, 8).', 'smartline-lite'); ?></span>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('thumbnails'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $thumbnails ) ; ?> id="<?php echo $this->get_field_id('thumbnails'); ?>" name="<?php echo $this->get_field_name('thumbnails'); ?>" />
+				<?php _e('Display as small posts grid with thumbnails', 'smartline-lite'); ?>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('category_link'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
+				<?php _e('Link Widget Title to Category Archive page', 'smartline-lite'); ?>
 			</label>
 		</p>
 <?php

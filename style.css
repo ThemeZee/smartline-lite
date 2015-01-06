@@ -2,7 +2,7 @@
 Theme Name: Smartline Lite
 Theme URI: http://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.0.8
+Version: 1.0.9
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -413,6 +413,9 @@ input, textarea, select {
 	max-width: 100%;
 	height: auto;
 }
+.widgettitle a:link, .widgettitle a:visited  {
+	color: #fff;
+}
 
 /* Custom Widgets
 -------------------------------------------------------------- */
@@ -734,9 +737,6 @@ blockquote {
 	border-left: 10px solid #ccc;
 	margin: 1.5em 0;
 	padding: 0.8em 1.5em;
-}
-blockquote p {
-	display:inline;
 }
 blockquote cite {
 	display: block;
@@ -1181,19 +1181,40 @@ embed, iframe, object, video {
 }
 
 /* Category Posts Widgets */
+.widget-category-posts {
+	margin-bottom: -1.5em;
+}
+.widget-category-posts .widgettitle .category-archive-link {
+	float: right;
+}
+.widget-category-posts .widgettitle .category-archive-link .genericon-next {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+	font-size: 21px;
+	font-family: 'Genericons';
+	text-decoration: inherit;
+	vertical-align: top;
+	content: '\f429';
+	margin: -4px -4px 0 0;
+}
+.widget-category-posts .widgettitle .category-archive-link .genericon-next:hover {
+	text-decoration: none;
+}
 .widget-category-posts .type-post {
 	margin: 0;
 	padding: 0;
 	border: none;
 	box-shadow: none;
 }
-.widget-category-posts .type-post .post-title {
+.widget-category-posts .big-post .post-title {
 	font-size: 1.35em;
 }
-.widget-category-posts .type-post .wp-post-image {
+.widget-category-posts .big-post .wp-post-image {
 	margin: 0 0 0.5em 0;
 }
-.widget-category-posts .more-posts .type-post {
+.widget-category-posts .small-post {
 	float: left;
 	display: block;
 	width: 100%;
@@ -1201,40 +1222,46 @@ embed, iframe, object, video {
 	padding: 0 0 1em 0;
 	border-bottom: 1px solid #ddd;
 }
-.widget-category-posts .more-posts .wp-post-image {
+.widget-category-posts .small-post .wp-post-image {
 	float: left;
 	margin: 0 1em 0 0;
 	max-width: 30%;
 }
-.widget-category-posts .more-posts .more-posts-content {
+.widget-category-posts .small-post .small-post-content {
 	padding: 0.4em 0.8em;
 }
-.widget-category-posts .more-posts .post-title{
+.widget-category-posts .small-post .post-title {
 	border: none;
 	margin: 0 0 0.3em;
 	padding: 0;
 	font-size: 1.15em;
 }
-.widget-category-posts .more-posts .postmeta {
+.widget-category-posts .small-post .postmeta {
 	display: inline;
 }
-.widget-category-posts .more-posts .postmeta .meta-date:before{
+.widget-category-posts .small-post .postmeta .meta-date:before{
 	content: '\f307';
 }
-.widget-category-posts .more-posts .postmeta .meta-comments:before{
+.widget-category-posts .small-post .postmeta .meta-comments:before{
 	content: '\f300';
+}
+.widget-category-posts .widget-category-posts-content .small-posts .small-post:last-child,
+.widget-category-posts .category-posts-columns .small-post:last-child,
+.widget-category-posts .category-posts-grid-row:last-child .small-post {
+	border-bottom: none;
 }
 
 /* Category Posts Boxed Widget */
-#widget-category-posts-boxed .first-post {
+#widget-category-posts-boxed .big-post {
 	float: left;
 	width: 50%;
 	padding-right: 1em;
+	margin-bottom: 1em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-#widget-category-posts-boxed .more-posts {
+#widget-category-posts-boxed .small-posts {
 	width: 50%;
 	margin-left: 50%;
 	padding-left: 1em;
@@ -1247,7 +1274,8 @@ embed, iframe, object, video {
 #widget-category-posts-grid .category-posts-grid-row {
 	margin-right: -2em;
 }
-#widget-category-posts-grid .category-posts-grid-row .type-post {
+#widget-category-posts-grid .category-posts-grid-row .big-post,
+#widget-category-posts-grid .category-posts-grid-row .small-post-wrap {
 	float: left;
 	width: 50%;
 	padding-right: 2em;
@@ -1255,6 +1283,10 @@ embed, iframe, object, video {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+#widget-category-posts-grid .category-posts-grid-row .small-post-wrap {
+	padding-right: 2em;
+}
+
 
 /* Front Page Category Area Thre (two columns) */
 #widget-category-posts-columns .category-posts-column-left {
@@ -1273,11 +1305,8 @@ embed, iframe, object, video {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-#widget-category-posts-columns .category-posts-columns .more-posts .type-post {
-	float: left;
-	display: block;
-	width: 100%;
-	margin: 1em 0 0;
+#widget-category-posts-columns .category-posts-columns .big-post {
+	margin-bottom: 1.5em;
 }
 
 
@@ -1360,7 +1389,7 @@ embed, iframe, object, video {
 	.widget-category-posts .type-post .post-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .more-posts .post-title{
+	.widget-category-posts .small-post .post-title{
 		font-size: 1.05em;
 	}
 }
@@ -1537,7 +1566,7 @@ embed, iframe, object, video {
 	.widget-category-posts .type-post .post-title {
 		font-size: 1.4em;
 	}
-	.widget-category-posts .more-posts .post-title{
+	.widget-category-posts .small-post .post-title{
 		font-size: 1.1em;
 	}
 }
@@ -1637,7 +1666,7 @@ embed, iframe, object, video {
 	.widget-category-posts .type-post .post-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .more-posts .post-title{
+	.widget-category-posts .small-post .post-title{
 		font-size: 1.0em;
 	}
 	
@@ -1728,25 +1757,22 @@ embed, iframe, object, video {
 	#widget-category-posts-grid .category-posts-grid-row {
 		margin-right: 0;
 	}
-	#widget-category-posts-grid .category-posts-grid-row .type-post,
-	#widget-category-posts-boxed .first-post,
+	#widget-category-posts-grid .category-posts-grid-row .big-post,
+	#widget-category-posts-grid .category-posts-grid-row .small-post-wrap,
+	#widget-category-posts-boxed .big-post,
 	#widget-category-posts-columns .category-posts-column-left {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	#widget-category-posts-boxed .more-posts,
+	#widget-category-posts-boxed .small-posts,
 	#widget-category-posts-columns .category-posts-column-right {
 		width: 100%;
 		margin-left: 0;
 		padding-left: 0;
 	}
-	#widget-category-posts-boxed .more-posts,
-	#widget-category-posts-columns .category-posts-columns .more-posts	{
+	#widget-category-posts-boxed .small-posts {
 		padding-bottom: 0.5em;
-	}
-	#widget-category-posts-columns .category-posts-columns .more-posts .type-post {
-		margin: 0 0 1em;
 	}
 	#widget-category-posts-columns .category-posts-column-right {
 		margin-top: 1.5em;
@@ -1780,7 +1806,7 @@ embed, iframe, object, video {
 	.widget-category-posts .type-post .post-title {
 		font-size: 1.0em;
 	}
-	.widget-category-posts .more-posts .post-title{
+	.widget-category-posts .small-post .post-title{
 		font-size: 0.9em;
 	}
 }
