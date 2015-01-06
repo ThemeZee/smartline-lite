@@ -2,6 +2,14 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.0.9
+-----------------------------------
+[added] setting to Category Posts widgets to link widget title to category archive page
+[added] small posts grid layout style to Category Posts Grid widget
+[added] number of posts and highlighting first post option to Category Post Columns widget
+[added] unminified version of html5shiv.min.js and jquery.flexslider-min.js
+[fixed] missing line spaces in paragraph styling of blockquotes
+
 Version 1.0.8
 -----------------------------------
 [fixed] cache reset bug of Category Posts widgets by changing from transient caching to object caching
