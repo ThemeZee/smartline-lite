@@ -15,7 +15,7 @@ function smartline_enqueue_scripts() {
 	wp_enqueue_style('smartline-lite-stylesheet', get_stylesheet_uri());
 	
 	// Register Genericons
-	wp_enqueue_style('smartline-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
+	wp_enqueue_style('smartline-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )

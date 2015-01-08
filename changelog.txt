@@ -2,6 +2,11 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.1
+-----------------------------------
+[improved] styling of blockquotes
+[updated] to Genericon Font 3.3 and added new twitch and spotify icons
+
 Version 1.0.9
 -----------------------------------
 [added] setting to Category Posts widgets to link widget title to category archive page

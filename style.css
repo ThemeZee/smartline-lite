@@ -2,7 +2,7 @@
 Theme Name: Smartline Lite
 Theme URI: http://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.0.9
+Version: 1.1
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -733,10 +733,10 @@ sub {
 	font-family: "Courier 10 Pitch", Courier, monospace;
 }
 blockquote {
-	background:#f5f5f5;
+	background: #f5f5f5;
 	border-left: 10px solid #ccc;
-	margin: 1.5em 0;
-	padding: 0.8em 1.5em;
+	margin: 1.2em 0;
+	padding: 0.3em 1.4em;
 }
 blockquote cite {
 	display: block;
@@ -959,10 +959,12 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; }
 #social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; }
 #social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; }
+#social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; }
 #social-icons-menu li a[href*="skype.com"]:before,
 #social-icons-menu li a[href*="skype:"]:before { content: '\f220'; }
 #social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; }
 #social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; }
+#social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; }
 #social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; }
 #social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; }
 #social-icons-menu li a[href*="wordpress.org"]:before,
@@ -989,10 +991,12 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="polldaddy.com"] { background: #bc0b0b; }
 #social-icons-menu li a[href*="getpocket.com"] { background: #ee4056; }
 #social-icons-menu li a[href*="reddit.com"] { background: #ff4500; }
+#social-icons-menu li a[href*="spotify.com"] { background: #81b71a; }
 #social-icons-menu li a[href*="skype.com"],
 #social-icons-menu li a[href*="skype:"] { background: #00aff0; }
 #social-icons-menu li a[href*="stumbleupon.com"] { background: #f74425; }
 #social-icons-menu li a[href*="tumblr.com"] { background: #32506d; }
+#social-icons-menu li a[href*="twitch.tv"] { background: #6441A5; }
 #social-icons-menu li a[href*="twitter.com"] { background: #00aced; }
 #social-icons-menu li a[href*="vimeo.com"]  { background: #aad450; }
 #social-icons-menu li a[href*="wordpress.org"] { background: #21759b; }
