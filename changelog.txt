@@ -6,6 +6,8 @@ Version 1.1
 -----------------------------------
 [improved] styling of blockquotes
 [updated] to Genericon Font 3.3 and added new twitch and spotify icons
+[added] extra content-search.php template for search
+[changed] appearance of static pages on search template
 
 Version 1.0.9
 -----------------------------------
