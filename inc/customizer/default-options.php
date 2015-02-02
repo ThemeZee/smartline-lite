@@ -31,6 +31,7 @@ function smartline_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
+		'deactivate_google_fonts'			=> false,
 		'header_tagline' 					=> true,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,

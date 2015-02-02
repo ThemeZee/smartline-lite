@@ -46,8 +46,7 @@ function smartline_customize_register_header_settings( $wp_customize ) {
             'label' =>  __( 'The Header Content configured below will be displayed on the right hand side of the header area.', 'smartline-lite' ),
             'section' => 'smartline_section_header',
             'settings' => 'smartline_theme_options[header_content_description]',
-            'priority' => 3,
-			'description' =>  __( 'Stay hungry. Stay foolish.', 'smartline-lite' )
+            'priority' => 3
             )
         )
     );

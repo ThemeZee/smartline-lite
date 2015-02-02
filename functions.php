@@ -56,38 +56,27 @@ function smartline_enqueue_comment_reply() {
 */
 function smartline_fonts_url() {
     $fonts_url = '';
+
+	// Get Theme Options from Database
+	$theme_options = smartline_theme_options();
 	
-    /* Translators: If there are characters in your language that are not
-    * supported by Raleway, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $raleway = _x( 'on', 'Raleway font: on or off', 'smartline-lite' );
- 
-    /* Translators: If there are characters in your language that are not
-    * supported by Bitter, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $bitter = _x( 'on', 'Bitter font: on or off', 'smartline-lite' );
- 
-    if ( 'off' !== $raleway || 'off' !== $bitter ) {
-        $font_families = array();
- 
-        if ( 'off' !== $raleway ) {
-            $font_families[] = 'Raleway:400,700';
-        }
- 
-        if ( 'off' !== $bitter ) {
-            $font_families[] = 'Bitter';
-        }
- 
-        $query_args = array(
-            'family' => urlencode( implode( '|', $font_families ) ),
-            'subset' => urlencode( 'latin,latin-ext' ),
-        );
- 
-        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-    }
- 
+	// Only embed Google Fonts if not deactivated
+	if ( ! ( isset($theme_options['deactivate_google_fonts']) and $theme_options['deactivate_google_fonts'] == true ) ) :
+		
+		// Set Default Fonts
+		$font_families = array('Raleway:400,700', 'Bitter');
+		 
+		// Set Google Font Query Args
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		
+		// Create Fonts URL
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		
+	endif;
+	 
     return $fonts_url;
 }
 
