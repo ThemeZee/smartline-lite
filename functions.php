@@ -76,8 +76,9 @@ function smartline_fonts_url() {
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 		
 	endif;
-	 
-    return $fonts_url;
+	
+	return apply_filters( 'smartline_google_fonts_url', $fonts_url );
+	
 }
 
 
@@ -223,17 +224,6 @@ function smartline_default_menu() {
 // Get Featured Posts
 function smartline_get_featured_content() {
 	return apply_filters( 'smartline_get_featured_content', false );
-}
-
-
-// Display Credit Link Function
-function smartline_credit_link() {
-	
-	printf(__( 'Powered by %1$s and %2$s.', 'smartline-lite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'smartline-lite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/smartline/" title="Smartline WordPress Theme">%s</a>', __( 'Smartline', 'smartline-lite' ) )
-		);
-
 }
 
 

@@ -1,4 +1,6 @@
 
+	<?php do_action('smartline_before_footer'); ?>
+	
 	<footer id="footer" class="clearfix" role="contentinfo">
 		
 		<?php // Display Footer Navigation
@@ -18,7 +20,11 @@
 		
 		<?php endif; ?>
 		
-		<div id="credit-link"><?php smartline_credit_link(); ?></div>
+		<div id="footer-text">
+			
+			<?php do_action('smartline_footer_text'); ?>
+		
+		</div>
 		
 	</footer>
 

@@ -8,6 +8,19 @@
  */
 	
 
+// Display Site Title
+add_action( 'smartline_site_title', 'smartline_display_site_title' );
+
+function smartline_display_site_title() { ?>
+
+	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+	</a>
+
+<?php
+}
+
+
 // Display Custom Header
 if ( ! function_exists( 'smartline_display_custom_header' ) ):
 	
@@ -156,6 +169,22 @@ if ( ! function_exists( 'smartline_display_pagination' ) ):
 	}
 	
 endif;
+
+
+// Display Footer Text
+add_action( 'smartline_footer_text', 'smartline_display_footer_text' );
+
+function smartline_display_footer_text() { ?>
+
+	<div id="credit-link">
+		<?php printf(__( 'Powered by %1$s and %2$s.', 'smartline-lite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'smartline-lite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/smartline/" title="Smartline WordPress Theme">%s</a>', __( 'Smartline', 'smartline-lite' ) )
+		); ?>
+	</div>
+
+<?php
+}
 
 
 // Display Social Icons
