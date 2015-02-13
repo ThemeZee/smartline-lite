@@ -237,16 +237,35 @@ class Smartline_Category_Posts_Columns_Widget extends WP_Widget {
 		// Display Category title if activated
 		if( $category_titles == true ) : 
 				
-				$cat_name = get_cat_name( $category_id );
-				$link_title = sprintf( __('View all posts from category %s', 'smartline-lite'), $cat_name );
+			echo $before_title;
+			
+			// Check if "All Categories" is selected
+			if( $category_id == 0 ) :
+			
+				$link_title = __('View all posts', 'smartline-lite');
+				$link_name = __('Latest Posts', 'smartline-lite');
+				
+				// Set Link URL to always point to latest posts page
+				if ( get_option( 'show_on_front' ) == 'page' ) :
+					$link_url = esc_url( get_permalink( get_option('page_for_posts' ) ) );
+				else : 
+					$link_url =	esc_url( home_url('/') );
+				endif;
+				
+			else :
+				
+				// Set Link URL and Title for Category
+				$link_name = get_cat_name( $category_id );
+				$link_title = sprintf( __('View all posts from category %s', 'smartline-lite'), $link_name );
 				$link_url = esc_url( get_category_link( $category_id ) );
 				
-				echo $before_title;
-				
-				echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $cat_name . '</a>';
-				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="genericon-next"></span></a>';
-				
-				echo $after_title; 
+			endif;
+			
+			// Display linked Widget Title
+			echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $link_name . '</a>';
+			echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="genericon-next"></span></a>';
+		
+			echo $after_title; 
 				
 		endif;
 
