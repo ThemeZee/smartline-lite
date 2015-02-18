@@ -167,12 +167,6 @@ input, textarea, select {
 	float: left;
 	max-width: 100%;
 }
-#logo .logo-image {
-	float: left;
-	border: 0;
-	max-width: 100%;
-	height: auto;
-}
 #logo .site-title {
 	float: left;
 	font-size: 2.5em;
@@ -1322,15 +1316,15 @@ embed, iframe, object, video {
 	color: #fff;
 	background: #004488;
 }
-#footer #credit-link {
+#footer #footer-text {
 	float: right;
 	font-size: 0.85em;
 }
-#footer #credit-link a:link, #footer #credit-link a:visited {
+#footer #footer-text a:link, #footer #footer-text a:visited {
 	color: #fff;
 	border-bottom: 1px dotted #ccc;
 }
-#footer #credit-link a:hover, #footer #credit-link a:active {
+#footer #footer-text a:hover, #footer #footer-text a:active {
 	border-bottom: none;
 	text-decoration: none;
 }
@@ -1382,7 +1376,7 @@ embed, iframe, object, video {
 		margin-left: 67%;
 		width: 33%;
 	}
-	#logo .site-title, #logo .logo-image {
+	#logo .site-title {
 		float: none;
 	}
 	#logo .site-description {
@@ -1429,14 +1423,6 @@ embed, iframe, object, video {
 	#logo {
 		float: none;
 		width: 100%;
-	}
-	#logo .site-title, #logo .logo-image {
-		float: none;
-	}
-	#logo .site-description {
-		float: none;
-		margin: 0.4em 0 0 0;
-		font-size: 1.2em;
 	}
 	#header-content {
 		display: block;
@@ -1675,7 +1661,7 @@ embed, iframe, object, video {
 	}
 	
 	/* Mobile Footer Navigation */
-	#footer #credit-link {
+	#footer #footer-text {
 		margin-top: -1.2em;
 	}
 		
@@ -1796,7 +1782,7 @@ embed, iframe, object, video {
 		float: none;
 		margin: 1em 0;
 	}
-	#footer #credit-link {
+	#footer #footer-text {
 		margin-top: 1.2em;
 		float: none;
 	}

@@ -119,6 +119,9 @@ function smartline_setup() {
 		'max_posts'  => 20
 		)
 	);
+	
+	// Add Theme Support for Smartline Pro Plugin
+	add_theme_support( 'smartline-pro' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'smartline-lite') );

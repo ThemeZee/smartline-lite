@@ -30,7 +30,7 @@ function smartline_customize_register_header_settings( $wp_customize ) {
             'label' => __( 'Header Content', 'smartline-lite' ),
             'section' => 'smartline_section_header',
             'settings' => 'smartline_theme_options[header_content]',
-            'priority' => 2
+            'priority' => 3
             )
         )
     );
@@ -46,7 +46,7 @@ function smartline_customize_register_header_settings( $wp_customize ) {
             'label' =>  __( 'The Header Content configured below will be displayed on the right hand side of the header area.', 'smartline-lite' ),
             'section' => 'smartline_section_header',
             'settings' => 'smartline_theme_options[header_content_description]',
-            'priority' => 3
+            'priority' => 4
             )
         )
     );
@@ -64,7 +64,7 @@ function smartline_customize_register_header_settings( $wp_customize ) {
         'section'  => 'smartline_section_header',
         'settings' => 'smartline_theme_options[header_search]',
         'type'     => 'checkbox',
-		'priority' => 4
+		'priority' => 5
 		)
 	);
 
@@ -80,7 +80,7 @@ function smartline_customize_register_header_settings( $wp_customize ) {
         'section'  => 'smartline_section_header',
         'settings' => 'smartline_theme_options[header_icons]',
         'type'     => 'checkbox',
-		'priority' => 5
+		'priority' => 6
 		)
 	);
 	

@@ -176,12 +176,12 @@ add_action( 'smartline_footer_text', 'smartline_display_footer_text' );
 
 function smartline_display_footer_text() { ?>
 
-	<div id="credit-link">
+	<span class="credit-link">
 		<?php printf(__( 'Powered by %1$s and %2$s.', 'smartline-lite' ), 
 			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'smartline-lite' ) ),
 			sprintf( '<a href="http://themezee.com/themes/smartline/" title="Smartline WordPress Theme">%s</a>', __( 'Smartline', 'smartline-lite' ) )
 		); ?>
-	</div>
+	</span>
 
 <?php
 }
