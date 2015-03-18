@@ -154,6 +154,7 @@ function smartline_add_image_sizes() {
 	// Add Frontpage Thumbnail Sizes
 	add_image_size( 'category_posts_wide_thumb', 600, 240, true);
 	add_image_size( 'category_posts_small_thumb', 90, 90, true);
+	add_image_size( 'category_posts_single', 880, 260, true);
 
 	// Add Widget Post Thumbnail Size
 	add_image_size( 'widget_post_thumb', 75, 75, true);
@@ -319,6 +320,7 @@ require( get_template_directory() . '/inc/template-tags.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-columns.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-grid.php' );
+require( get_template_directory() . '/inc/widgets/widget-category-posts-single.php' );
 
 // Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
