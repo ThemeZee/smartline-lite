@@ -44,12 +44,6 @@ function smartline_display_theme_info_page() {
 				<a href="http://preview.themezee.com/smartline/" target="_blank"><?php _e('Theme Demo', 'smartline-lite'); ?></a>
 				<a href="http://themezee.com/docs/smartline-documentation/" target="_blank"><?php _e('Theme Documentation', 'smartline-lite'); ?></a>
 				<a href="http://wordpress.org/support/view/theme-reviews/smartline-lite?filter=5" target="_blank"><?php _e('Rate this theme', 'smartline-lite'); ?></a>
-				
-				<span class="social-icons">
-					<a href="http://themezee.com/newsletter/" target="_blank"><span class="genericon-mail"></span></a>
-					<a href="https://www.facebook.com/ThemeZee" target="_blank"><span class="genericon-facebook"></span></a>
-					<a href="https://twitter.com/ThemeZee" target="_blank"><span class="genericon-twitter"></a>
-				</span>
 			</p>
 		</div>
 		<hr>
@@ -129,9 +123,6 @@ function smartline_theme_info_page_css($hook) {
 	
 	// Embed theme info css style
 	wp_enqueue_style('smartline-lite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css');
-	
-	// Register Genericons
-	wp_enqueue_style('smartline-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
 
 }
 

@@ -113,13 +113,6 @@ function smartline_setup() {
 		'width'	=> 1340,
 		'height' => 250,
 		'flex-height' => true));
-		
-	// Add theme support for Jetpack Featured Content
-	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'smartline_get_featured_content',
-		'max_posts'  => 20
-		)
-	);
 	
 	// Add Theme Support for Smartline Pro Plugin
 	add_theme_support( 'smartline-pro' );
@@ -322,9 +315,8 @@ require( get_template_directory() . '/inc/widgets/widget-category-posts-columns.
 require( get_template_directory() . '/inc/widgets/widget-category-posts-grid.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-single.php' );
 
-// Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
-if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
-	require( get_template_directory() . '/inc/featured-content.php' );
-}
+// Include Featured Content class
+require( get_template_directory() . '/inc/featured-content.php' );
+
 
 ?>
