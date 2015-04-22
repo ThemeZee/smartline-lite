@@ -2,6 +2,11 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.1.6
+-----------------------------------
+[added] new classes entry-title, updated and author for google microformats structure
+[added] comments section to fullwidth page template (of course you can still deactivate comments if you want)
+
 Version 1.1.5
 -----------------------------------
 [updated] Featured Content class to new version with many code improvements
