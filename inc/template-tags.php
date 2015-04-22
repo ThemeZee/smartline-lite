@@ -53,7 +53,7 @@ if ( ! function_exists( 'smartline_display_postmeta' ) ):
 	function smartline_display_postmeta() { ?>
 		
 		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'smartline-lite'), 
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'smartline-lite'), 
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -61,8 +61,8 @@ if ( ! function_exists( 'smartline_display_postmeta' ) ):
 			);
 		?>
 		</span>
-		<span class="meta-author">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'smartline-lite'), 
+		<span class="meta-author author vcard">
+		<?php printf(__('<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 'smartline-lite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_attr( sprintf( __( 'View all posts by %s', 'smartline-lite' ), get_the_author() ) ),
 				get_the_author()
