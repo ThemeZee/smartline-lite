@@ -2,6 +2,11 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.1.7
+-----------------------------------
+[added] new translation files for Spanish, French, Dutch, Italian, German and Greek
+[fixed] open div bug in Category Posts Grid widget when an uneven number of posts is displayed
+
 Version 1.1.6
 -----------------------------------
 [added] new classes entry-title, updated and author for google microformats structure

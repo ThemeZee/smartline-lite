@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Smartline Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 15:27+0100\n"
-"PO-Revision-Date: 2015-04-02 15:28+0100\n"
+"POT-Creation-Date: 2015-04-30 10:25+0100\n"
+"PO-Revision-Date: 2015-04-30 10:26+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -99,58 +99,58 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:121
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:122
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:123
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:126
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:167
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:176
+#: functions.php:169
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 
-#: functions.php:183
+#: functions.php:176
 msgid "Magazine Front Page"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:178
 msgid ""
 "Appears on Magazine Front Page page template only. You can use the Category "
 "Posts widgets here."
 msgstr ""
 
-#: functions.php:265
+#: functions.php:258
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:266 functions.php:286
+#: functions.php:259 functions.php:279
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:277
+#: functions.php:270
 #, php-format
 msgid "<span class=\"fn\">%s</span>"
 msgstr ""
 
-#: functions.php:281
+#: functions.php:274
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:285
+#: functions.php:278
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -209,40 +209,40 @@ msgid ""
 "website."
 msgstr ""
 
-#: inc/featured-content.php:419
+#: inc/featured-content.php:350
 msgid "Featured Content"
 msgstr ""
 
-#: inc/featured-content.php:420
+#: inc/featured-content.php:351
 #, php-format
 msgid ""
-"Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
-"tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+"Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> or a "
+"tag of your choice. Your theme supports up to %2$s posts in its featured "
+"content area."
 msgstr ""
 
-#: inc/featured-content.php:421 inc/featured-content.php:430
-#: inc/featured-content.php:490
-msgid "featured"
+#: inc/featured-content.php:378
+msgid "Tag name"
 msgstr ""
 
-#: inc/featured-content.php:442
-msgid "Tag Name"
+#: inc/featured-content.php:383
+msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
 
-#: inc/featured-content.php:447
-msgid "Don&rsquo;t display tag on front end."
+#: inc/featured-content.php:389
+msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
 #: inc/template-tags.php:56
 #, php-format
 msgid ""
-"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
-"%4$s</time></a>"
+"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date "
+"published updated\" datetime=\"%3$s\">%4$s</time></a>"
 msgstr ""
 
 #: inc/template-tags.php:65
 #, php-format
-msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
+msgid "<a class=\"fn\" href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 msgstr ""
 
 #: inc/template-tags.php:67
@@ -375,7 +375,7 @@ msgstr ""
 msgid "rate it"
 msgstr ""
 
-#: inc/customizer/customizer.php:54
+#: inc/customizer/customizer.php:50
 msgid "Display Tagline beside site title."
 msgstr ""
 

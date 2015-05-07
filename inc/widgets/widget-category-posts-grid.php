@@ -182,6 +182,11 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 				
 			endwhile;
 			
+			// Close Row if still open
+			if ( $row_open == true ) : ?>
+				</div>
+			<?php endif;
+			
 			// Remove excerpt filter
 			remove_filter('excerpt_length', 'smartline_frontpage_category_excerpt_length');
 			
