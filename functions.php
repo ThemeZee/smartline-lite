@@ -35,6 +35,9 @@ function smartline_enqueue_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script('smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
+	// Passing Parameters to Navigation.js Javascript
+	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', __('Menu', 'smartline-lite') );
+	
 	// Register and Enqueue Font
 	wp_enqueue_style('smartline-lite-default-fonts', smartline_fonts_url(), array(), null );
 

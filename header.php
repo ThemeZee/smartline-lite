@@ -28,7 +28,6 @@
 		if ( has_nav_menu( 'secondary' ) ) : ?>
 		
 		<nav id="topnav" class="clearfix" role="navigation">
-			<h5 id="topnav-icon"><?php _e('Menu', 'smartline-lite'); ?></h5>
 			<?php wp_nav_menu(	array(
 				'theme_location' => 'secondary', 
 				'container' => false, 
@@ -65,7 +64,6 @@
 	<div id="navi-wrap">
 		
 		<nav id="mainnav" class="clearfix" role="navigation">
-			<h4 id="mainnav-icon"><?php _e('Menu', 'smartline-lite'); ?></h4>
 			<?php // Display Main Navigation
 				wp_nav_menu( array(
 					'theme_location' => 'primary', 

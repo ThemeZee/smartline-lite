@@ -2,7 +2,7 @@
 Theme Name: Smartline Lite
 Theme URI: http://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.1.7
+Version: 1.1.8
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -215,7 +215,7 @@ input, textarea, select {
 
 /* Top Navigation Menu
 -------------------------------------------------------------- */
-#topnav-icon {
+#topnav-toggle, #topnav-icon {
 	display: none;
 }
 #topnav {
@@ -254,7 +254,7 @@ input, textarea, select {
 
 /* Navigation Menu
 -------------------------------------------------------------- */
-#mainnav-icon {
+#mainnav-toggle, #mainnav-icon {
 	display: none;
 }
 #navi-wrap {
@@ -1488,28 +1488,32 @@ embed, iframe, object, video {
 		margin: 1.5em 0;
 		float: none;
 	}
-	#mainnav-icon {
+	#mainnav-toggle {
 		display: block;
-		padding: 1.5em;
+		width: 100%;
+		margin: 0;
+		padding: 1.3em;
+		text-align: left;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-size: 1.0em;
 		font-family: 'Bitter', Georgia, Arial, Tahoma;
 		color: #fff;
 		background: #004488;
+		border: none;
 		-webkit-transition: all 0.1s ease-out;
 		-moz-transition: all 0.1s ease-out;
 		-ms-transition: all 0.1s ease-out;
 		-o-transition: all 0.1s ease-out;
 		transition: all 0.1s ease-out;	
 	}
-	#mainnav-icon:hover {
+	#mainnav-toggle:hover {
 		cursor: pointer;
 		background: #303030;
 	}
-	#mainnav-icon:after {
+	#mainnav-toggle:after {
 		float: right;
-		margin: -0.15em 0 0;
+		margin: -0.1em 0 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
 		content: '\f419';
@@ -1569,6 +1573,37 @@ embed, iframe, object, video {
 		text-decoration: underline;
 	}
 	
+	#mainnav-menu .submenu-dropdown-toggle {
+		float: right;
+		display: block;
+		margin: 0;
+		padding: 1.15em 1.5em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover {
+		cursor: pointer;
+		background: #404040; 
+	}
+	#mainnav-menu .submenu-dropdown-toggle:before {
+		font-size: 20px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f510';
+		color: #fff;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active:before {
+		content: '\f50e';
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle {
+		padding: 0.75em 1.2em;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle:before {
+		font-size: 16px;
+	}
+	
 	.widget-category-posts .type-post .post-title {
 		font-size: 1.4em;
 	}
@@ -1606,19 +1641,23 @@ embed, iframe, object, video {
 	#topnav {
 		float: none;
 	}
-	#topnav-icon {
+	#topnav-toggle {
 		display: block;
+		width: 100%;
+		margin: 0;
 		padding: 0.5em;
-		text-decoration: none;
 		font-size: 0.9em;
+		text-align: left;
+		text-decoration: none;
 		color: #333;
 		background: #eee;
+		border: none;
 	}
-	#topnav-icon:hover {
+	#topnav-toggle:hover {
 		cursor: pointer;
 		text-decoration: underline;
 	}
-	#topnav-icon:after {
+	#topnav-toggle:after {
 		float: right;
 		margin: 0.05em 0 0;
 		-webkit-font-smoothing: antialiased;
@@ -1628,7 +1667,7 @@ embed, iframe, object, video {
 		text-decoration: inherit;
 		vertical-align: text-bottom;
 	}
-	#topnav-icon:hover:after {
+	#topnav-toggle:hover:after {
 		text-decoration: none;
 	}
 	#topnav-menu {
