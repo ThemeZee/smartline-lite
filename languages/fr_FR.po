@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Smartline package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-05-07 14:46+0100\n"
+"PO-Revision-Date: 2015-06-06 16:45+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,28 +19,35 @@ msgid ""
 "tag of your choice. Your theme supports up to %2$s posts in its featured "
 "content area."
 msgstr ""
+"Promouvez facilement vos articles avec la balise <a href=\"%1$s\">\"featured"
+"\"</a> or une balise de votre choix. Votre thème accepte jusqu'à %2$s "
+"articles dans la zone de contenus promus."
 
 #: inc/featured-content.php:378
 msgid "Tag name"
-msgstr ""
+msgstr "Nom de la balise"
 
 #: inc/featured-content.php:383
 msgid "Hide tag from displaying in post meta and tag clouds."
-msgstr ""
+msgstr "Masquer la balise dans les nuages de balises."
 
 #: inc/featured-content.php:389
 msgid "Display featured posts in latest blog post listing."
 msgstr ""
+"Afficher les articles mis en avant dans la liste des derniers articles du "
+"blog."
 
 #: inc/template-tags.php:56
 msgid ""
 "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date "
 "published updated\" datetime=\"%3$s\">%4$s</time></a>"
 msgstr ""
+"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date "
+"published updated\" datetime=\"%3$s\">%4$s</time></a>"
 
 #: inc/template-tags.php:65
 msgid "<a class=\"fn\" href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
-msgstr ""
+msgstr "<a class=\"fn\" href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 
 #: featured-content-slider.php:14
 msgid ""
@@ -389,7 +396,7 @@ msgstr "%1$s"
 
 #: inc/template-tags.php:76
 msgid "Edit Post"
-msgstr "Éditer l\\'article"
+msgstr "Éditer l'article"
 
 #: inc/template-tags.php:214
 msgid ""
@@ -643,7 +650,7 @@ msgstr ""
 #: inc/widgets/widget-category-posts-grid.php:315
 #: inc/widgets/widget-category-posts-single.php:242
 msgid "Number of posts:"
-msgstr "Nombre d\\'articles:"
+msgstr "Nombre d'articles:"
 
 #: inc/widgets/widget-category-posts-grid.php:317
 msgid "Please chose an even number (2, 4, 6, 8)."

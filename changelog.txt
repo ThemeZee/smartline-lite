@@ -2,6 +2,13 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.1.9
+-----------------------------------
+[moved] featured content settings to post slider section in Customizer
+[added] number of posts setting for the Featured Post Slider
+[added] active_callback parameter to display slider controls only when slider is activated
+[added] and updated theme language files
+
 Version 1.1.8
 -----------------------------------
 [changed] navigation.js to use our new developed responsiveMenu function
