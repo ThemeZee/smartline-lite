@@ -78,7 +78,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
             'label' => __( 'Select Featured Posts', 'smartline-lite' ),
             'section' => 'smartline_section_slider',
             'settings' => 'smartline_theme_options[featured_posts_header]',
-            'priority' => 3,
+            'priority' => 4,
 			'active_callback' => 'smartline_slider_activated_callback'
             )
         )
@@ -95,7 +95,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'smartline-lite' ),
             'section' => 'smartline_section_slider',
             'settings' => 'smartline_theme_options[featured_posts_description]',
-            'priority' => 4,
+            'priority' => 5,
 			'active_callback' => 'smartline_slider_activated_callback'
             )
         )
@@ -114,7 +114,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
         'section'  => 'smartline_section_slider',
         'settings' => 'smartline_theme_options[slider_animation]',
         'type'     => 'radio',
-		'priority' => 8,
+		'priority' => 9,
 		'active_callback' => 'smartline_slider_activated_callback',
         'choices'  => array(
             'horizontal' => __( 'Horizontal Slider', 'smartline-lite' ),

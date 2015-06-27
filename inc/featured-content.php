@@ -367,28 +367,28 @@ class Smartline_Featured_Content {
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
 			'label'          => __( 'Tag name', 'smartline-lite' ),
 			'section'        => 'smartline_section_slider',
-			'priority'       => 5,
+			'priority'       => 6,
 			'active_callback' => 'smartline_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
 			'label'          => __( 'Hide tag from displaying in post meta and tag clouds.', 'smartline-lite' ),
 			'section'        => 'smartline_section_slider',
 			'type'           => 'checkbox',
-			'priority'       => 6,
+			'priority'       => 7,
 			'active_callback' => 'smartline_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
 			'label'          => __( 'Display featured posts in latest blog post listing.', 'smartline-lite' ),
 			'section'        => 'smartline_section_slider',
 			'type'           => 'checkbox',
-			'priority'       => 7,
+			'priority'       => 8,
 			'active_callback' => 'smartline_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[max-posts]', array(
 			'label'          => __( 'Number of Posts', 'smartline-lite' ),
 			'section'        => 'smartline_section_slider',
 			'type'           => 'text',
-			'priority'       => 9,
+			'priority'       => 10,
 			'active_callback' => 'smartline_slider_activated_callback'
 		) );
 	}

@@ -50,29 +50,49 @@ endif;
 // Display Postmeta Data
 if ( ! function_exists( 'smartline_display_postmeta' ) ):
 	
-	function smartline_display_postmeta() { ?>
+	function smartline_display_postmeta() {
 		
-		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'smartline-lite'), 
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
-		<span class="meta-author author vcard">
-		<?php printf(__('<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 'smartline-lite'), 
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'smartline-lite' ), get_the_author() ) ),
-				get_the_author()
-			);
-		?>
-		</span>
-		<span class="meta-category">
-			<?php printf(__('%1$s', 'smartline-lite'), get_the_category_list(', ')); ?>
-		</span>
-	<?php
+		// Get Theme Options from Database
+		$theme_options = smartline_theme_options();
+
+		// Display Date unless user has deactivated it via settings
+		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
+		
+			<span class="meta-date">
+			<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'smartline-lite'), 
+					esc_url( get_permalink() ),
+					esc_attr( get_the_time() ),
+					esc_attr( get_the_date( 'c' ) ),
+					esc_html( get_the_date() )
+				);
+			?>
+			</span>
+		
+		<?php endif; 
+		
+		// Display Author unless user has deactivated it via settings
+		if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>		
+		
+			<span class="meta-author author vcard">
+			<?php printf(__('<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 'smartline-lite'), 
+					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+					esc_attr( sprintf( __( 'View all posts by %s', 'smartline-lite' ), get_the_author() ) ),
+					get_the_author()
+				);
+			?>
+			</span>
+		
+		<?php endif; 
+		
+		// Display Categories unless user has deactivated it via settings
+		if ( isset($theme_options['meta_category']) and $theme_options['meta_category'] == true ) : ?>		
+		
+			<span class="meta-category">
+				<?php printf(__('%1$s', 'smartline-lite'), get_the_category_list(', ')); ?>
+			</span>
+		
+		<?php endif;
+		
 		edit_post_link(__( 'Edit Post', 'smartline-lite' ));
 	}
 	
@@ -119,18 +139,30 @@ if ( ! function_exists( 'smartline_display_postinfo' ) ):
 	
 	function smartline_display_postinfo() {
 		
+		// Get Theme Options from Database
+		$theme_options = smartline_theme_options();
+		
+		// Display Comments
 		if ( comments_open() ) : ?>
 			<span class="meta-comments">
 				<?php comments_popup_link( __('Leave a comment', 'smartline-lite'),__('One comment','smartline-lite'),__('% comments','smartline-lite') ); ?>
 			</span>
 <?php endif;
 
-		$tag_list = get_the_tag_list('', ', ');
-		if ( $tag_list ) : ?>
-			<span class="meta-tags">
-				<?php echo $tag_list; ?>
-			</span>
-<?php endif; 	
+		// Display Tags unless user has deactivated it via settings
+		if ( isset($theme_options['meta_tags']) and $theme_options['meta_tags'] == true ) :
+
+			$tag_list = get_the_tag_list('', ', ');
+			
+			if ( $tag_list ) : ?>
+				
+				<span class="meta-tags">
+					<?php echo $tag_list; ?>
+				</span>
+		
+			<?php endif; 
+		
+		endif;
 	
 	}
 	
