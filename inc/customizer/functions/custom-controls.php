@@ -62,6 +62,18 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 endif;
 
 
+// Add a callback function to retrieve wether posts length setting is set to excerpt or not
+function smartline_control_posts_length_callback( $control ) {
+	
+	// Check if excerpt mode is selected
+	if ( $control->manager->get_setting('smartline_theme_options[posts_length]')->value() == 'excerpt' ) :
+		return true;
+	else :
+		return false;
+	endif;
+	
+}
+
 // Add a callback function to retrieve wether slider is activated or not
 function smartline_slider_activated_callback( $control ) {
 	
