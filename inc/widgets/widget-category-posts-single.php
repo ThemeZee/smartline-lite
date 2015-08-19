@@ -10,7 +10,7 @@ class Smartline_Category_Posts_Single_Widget extends WP_Widget {
 			'classname' => 'smartline_category_posts_single', 
 			'description' => __('Displays a single post from a selected category. Please use this widget ONLY in the Frontpage Magazine widget area.', 'smartline-lite')
 		);
-		$this->WP_Widget('smartline_category_posts_single', __('Category Posts Single (Smartline)', 'smartline-lite'), $widget_ops);
+		parent::__construct('smartline_category_posts_single', __('Category Posts Single (Smartline)', 'smartline-lite'), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
