@@ -26,7 +26,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'smartlinelite' ),
+		'title'          => __( 'Theme Options', 'smartline-lite' ),
 		'description'    => '',
 	) );
 	

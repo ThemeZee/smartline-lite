@@ -40,7 +40,7 @@ function smartline_display_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php _e('Important Links:', 'smartline-lite'); ?></strong>
 				<a href="http://themezee.com/themes/smartline/" target="_blank"><?php _e('Theme Info Page', 'smartline-lite'); ?></a>
-				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'smartline'); ?></a>
+				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'smartline-lite'); ?></a>
 				<a href="http://preview.themezee.com/smartline/" target="_blank"><?php _e('Theme Demo', 'smartline-lite'); ?></a>
 				<a href="http://themezee.com/docs/smartline-documentation/" target="_blank"><?php _e('Theme Documentation', 'smartline-lite'); ?></a>
 				<a href="http://wordpress.org/support/view/theme-reviews/smartline-lite?filter=5" target="_blank"><?php _e('Rate this theme', 'smartline-lite'); ?></a>
