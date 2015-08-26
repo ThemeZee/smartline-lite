@@ -176,9 +176,9 @@ function smartline_register_sidebars() {
 		'after_title' => '</span></h3>',
 	));
 	register_sidebar( array(
-		'name' => __( 'Magazine Front Page', 'smartline-lite' ),
+		'name' => __( 'Magazine Homepage', 'smartline-lite' ),
 		'id' => 'frontpage-magazine',
-		'description' => __( 'Appears on Magazine Front Page page template only. You can use the Category Posts widgets here.', 'smartline-lite' ),
+		'description' => __( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'smartline-lite' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle">',
@@ -279,7 +279,7 @@ function smartline_list_comments($comment, $args, $depth) {
 
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 56 ); ?>
-					<?php printf(__('<span class="fn">%s</span>', 'smartline-lite'), get_comment_author_link()) ?>
+					<?php printf( '<span class="fn">%s</span>', get_comment_author_link() ); ?>
 				</div>
 
 		<?php if ($comment->comment_approved == '0') : ?>

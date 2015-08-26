@@ -59,7 +59,7 @@ if ( ! function_exists( 'smartline_display_postmeta' ) ):
 		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
 		
 			<span class="meta-date">
-			<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'smartline-lite'), 
+			<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 
 					esc_url( get_permalink() ),
 					esc_attr( get_the_time() ),
 					esc_attr( get_the_date( 'c' ) ),
@@ -74,7 +74,7 @@ if ( ! function_exists( 'smartline_display_postmeta' ) ):
 		if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>		
 		
 			<span class="meta-author author vcard">
-			<?php printf(__('<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 'smartline-lite'), 
+			<?php printf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 					esc_attr( sprintf( __( 'View all posts by %s', 'smartline-lite' ), get_the_author() ) ),
 					get_the_author()
@@ -88,7 +88,7 @@ if ( ! function_exists( 'smartline_display_postmeta' ) ):
 		if ( isset($theme_options['meta_category']) and $theme_options['meta_category'] == true ) : ?>		
 		
 			<span class="meta-category">
-				<?php printf(__('%1$s', 'smartline-lite'), get_the_category_list(', ')); ?>
+				<?php echo get_the_category_list(', '); ?>
 			</span>
 		
 		<?php endif;

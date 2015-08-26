@@ -8,9 +8,9 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'smartline_category_posts_boxed', 
-			'description' => __('Display latest posts from category in boxed layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'smartline-lite')
+			'description' => __('Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'smartline-lite')
 		);
-		parent::__construct('smartline_category_posts_boxed', __('Category Posts Boxed (Smartline)', 'smartline-lite'), $widget_ops);
+		parent::__construct('smartline_category_posts_boxed', sprintf( __('Category Posts: Boxed (%s)', 'smartline-lite'), 'Smartline' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
