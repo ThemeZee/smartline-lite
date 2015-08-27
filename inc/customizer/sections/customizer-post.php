@@ -26,14 +26,14 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_posts_length', array(
-        'label'    => __( 'Post Length on archives', 'smartline-lite' ),
+        'label'    => __( 'Post length on archives', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
             'index' => __( 'Show full posts', 'smartline-lite' ),
-            'excerpt' => __( 'Show post summaries (excerpt)', 'smartline-lite' )
+            'excerpt' => __( 'Show post excerpts', 'smartline-lite' )
 			)
 		)
 	);

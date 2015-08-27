@@ -27,7 +27,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_slider_activated', array(
-            'label' => __( 'Activate Featured Post Slider', 'smartline-lite' ),
+            'label' => __( 'Activate Post Slider', 'smartline-lite' ),
             'section' => 'smartline_section_slider',
             'settings' => 'smartline_theme_options[slider_activated]',
             'priority' => 1
@@ -42,7 +42,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_slider_activated_frontpage', array(
-        'label'    => __( 'Display Slider on Magazine Homepage template.', 'smartline-lite' ),
+        'label'    => __( 'Show Slider on Magazine Homepage', 'smartline-lite' ),
         'section'  => 'smartline_section_slider',
         'settings' => 'smartline_theme_options[slider_activated_front_page]',
         'type'     => 'checkbox',
@@ -57,7 +57,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_slider_activated_blog', array(
-        'label'    => __( 'Display Slider on normal blog index.', 'smartline-lite' ),
+        'label'    => __( 'Show Slider on posts page', 'smartline-lite' ),
         'section'  => 'smartline_section_slider',
         'settings' => 'smartline_theme_options[slider_activated_blog]',
         'type'     => 'checkbox',
@@ -117,8 +117,8 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 9,
 		'active_callback' => 'smartline_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Horizontal Slider', 'smartline-lite' ),
-            'fade' => __( 'Fade Slider', 'smartline-lite' )
+            'horizontal' => __( 'Slide Effect', 'smartline-lite' ),
+            'fade' => __( 'Fade Effect', 'smartline-lite' )
 			)
 		)
 	);

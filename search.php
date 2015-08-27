@@ -34,13 +34,19 @@
 
 			<div class="type-page">
 				
-				<div class="entry">
-					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'smartline-lite'); ?></p>
+				<h2 class="page-title entry-title"><?php _e('No matches', 'smartline-lite'); ?></h2>
+				
+				<div class="entry clearfix">
+					
+					<p><?php esc_html_e('Please try again, or use the navigation menus to find what you search for.', 'smartline-lite'); ?></p>
+					
+					<?php get_search_form(); ?>
+					
 				</div>
 				
 			</div>
 
-			<?php endif; ?>
+		<?php endif; ?>
 			
 		</section>
 		
