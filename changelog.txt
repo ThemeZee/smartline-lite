@@ -2,6 +2,12 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.2.4
+-----------------------------------
+[improved] code of 404.php and search.php templates
+[improved] phrasing of all translatable text strings
+[updated] translation files
+
 Version 1.2.3
 -----------------------------------
 [fixed] deprecating PHP4 style constructors notices in WordPress 4.3

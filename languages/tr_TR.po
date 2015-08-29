@@ -1,11 +1,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Smartline\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-09 14:32+0100\n"
-"PO-Revision-Date: 2015-06-01 10:33+0100\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-08-29 14:31+0100\n"
+"PO-Revision-Date: 2015-08-29 14:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,460 +15,283 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: tr_TR\n"
 
 #: 404.php:9
-msgid "404 Error: Not found"
+#, fuzzy
+msgid "404: Page not found"
 msgstr "404 Hata: Bulunamadı"
 
 #: 404.php:12
 msgid ""
-"The page you trying to reach does not exist, or has been moved. Please use "
-"the menus or the search box to find what you are looking for"
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
 msgstr ""
-"Aradığınız sayfa mevcut değil veya başka bir yere taşınmış. Aradığınız "
-"sayfayı bulmak için lütfen arama kutusu veya menüleri kullanınız."
-
-#: 404.php:14
-msgid "Search"
-msgstr "Ara"
-
-#: 404.php:17 inc/widgets/widget-tabbed-content.php:274
-msgid "Recent Posts"
-msgstr "Son Yazılar"
-
-#: 404.php:27 inc/widgets/widget-tabbed-content.php:271
-msgid "Pages"
-msgstr "Sayfalar"
-
-#: archive.php:14
-#, php-format
-msgid "Monthly Archives: %s"
-msgstr "Aylık Arşiv: %s"
-
-#: archive.php:14
-msgid "F Y"
-msgstr "F Y"
-
-#: archive.php:16 inc/widgets/widget-tabbed-content.php:267
-msgid "Archives"
-msgstr "Arşiv"
-
-#: author.php:16
-#, php-format
-msgid "Author Archives: %s"
-msgstr "Yazar Arşivi: %s"
-
-#: category.php:12
-#, php-format
-msgid "Category Archives: %s"
-msgstr "Kategori Arşivi: %s"
 
 #: comments.php:10
 msgid "Enter password to view comments."
 msgstr "Yorumları görmek için şifrenizi giriniz."
 
-#: comments.php:20 inc/template-tags.php:111
-#: inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
-#: inc/widgets/widget-popular-posts.php:71
-#: inc/widgets/widget-recent-posts.php:70
+#: comments.php:20 inc/template-tags.php:148
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:215
 msgid "One comment"
 msgstr "Bir yorum"
 
-#: comments.php:20 inc/template-tags.php:111
-#: inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
-#: inc/widgets/widget-popular-posts.php:71
-#: inc/widgets/widget-recent-posts.php:70
+#: comments.php:20 inc/template-tags.php:148
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:215
 #, php-format
 msgid "% comments"
 msgstr "% yorum"
 
-#: content-excerpt.php:11 content.php:10
+#: content-excerpt.php:11 content-search.php:8 content.php:10
+#: inc/widgets/widget-category-posts-single.php:130
 msgid "&raquo; Read more"
 msgstr "&raquo; Devamını Oku"
 
 #: featured-content-slider.php:14
 msgid ""
 "There is no featured content to be displayed in the slider. To set up the "
-"slider, go to Appearance → Customize, and add a tag under Tag Name in the "
-"Featured Content section. The slideshow will then display all posts which "
-"are tagged with that keyword."
+"slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a "
+"featured tag in the Post Slider section. The slideshow displays all your "
+"posts which are tagged with that keyword."
 msgstr ""
 
 #: featured-content-slider.php:48
 msgid "Read more &raquo;"
 msgstr "Devamını oku&raquo;"
 
-#: footer.php:18 header.php:32 header.php:76
+#: footer.php:18 functions.php:39
 msgid "Menu"
 msgstr "Menü"
 
-#: functions.php:90
+#: functions.php:124
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:125
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:126
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:129
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:170 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:137
-msgid "Appears on posts and pages except front page and fullwidth template."
-msgstr ""
-
-#: functions.php:144
-msgid "Magazine Front Page"
-msgstr ""
-
-#: functions.php:146
+#: functions.php:172
 msgid ""
-"Appears on Magazine Front Page page template only. You can use the Category "
-"Posts widgets here."
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:155
-msgid "Footer Widgets Left"
+#: functions.php:179
+msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:157
-msgid "Appears on footer on the left hand side."
+#: functions.php:181
+msgid ""
+"Appears on Magazine Homepage template only. You can use the Category Posts "
+"widgets here."
 msgstr ""
 
-#: functions.php:164
-msgid "Footer Widgets Center Left"
-msgstr ""
-
-#: functions.php:166
-msgid "Appears on footer on center left position."
-msgstr ""
-
-#: functions.php:173
-msgid "Footer Widgets Center Right"
-msgstr ""
-
-#: functions.php:175
-msgid "Appears on footer on center right position."
-msgstr ""
-
-#: functions.php:182
-msgid "Footer Widgets Right"
-msgstr ""
-
-#: functions.php:184
-msgid "Appears on footer on the right hand side."
-msgstr ""
-
-#: functions.php:215
-#, php-format
-msgid "Page %s"
-msgstr "Sayfa %s"
-
-#: functions.php:241
-#, php-format
-msgid "Powered by %1$s and %2$s."
-msgstr ""
-
-#: functions.php:242
-msgid "WordPress"
-msgstr ""
-
-#: functions.php:243
-msgid "Smartline"
-msgstr ""
-
-#: functions.php:293
+#: functions.php:270
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:294 functions.php:314
+#: functions.php:271 functions.php:291
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:305
-#, php-format
-msgid "<span class=\"fn\">%s</span>"
-msgstr ""
-
-#: functions.php:309
+#: functions.php:286
 msgid "Your comment is awaiting moderation."
 msgstr "Yorumunuz onay bekliyor."
 
-#: functions.php:313
+#: functions.php:290
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: image.php:19
-msgid "Previous"
-msgstr "Önceki"
-
-#: image.php:20
-msgid "Next"
-msgstr "Sonraki"
-
-#: image.php:26
-msgid "Return to Gallery"
-msgstr ""
-
-#: image.php:27
-msgid "Return to"
-msgstr ""
-
-#: search.php:13 search.php:27
+#: search.php:13
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Arama sonuçları: %s"
 
-#: search.php:33
+#: search.php:37
+msgid "No matches"
+msgstr ""
+
+#: search.php:41
+#, fuzzy
 msgid ""
-"No matches. Please try again, or use the navigation menus to find what you "
-"search for."
+"Please try again, or use the navigation menus to find what you search for."
 msgstr ""
 "Eşleşme bulunamadı. Lütfen tekrar deneyin veya navigasyon menülerini "
 "kullanın."
 
 #: searchform.php:4
+#, fuzzy
+msgctxt "label"
 msgid "Search for:"
 msgstr "Ara:"
 
-#: sidebar.php:14
-msgid "Widget Area"
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
 msgstr ""
 
 #: sidebar.php:16
 msgid ""
-"There are no active widgets to be displayed. Please go to Appearance -> "
-"Widgets to setup your sidebar."
+"Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
 
-#: tag.php:12
-#, php-format
-msgid "Tag Archives: %s"
-msgstr ""
-
-#: template-frontpage.php:36
+#: template-frontpage.php:39
 msgid ""
-"There are no widgets to be displayed. Please go to Appearance → Widgets and "
-"add at least one widget to the \"Magazine Front Page\" widget area. You can "
-"use the three Category Posts widgets to set up the theme like the demo "
-"website."
+"Please go to Appearance &#8594; Widgets and add at least one widget to the "
+"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"set up the theme like the demo website."
 msgstr ""
 
-#: inc/featured-content.php:419
-msgid "Featured Content"
+#: inc/featured-content.php:368
+msgid "Tag name"
 msgstr ""
 
-#: inc/featured-content.php:420
-#, php-format
-msgid ""
-"Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
-"tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+#: inc/featured-content.php:374
+msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
 
-#: inc/featured-content.php:421 inc/featured-content.php:430
-#: inc/featured-content.php:490
-msgid "featured"
+#: inc/featured-content.php:381
+msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
-#: inc/featured-content.php:442
-msgid "Tag Name"
+#: inc/featured-content.php:388
+msgid "Number of Posts"
 msgstr ""
 
-#: inc/featured-content.php:447
-msgid "Don&rsquo;t display tag on front end."
-msgstr ""
-
-#: inc/template-tags.php:43
-#, php-format
-msgid ""
-"<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\">"
-"%4$s</time></a>"
-msgstr ""
-
-#: inc/template-tags.php:52
-#, php-format
-msgid "<a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
-msgstr ""
-
-#: inc/template-tags.php:54
+#: inc/template-tags.php:79
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:60
-#, php-format
-msgid "%1$s"
-msgstr ""
-
-#: inc/template-tags.php:63
+#: inc/template-tags.php:96
 msgid "Edit Post"
 msgstr ""
 
-#: inc/template-tags.php:111 inc/widgets/widget-category-posts-boxed.php:184
-#: inc/widgets/widget-category-posts-columns.php:204
-#: inc/widgets/widget-category-posts-grid.php:182
+#: inc/template-tags.php:148 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:215
 msgid "Leave a comment"
 msgstr "Yorum yaz"
 
-#: inc/template-tags.php:184
+#: inc/template-tags.php:212
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: inc/template-tags.php:246
 msgid ""
-"Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
+"Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
-"tab and assign your created menu to the \"Social Icons\" theme location."
+"tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/theme-info.php:15
-msgid "Welcome to Smartline"
+#: inc/theme-info.php:18 inc/theme-info.php:38
+#, php-format
+msgid "Welcome to %1$s %2$s"
 msgstr ""
 
-#: inc/theme-info.php:16
+#: inc/theme-info.php:19
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:35
-#, php-format
-msgid "Welcome to %1s %2s"
-msgstr ""
-
-#: inc/theme-info.php:41
+#: inc/theme-info.php:44
 msgid "Important Links:"
 msgstr ""
 
-#: inc/theme-info.php:42
-msgid "Theme Info Page"
+#: inc/theme-info.php:45
+msgid "Theme Page"
 msgstr ""
 
-#: inc/theme-info.php:43
+#: inc/theme-info.php:46
 msgid "Changelog"
 msgstr ""
 
-#: inc/theme-info.php:44
+#: inc/theme-info.php:47
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/theme-info.php:65
+#: inc/theme-info.php:48 inc/theme-info.php:63
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:62
+#: inc/theme-info.php:49
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/theme-info.php:56
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:67
+#: inc/theme-info.php:66
 msgid ""
-"Need any help to setup and configure this theme? We got you covered with an "
+"You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:69
-msgid "Visit Smartline Documentation"
+#: inc/theme-info.php:70
+#, php-format
+msgid "View %s Documentation"
 msgstr ""
 
-#: inc/theme-info.php:74 inc/customizer/customizer.php:30
+#: inc/theme-info.php:76 inc/customizer/customizer.php:29
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-info.php:76
+#: inc/theme-info.php:79
+#, php-format
 msgid ""
-"Smartline supports the awesome Theme Customizer for all theme settings. "
-"Click \"Customize Theme\" to open the Customizer now."
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:78
+#: inc/theme-info.php:82
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:98
-#, php-format
-msgid "Smartline is proudly brought to you by %1s."
+#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:14
+msgid "Pro Version"
 msgstr ""
 
-#: inc/customizer/customizer.php:55
-msgid "Display Tagline beside site title."
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:14
-msgid "Theme Colors"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:30
-msgid "Header Line Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:46
-msgid "Navigation Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:62
-msgid "Post Title Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:78
-msgid "Link Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:94
-msgid "Widget Title Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:110
-msgid "Widget Link Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:126
-msgid "Footer Widgets Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:142
-msgid "Footer Line Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:14
-msgid "Theme Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:30
-msgid "Default Text Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:46
-msgid "Title Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:62
-msgid "Navigation Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:78
-msgid "Widget Title Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:94
-msgid "Install additional Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:111
+#: inc/theme-info.php:90
 msgid ""
-"You can install additional fonts from the <a target=\"_blank\" href=\"http://"
-"www.google.com/webfonts/\">Google Font API</a> by inserting a list of fonts "
-"separated by Semicolon here (e.g. Cantora One; Galindo; Open Sans; ...). "
-"Please save your changes and RELOAD(F5) the Customizer then."
+"You need more features? Purchase the Pro Version to get additional features "
+"and advanced customization options."
+msgstr ""
+
+#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:62
+#, php-format
+msgid "Learn more about %s Pro"
+msgstr ""
+
+#: inc/theme-info.php:115
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+
+#: inc/theme-info.php:118
+msgid "rate it"
+msgstr ""
+
+#: inc/customizer/customizer.php:50
+msgid "Display Tagline beside site title."
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -486,42 +310,33 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:50
-msgid "Footer Text"
+#: inc/customizer/sections/customizer-general.php:51
+msgid "Default Fonts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:65
-msgid "Display Credit Link to ThemeZee on footer line."
+#: inc/customizer/sections/customizer-general.php:68
+msgid "Deactivate Google Fonts in case your language is not compatible."
 msgstr ""
 
 #: inc/customizer/sections/customizer-header.php:14
-#: inc/customizer/sections/customizer-header.php:65
-msgid "Header Content"
+msgid "Header Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-header.php:30
-msgid "Logo Image (replaces Site Title)"
+msgid "Header Content"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:47
-msgid "Remove spacing on header area for fullwidth logo images."
-msgstr ""
-
-#: inc/customizer/sections/customizer-header.php:81
+#: inc/customizer/sections/customizer-header.php:46
 msgid ""
-"The Header Content configured below will be displayed on the right hand side "
-"of the header area."
+"The Header Content will be displayed on the right hand side of the header "
+"area."
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:85
-msgid "Stay hungry. Stay foolish."
-msgstr ""
-
-#: inc/customizer/sections/customizer-header.php:99
+#: inc/customizer/sections/customizer-header.php:63
 msgid "Display search field on header area"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:115
+#: inc/customizer/sections/customizer-header.php:79
 msgid "Display Social Icons on header area"
 msgstr ""
 
@@ -530,7 +345,7 @@ msgid "Post Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:29
-msgid "Post Length on archives"
+msgid "Post length on archives"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:35
@@ -538,288 +353,269 @@ msgid "Show full posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:36
-msgid "Show post summaries (excerpt)"
+msgid "Show post excerpts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:51
+#: inc/customizer/sections/customizer-post.php:50
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:69
+msgid "Text after Excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:84
+msgid "Display [...] after excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:102
 msgid "Post Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:66
+#: inc/customizer/sections/customizer-post.php:117
 msgid "Display featured images on archive pages"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:82
+#: inc/customizer/sections/customizer-post.php:133
 msgid "Display featured images on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:100
-msgid "Excerpt More Text"
+#: inc/customizer/sections/customizer-post.php:151
+msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:115
-msgid "Display [...] after text excerpts."
+#: inc/customizer/sections/customizer-post.php:166
+msgid "Display post date"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:181
+msgid "Display post author"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:196
+msgid "Display post categories"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:211
+msgid "Display post tags"
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:14
 msgid "Post Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:15
+#: inc/customizer/sections/customizer-slider.php:30
+msgid "Activate Post Slider"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:45
+msgid "Show Slider on Magazine Homepage"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:60
+msgid "Show Slider on posts page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:78
+#, fuzzy
+msgid "Select Featured Posts"
+msgstr "Son Yazılar"
+
+#: inc/customizer/sections/customizer-slider.php:95
 msgid ""
-"The slideshow displays your featured posts, which you can configure on the "
-"\"Featured Content\" section above."
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:31
-msgid "Activate Featured Post Slider"
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:46
-msgid "Display Slider on Magazine Front Page template."
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:61
-msgid "Display Slider on normal blog index."
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:77
+#: inc/customizer/sections/customizer-slider.php:113
 msgid "Slider Animation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:83
-msgid "Horizontal Slider"
+#: inc/customizer/sections/customizer-slider.php:120
+msgid "Slide Effect"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:84
-msgid "Fade Slider"
+#: inc/customizer/sections/customizer-slider.php:121
+msgid "Fade Effect"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:30
+msgid "You need more features?"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:46
+msgid ""
+"Purchase the Pro Version to get additional features and advanced "
+"customization options."
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
-"Display latest posts from category in boxed layout. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from a selected category in a boxed layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:13
-msgid "Category Posts Boxed (Smartline)"
+#, php-format
+msgid "Category Posts: Boxed (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:209
-#: inc/widgets/widget-category-posts-columns.php:230
-#: inc/widgets/widget-category-posts-grid.php:208
-#: inc/widgets/widget-popular-posts.php:120
-#: inc/widgets/widget-recent-comments.php:119
-#: inc/widgets/widget-recent-posts.php:119
-#: inc/widgets/widget-social-icons.php:66
-#: inc/widgets/widget-tabbed-content.php:294
-#: inc/widgets/widget-tabbed-content.php:302
-#: inc/widgets/widget-tabbed-content.php:310
-#: inc/widgets/widget-tabbed-content.php:318
-#: inc/widgets/widget-tabbed-content.php:326
+#: inc/widgets/widget-category-posts-boxed.php:219
+#: inc/widgets/widget-category-posts-columns.php:245
+#: inc/widgets/widget-category-posts-grid.php:244
+#: inc/widgets/widget-category-posts-single.php:167
+msgid "View all posts"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:231
+#: inc/widgets/widget-category-posts-columns.php:259
+#: inc/widgets/widget-category-posts-grid.php:256
+#: inc/widgets/widget-category-posts-single.php:179
+#, php-format
+msgid "View all posts from category %s"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:272
+#: inc/widgets/widget-category-posts-columns.php:297
+#: inc/widgets/widget-category-posts-grid.php:299
+#: inc/widgets/widget-category-posts-single.php:221
 msgid "Title:"
 msgstr "Başlık:"
 
-#: inc/widgets/widget-category-posts-boxed.php:215
-#: inc/widgets/widget-category-posts-grid.php:214
+#: inc/widgets/widget-category-posts-boxed.php:278
+#: inc/widgets/widget-category-posts-grid.php:305
+#: inc/widgets/widget-category-posts-single.php:227
 msgid "Category:"
 msgstr "Kategori:"
 
-#: inc/widgets/widget-category-posts-boxed.php:218
-#: inc/widgets/widget-category-posts-columns.php:239
-#: inc/widgets/widget-category-posts-columns.php:253
-#: inc/widgets/widget-category-posts-grid.php:217
+#: inc/widgets/widget-category-posts-boxed.php:281
+#: inc/widgets/widget-category-posts-columns.php:306
+#: inc/widgets/widget-category-posts-columns.php:321
+#: inc/widgets/widget-category-posts-grid.php:308
+#: inc/widgets/widget-category-posts-single.php:230
 msgid "All Categories"
 msgstr "Tüm Kategoriler"
 
+#: inc/widgets/widget-category-posts-boxed.php:295
+#: inc/widgets/widget-category-posts-grid.php:336
+#: inc/widgets/widget-category-posts-single.php:250
+msgid "Link Widget Title to Category Archive page"
+msgstr ""
+
 #: inc/widgets/widget-category-posts-columns.php:11
 msgid ""
-"Display latest posts from two specified categories. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
 msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:13
-msgid "Category Posts Columns (Smartline)"
+#, php-format
+msgid "Category Posts: 2 Columns (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:236
+#: inc/widgets/widget-category-posts-columns.php:246
+#, fuzzy
+msgid "Latest Posts"
+msgstr "Son Yazılar"
+
+#: inc/widgets/widget-category-posts-columns.php:303
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:250
+#: inc/widgets/widget-category-posts-columns.php:318
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:11
-msgid ""
-"Display latest posts from category in a grid layout. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
-msgstr ""
-
-#: inc/widgets/widget-category-posts-grid.php:13
-msgid "Category Posts Grid (Smartline)"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-grid.php:228
+#: inc/widgets/widget-category-posts-columns.php:333
+#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-single.php:242
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:230
+#: inc/widgets/widget-category-posts-columns.php:341
+msgid "Highlight first post (big image + excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:348
+#, fuzzy
+msgid "Display Category Titles"
+msgstr "Tüm Kategoriler"
+
+#: inc/widgets/widget-category-posts-grid.php:11
+msgid ""
+"Displays your posts from a selected category in a grid layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:13
+#, fuzzy, php-format
+msgid "Category Posts: Grid (%s)"
+msgstr "Kategori Arşivi: %s"
+
+#: inc/widgets/widget-category-posts-grid.php:322
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-popular-posts.php:8
-msgid "Show popular posts with post thumbnails."
+#: inc/widgets/widget-category-posts-grid.php:329
+msgid "Display as small posts grid with thumbnails"
 msgstr ""
 
-#: inc/widgets/widget-popular-posts.php:71
-#: inc/widgets/widget-recent-posts.php:70
-msgid "No comments"
-msgstr "Yorum bulunmuyor"
-
-#: inc/widgets/widget-popular-posts.php:123
-#: inc/widgets/widget-recent-posts.php:122
-msgid "Number of posts to show:"
-msgstr ""
-
-#: inc/widgets/widget-popular-posts.php:127
-#: inc/widgets/widget-recent-posts.php:126
-msgid "Show Post Thumbnails?"
-msgstr ""
-
-#: inc/widgets/widget-popular-posts.php:129
-#: inc/widgets/widget-recent-posts.php:128
-msgid "Excerpt length in number of words:"
-msgstr ""
-
-#: inc/widgets/widget-popular-posts.php:133
-#: inc/widgets/widget-recent-posts.php:132
-msgid "Show Postmeta(Date, Comments)?"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:8
-msgid "Show recent comments with gravatar."
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:62
-msgid " on"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:68
-msgid " said:"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:122
-msgid "Number of comments to show:"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:126
-msgid "Show avatar of comment author?"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:129
-msgid "Show post title of commented post?"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:132
-msgid "Show excerpt of comment?"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:134
-msgid "Excerpt length in number of characters:"
-msgstr ""
-
-#: inc/widgets/widget-recent-comments.php:138
-msgid "Show date of comment?"
-msgstr ""
-
-#: inc/widgets/widget-recent-posts.php:8
-#: inc/widgets/widget-tabbed-content.php:9
-msgid "Show recent posts with post thumbnails."
-msgstr ""
-
-#: inc/widgets/widget-social-icons.php:8
-msgid "Displays your Social Icons"
-msgstr ""
-
-#: inc/widgets/widget-tabbed-content.php:147
-msgid "Syndicate this site using RSS 2.0"
-msgstr ""
-
-#: inc/widgets/widget-tabbed-content.php:147
-msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr ""
-
-#: inc/widgets/widget-tabbed-content.php:148
-msgid "The latest comments to all posts in RSS"
-msgstr ""
-
-#: inc/widgets/widget-tabbed-content.php:148
-msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
-msgstr "Yorumlar<abbr title=\"Really Simple Syndication\">RSS</abbr>"
-
-#: inc/widgets/widget-tabbed-content.php:149
+#: inc/widgets/widget-category-posts-single.php:11
 msgid ""
-"Powered by WordPress, state-of-the-art semantic personal publishing platform."
+"Displays a single post from a selected category. Please use this widget ONLY "
+"in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-tabbed-content.php:149
-msgid "WordPress.org"
-msgstr ""
-
-#: inc/widgets/widget-tabbed-content.php:194
+#: inc/widgets/widget-category-posts-single.php:13
 #, php-format
-msgid "%1$s on %2$s"
+msgid "Category Posts: Single (%s)"
 msgstr ""
 
-#: inc/widgets/widget-tabbed-content.php:268
-msgid "Categories"
-msgstr "Kategoriler"
+#~ msgid ""
+#~ "The page you trying to reach does not exist, or has been moved. Please "
+#~ "use the menus or the search box to find what you are looking for"
+#~ msgstr ""
+#~ "Aradığınız sayfa mevcut değil veya başka bir yere taşınmış. Aradığınız "
+#~ "sayfayı bulmak için lütfen arama kutusu veya menüleri kullanınız."
 
-#: inc/widgets/widget-tabbed-content.php:269
-msgid "Links"
-msgstr "Linkler"
+#~ msgid "Search"
+#~ msgstr "Ara"
 
-#: inc/widgets/widget-tabbed-content.php:270
-msgid "Meta"
-msgstr ""
+#~ msgid "Pages"
+#~ msgstr "Sayfalar"
 
-#: inc/widgets/widget-tabbed-content.php:272
-msgid "Popular Posts"
-msgstr ""
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Aylık Arşiv: %s"
 
-#: inc/widgets/widget-tabbed-content.php:273
-msgid "Recent Comments"
-msgstr "Son Yorumlar"
+#~ msgid "F Y"
+#~ msgstr "F Y"
 
-#: inc/widgets/widget-tabbed-content.php:275
-msgid "Tag Cloud"
-msgstr ""
+#~ msgid "Archives"
+#~ msgstr "Arşiv"
 
-#: inc/widgets/widget-tabbed-content.php:298
-msgid "Tab 1:"
-msgstr ""
+#~ msgid "Author Archives: %s"
+#~ msgstr "Yazar Arşivi: %s"
 
-#: inc/widgets/widget-tabbed-content.php:306
-msgid "Tab 2:"
-msgstr ""
+#~ msgid "Page %s"
+#~ msgstr "Sayfa %s"
 
-#: inc/widgets/widget-tabbed-content.php:314
-msgid "Tab 3:"
-msgstr ""
+#~ msgid "Previous"
+#~ msgstr "Önceki"
 
-#: inc/widgets/widget-tabbed-content.php:322
-msgid "Tab 4:"
-msgstr ""
+#~ msgid "Next"
+#~ msgstr "Sonraki"
 
-#: inc/widgets/widget-tabbed-content.php:331
-msgid "Settings for Recent/Popular Posts and Recent Comments"
-msgstr ""
+#~ msgid "No comments"
+#~ msgstr "Yorum bulunmuyor"
 
-#: inc/widgets/widget-tabbed-content.php:332
-msgid "Number of entries:"
-msgstr ""
+#~ msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+#~ msgstr "Yorumlar<abbr title=\"Really Simple Syndication\">RSS</abbr>"
 
-#: inc/widgets/widget-tabbed-content.php:335
-msgid "Show Thumbnails?"
-msgstr ""
+#~ msgid "Categories"
+#~ msgstr "Kategoriler"
+
+#~ msgid "Links"
+#~ msgstr "Linkler"
+
+#~ msgid "Recent Comments"
+#~ msgstr "Son Yorumlar"
