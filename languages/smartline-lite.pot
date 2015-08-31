@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Smartline Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-29 14:31+0100\n"
-"PO-Revision-Date: 2015-08-29 14:32+0100\n"
+"POT-Creation-Date: 2015-08-31 20:04+0100\n"
+"PO-Revision-Date: 2015-08-31 20:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -95,29 +95,29 @@ msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:179
+#: functions.php:181
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:181
+#: functions.php:183
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
 msgstr ""
 
-#: functions.php:270
+#: functions.php:278
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:271 functions.php:291
+#: functions.php:279 functions.php:299
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:286
+#: functions.php:294
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:290
+#: functions.php:298
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -287,6 +287,10 @@ msgstr ""
 
 #: inc/theme-info.php:118
 msgid "rate it"
+msgstr ""
+
+#: inc/customizer/customizer.php:39
+msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:50
