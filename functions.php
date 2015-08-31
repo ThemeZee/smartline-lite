@@ -165,7 +165,7 @@ add_action( 'widgets_init', 'smartline_register_sidebars' );
 if ( ! function_exists( 'smartline_register_sidebars' ) ):
 function smartline_register_sidebars() {
 
-	// Register Sidebars
+	// Register Sidebar
 	register_sidebar( array(
 		'name' => __( 'Sidebar', 'smartline-lite' ),
 		'id' => 'sidebar',
@@ -175,6 +175,8 @@ function smartline_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
+	
+	// Register Magazine Homepage
 	register_sidebar( array(
 		'name' => __( 'Magazine Homepage', 'smartline-lite' ),
 		'id' => 'frontpage-magazine',
@@ -184,6 +186,12 @@ function smartline_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => '</h3>',
 	));
+	
+	// Register Category Posts widgets
+	register_widget('Smartline_Category_Posts_Boxed_Widget');
+	register_widget('Smartline_Category_Posts_Columns_Widget');
+	register_widget('Smartline_Category_Posts_Grid_Widget');
+	register_widget('Smartline_Category_Posts_Single_Widget');
 
 }
 endif;

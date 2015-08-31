@@ -299,5 +299,3 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 <?php
 	}
 }
-register_widget('Smartline_Category_Posts_Boxed_Widget');
-?>
