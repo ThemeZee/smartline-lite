@@ -186,12 +186,6 @@ function smartline_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => '</h3>',
 	));
-	
-	// Register Category Posts widgets
-	register_widget('Smartline_Category_Posts_Boxed_Widget');
-	register_widget('Smartline_Category_Posts_Columns_Widget');
-	register_widget('Smartline_Category_Posts_Grid_Widget');
-	register_widget('Smartline_Category_Posts_Single_Widget');
 
 }
 endif;

@@ -2,6 +2,12 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.2.5
+-----------------------------------
+[moved] register_widget functions to widgets_init action hook to fix widget translation
+[improved] customizer sections to be translation-ready
+[updated] German translation file
+
 Version 1.2.4
 -----------------------------------
 [improved] code of 404.php and search.php templates

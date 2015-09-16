@@ -299,3 +299,12 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 <?php
 	}
 }
+
+// Register Widget
+add_action( 'widgets_init', 'smartline_register_category_posts_boxed_widget' );
+
+function smartline_register_category_posts_boxed_widget() {
+
+	register_widget('Smartline_Category_Posts_Boxed_Widget');
+	
+}
