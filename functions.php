@@ -191,122 +191,6 @@ function smartline_register_sidebars() {
 endif;
 
 
-// Add title tag for older WordPress versions
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-
-	add_action( 'wp_head', 'smartline_wp_title' );
-	function smartline_wp_title() { ?>
-		
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-
-<?php
-    }
-    
-endif;
-
-
-// Add Default Menu Fallback Function
-function smartline_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
-}
-
-
-// Get Featured Posts
-function smartline_get_featured_content() {
-	return apply_filters( 'smartline_get_featured_content', false );
-}
-
-
-// Change Excerpt Length
-add_filter('excerpt_length', 'smartline_excerpt_length');
-function smartline_excerpt_length($length) {
-    
-	// Get Theme Options from Database
-	$theme_options = smartline_theme_options();
-
-	// Return Excerpt Length
-	if ( isset($theme_options['excerpt_length']) and $theme_options['excerpt_length'] >= 0 ) :
-		return absint( $theme_options['excerpt_length'] );
-	else :
-		return 60; // number of words
-	endif;
-}
-
-
-// Slideshow Excerpt Length
-function smartline_slideshow_excerpt_length($length) {
-    return 15;
-}
-
-// Frontpage Category Excerpt Length
-function smartline_frontpage_category_excerpt_length($length) {
-    return 25;
-}
-
-
-// Change Excerpt More
-add_filter('excerpt_more', 'smartline_excerpt_more');
-function smartline_excerpt_more($more) {
-    
-	// Get Theme Options from Database
-	$theme_options = smartline_theme_options();
-
-	// Return Excerpt Text
-	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
-		return ' [...]';
-	else :
-		return '';
-	endif;
-}
-
-
-// Custom Template for comments and pingbacks.
-if ( ! function_exists( 'smartline_list_comments' ) ):
-function smartline_list_comments($comment, $args, $depth) {
-
-	$GLOBALS['comment'] = $comment;
-
-	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
-
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'smartline-lite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'smartline-lite' ), '<span class="edit-link">', '</span>' ); ?>
-			</p>
-
-	<?php else : ?>
-
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-
-			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-
-				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment, 56 ); ?>
-					<?php printf( '<span class="fn">%s</span>', get_comment_author_link() ); ?>
-				</div>
-
-		<?php if ($comment->comment_approved == '0') : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'smartline-lite' ); ?></p>
-		<?php endif; ?>
-
-				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'smartline-lite'), get_comment_date(),  get_comment_time()) ?></a>
-					<?php edit_comment_link(__('(Edit)', 'smartline-lite'),'  ','') ?>
-				</div>
-
-				<div class="comment-content"><?php comment_text(); ?></div>
-
-				<div class="reply">
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-				</div>
-
-			</div>
-<?php
-	endif;
-
-}
-endif;
-
-
 /*==================================== INCLUDE FILES ====================================*/
 
 // include Theme Info page
@@ -320,6 +204,9 @@ require( get_template_directory() . '/inc/customizer/default-options.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php' );
 
+// Include Extra Functions
+require get_template_directory() . '/inc/extras.php';
+
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
 
@@ -331,6 +218,3 @@ require( get_template_directory() . '/inc/widgets/widget-category-posts-single.p
 
 // Include Featured Content class
 require( get_template_directory() . '/inc/featured-content.php' );
-
-
-?>
