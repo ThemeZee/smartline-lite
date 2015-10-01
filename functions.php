@@ -5,7 +5,6 @@
 // Load default style.css and Javascripts
 add_action('wp_enqueue_scripts', 'smartline_enqueue_scripts');
 
-if ( ! function_exists( 'smartline_enqueue_scripts' ) ):
 function smartline_enqueue_scripts() {
 
 	// Get Theme Options from Database
@@ -38,20 +37,16 @@ function smartline_enqueue_scripts() {
 	// Passing Parameters to Navigation.js Javascript
 	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', __('Menu', 'smartline-lite') );
 	
+	// Register Comment Reply Script for Threaded Comments
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 	// Register and Enqueue Font
 	wp_enqueue_style('smartline-lite-default-fonts', smartline_fonts_url(), array(), null );
 
 }
-endif;
 
-// Load comment-reply.js if comment form is loaded and threaded comments activated
-add_action( 'comment_form_before', 'smartline_enqueue_comment_reply' );
-
-function smartline_enqueue_comment_reply() {
-	if( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
 
 /*
 * Retrieve Font URL to register default Google Fonts
@@ -88,7 +83,6 @@ function smartline_fonts_url() {
 // Setup Function: Registers support for various WordPress features
 add_action( 'after_setup_theme', 'smartline_setup' );
 
-if ( ! function_exists( 'smartline_setup' ) ):
 function smartline_setup() {
 
 	// Set Content Width
@@ -129,13 +123,11 @@ function smartline_setup() {
 	register_nav_menu( 'social', __('Social Icons', 'smartline-lite') );
 
 }
-endif;
 
 
 // Add custom Image Sizes
 add_action( 'after_setup_theme', 'smartline_add_image_sizes' );
 
-if ( ! function_exists( 'smartline_add_image_sizes' ) ):
 function smartline_add_image_sizes() {
 
 	// Add Custom Header Image Size
@@ -156,13 +148,11 @@ function smartline_add_image_sizes() {
 	add_image_size( 'widget_post_thumb', 75, 75, true);
 
 }
-endif;
 
 
 // Register Sidebars
 add_action( 'widgets_init', 'smartline_register_sidebars' );
 
-if ( ! function_exists( 'smartline_register_sidebars' ) ):
 function smartline_register_sidebars() {
 
 	// Register Sidebar
@@ -188,7 +178,6 @@ function smartline_register_sidebars() {
 	));
 
 }
-endif;
 
 
 /*==================================== INCLUDE FILES ====================================*/
