@@ -110,9 +110,6 @@ function smartline_setup() {
 		'width'	=> 1340,
 		'height' => 250,
 		'flex-height' => true));
-	
-	// Add Theme Support for Smartline Pro Plugin
-	add_theme_support( 'smartline-pro' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'smartline-lite') );
@@ -198,6 +195,9 @@ require get_template_directory() . '/inc/extras.php';
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
+
+// Include support functions for Theme Addons
+require get_template_directory() . '/inc/addons.php';
 
 // include Widget Files
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );
