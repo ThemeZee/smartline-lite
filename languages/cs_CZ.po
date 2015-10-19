@@ -1,0 +1,581 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smartline Lite\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-08-31 20:04+0100\n"
+"PO-Revision-Date: 2015-10-06 15:47+0100\n"
+"Last-Translator: Administrátor <admin@sufix.cz>\n"
+"Language-Team: ThemeZee <support@themezee.com>\n"
+"Language: Czech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Loco-Target-Locale: cs_CZ\n"
+
+#: 404.php:9
+msgid "404: Page not found"
+msgstr "Chyba 404: Stránka nenalezena"
+
+#: 404.php:12
+msgid ""
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
+msgstr ""
+"Na této adrese nebylo nic nalezeno. Můžete zkusit hledat nebo použít odkazy "
+"níže."
+
+#: comments.php:10
+msgid "Enter password to view comments."
+msgstr "Zadejte heslo ke zobrazení komentářů."
+
+#: comments.php:20 inc/template-tags.php:148
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:215
+msgid "One comment"
+msgstr "Jeden komentář"
+
+#: comments.php:20 inc/template-tags.php:148
+#: inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:215
+#, php-format
+msgid "% comments"
+msgstr "% komentářů"
+
+#: content-excerpt.php:11 content-search.php:8 content.php:10
+#: inc/widgets/widget-category-posts-single.php:130
+msgid "&raquo; Read more"
+msgstr ">> Číst dále"
+
+#: featured-content-slider.php:14
+msgid ""
+"There is no featured content to be displayed in the slider. To set up the "
+"slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a "
+"featured tag in the Post Slider section. The slideshow displays all your "
+"posts which are tagged with that keyword."
+msgstr ""
+
+#: featured-content-slider.php:48
+msgid "Read more &raquo;"
+msgstr "Číst dále >>"
+
+#: footer.php:18 functions.php:39
+msgid "Menu"
+msgstr "Nabídka"
+
+#: functions.php:124
+msgid "Main Navigation"
+msgstr "Hlavní navigace"
+
+#: functions.php:125
+msgid "Top Navigation"
+msgstr "Horní navigace"
+
+#: functions.php:126
+msgid "Footer Navigation"
+msgstr "Navigace v patičce"
+
+#: functions.php:129
+msgid "Social Icons"
+msgstr "Sociální ikony"
+
+#: functions.php:170 sidebar.php:14
+msgid "Sidebar"
+msgstr "Sloupec"
+
+#: functions.php:172
+msgid ""
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
+msgstr ""
+
+#: functions.php:181
+msgid "Magazine Homepage"
+msgstr ""
+
+#: functions.php:183
+msgid ""
+"Appears on Magazine Homepage template only. You can use the Category Posts "
+"widgets here."
+msgstr ""
+
+#: functions.php:278
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:279 functions.php:299
+msgid "(Edit)"
+msgstr "(Upravit)"
+
+#: functions.php:294
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentář čeká na schválení."
+
+#: functions.php:298
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s na %2$s"
+
+#: search.php:13
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Výsledky vyhledávání: %s"
+
+#: search.php:37
+msgid "No matches"
+msgstr "Žádné shody"
+
+#: search.php:41
+msgid ""
+"Please try again, or use the navigation menus to find what you search for."
+msgstr "Zkuste vyhledávat znovu, či použijte navigační menu."
+
+#: searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr "Hledat:"
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Hledat &hellip;"
+
+#: sidebar.php:16
+msgid ""
+"Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
+msgstr ""
+
+#: template-frontpage.php:39
+msgid ""
+"Please go to Appearance &#8594; Widgets and add at least one widget to the "
+"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"set up the theme like the demo website."
+msgstr ""
+
+#: inc/featured-content.php:368
+msgid "Tag name"
+msgstr "Jméno štítku"
+
+#: inc/featured-content.php:374
+msgid "Hide tag from displaying in post meta and tag clouds."
+msgstr ""
+
+#: inc/featured-content.php:381
+msgid "Display featured posts in latest blog post listing."
+msgstr ""
+
+#: inc/featured-content.php:388
+msgid "Number of Posts"
+msgstr "Počet příspěkvů"
+
+#: inc/template-tags.php:79
+#, php-format
+msgid "View all posts by %s"
+msgstr "Zobrazit všechny příspěvky od %s"
+
+#: inc/template-tags.php:96
+msgid "Edit Post"
+msgstr "Upravit příspěvek"
+
+#: inc/template-tags.php:148 inc/widgets/widget-category-posts-boxed.php:190
+#: inc/widgets/widget-category-posts-columns.php:221
+#: inc/widgets/widget-category-posts-grid.php:215
+msgid "Leave a comment"
+msgstr "Zanechat komentář"
+
+#: inc/template-tags.php:212
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: inc/template-tags.php:246
+msgid ""
+"Please go to Appearance &#8594; Menus and create a new custom menu with "
+"custom links to all your social networks. Then click on \"Manage Locations\" "
+"tab and assign your created menu to the \"Social Icons\" location."
+msgstr ""
+
+#: inc/theme-info.php:18 inc/theme-info.php:38
+#, php-format
+msgid "Welcome to %1$s %2$s"
+msgstr "Vítejte na webu %1$s %2$s"
+
+#: inc/theme-info.php:19
+msgid "Theme Info"
+msgstr "Info o šabloně"
+
+#: inc/theme-info.php:44
+msgid "Important Links:"
+msgstr "Důležité odkazy:"
+
+#: inc/theme-info.php:45
+msgid "Theme Page"
+msgstr "Stránka šablony"
+
+#: inc/theme-info.php:46
+msgid "Changelog"
+msgstr "Seznam změn"
+
+#: inc/theme-info.php:47
+msgid "Theme Demo"
+msgstr "Demo šablony"
+
+#: inc/theme-info.php:48 inc/theme-info.php:63
+msgid "Theme Documentation"
+msgstr "Dokumentace k šabloně"
+
+#: inc/theme-info.php:49
+msgid "Rate this theme"
+msgstr "Hodnotit šablonu"
+
+#: inc/theme-info.php:56
+#, php-format
+msgid "Getting Started with %s"
+msgstr "Začínáme s %s"
+
+#: inc/theme-info.php:66
+msgid ""
+"You need help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+
+#: inc/theme-info.php:70
+#, php-format
+msgid "View %s Documentation"
+msgstr "Zobrazit dokumentaci k %s"
+
+#: inc/theme-info.php:76 inc/customizer/customizer.php:29
+msgid "Theme Options"
+msgstr "Nastavení šablony"
+
+#: inc/theme-info.php:79
+#, php-format
+msgid ""
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
+msgstr ""
+
+#: inc/theme-info.php:82
+msgid "Customize Theme"
+msgstr "Přizpůsobit šablonu"
+
+#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:14
+msgid "Pro Version"
+msgstr "Pro verze"
+
+#: inc/theme-info.php:90
+msgid ""
+"You need more features? Purchase the Pro Version to get additional features "
+"and advanced customization options."
+msgstr ""
+"Potřebujete více funkcí? Zakupte si Pro verzi a získejte další možnosti a "
+"možnost pokročilého přizpůsobení."
+
+#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:62
+#, php-format
+msgid "Learn more about %s Pro"
+msgstr "Dozvědět se více o Pro"
+
+#: inc/theme-info.php:115
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+
+#: inc/theme-info.php:118
+msgid "rate it"
+msgstr "hodnotit"
+
+#: inc/customizer/customizer.php:39
+msgid "Background"
+msgstr "Pozadí"
+
+#: inc/customizer/customizer.php:50
+msgid "Display Tagline beside site title."
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:14
+msgid "General Settings"
+msgstr "Základní nastavení"
+
+#: inc/customizer/sections/customizer-general.php:29
+msgid "Theme Layout"
+msgstr "Rozložení šablony"
+
+#: inc/customizer/sections/customizer-general.php:35
+msgid "Left Sidebar"
+msgstr "Levý sloupec"
+
+#: inc/customizer/sections/customizer-general.php:36
+msgid "Right Sidebar"
+msgstr "Pravý sloupce"
+
+#: inc/customizer/sections/customizer-general.php:51
+msgid "Default Fonts"
+msgstr "Výchozí fonty"
+
+#: inc/customizer/sections/customizer-general.php:68
+msgid "Deactivate Google Fonts in case your language is not compatible."
+msgstr "Deaktivovat Google fonty pro případ nekompatibilnosti s jazykem."
+
+#: inc/customizer/sections/customizer-header.php:14
+msgid "Header Settings"
+msgstr "Nastavení hlavičky"
+
+#: inc/customizer/sections/customizer-header.php:30
+msgid "Header Content"
+msgstr "Obsah hlavičky"
+
+#: inc/customizer/sections/customizer-header.php:46
+msgid ""
+"The Header Content will be displayed on the right hand side of the header "
+"area."
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:63
+msgid "Display search field on header area"
+msgstr "Zobrazovat hledání v hlavičce"
+
+#: inc/customizer/sections/customizer-header.php:79
+msgid "Display Social Icons on header area"
+msgstr "Zobrazovat sociální ikony v hlavičce"
+
+#: inc/customizer/sections/customizer-post.php:14
+msgid "Post Settings"
+msgstr "Nastavení příspěvků"
+
+#: inc/customizer/sections/customizer-post.php:29
+msgid "Post length on archives"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:35
+msgid "Show full posts"
+msgstr "Zobrazovat celé příspěvky"
+
+#: inc/customizer/sections/customizer-post.php:36
+msgid "Show post excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:50
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:69
+msgid "Text after Excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:84
+msgid "Display [...] after excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:102
+msgid "Post Images"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Display featured images on archive pages"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:133
+msgid "Display featured images on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:151
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:166
+msgid "Display post date"
+msgstr "Zobrazit datum příspěvku"
+
+#: inc/customizer/sections/customizer-post.php:181
+msgid "Display post author"
+msgstr "Zobrazit autora příspěvku"
+
+#: inc/customizer/sections/customizer-post.php:196
+msgid "Display post categories"
+msgstr "Zobrazit kategorie příspěvku"
+
+#: inc/customizer/sections/customizer-post.php:211
+msgid "Display post tags"
+msgstr "Zobrazit štítky příspěvku"
+
+#: inc/customizer/sections/customizer-slider.php:14
+msgid "Post Slider"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:30
+msgid "Activate Post Slider"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:45
+msgid "Show Slider on Magazine Homepage"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:60
+msgid "Show Slider on posts page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:78
+msgid "Select Featured Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:95
+msgid ""
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:113
+msgid "Slider Animation"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:120
+msgid "Slide Effect"
+msgstr "Klouzavý efekt"
+
+#: inc/customizer/sections/customizer-slider.php:121
+msgid "Fade Effect"
+msgstr "Efekt slábnutí"
+
+#: inc/customizer/sections/customizer-upgrade.php:30
+msgid "You need more features?"
+msgstr "Potřebujete více možností?"
+
+#: inc/customizer/sections/customizer-upgrade.php:46
+msgid ""
+"Purchase the Pro Version to get additional features and advanced "
+"customization options."
+msgstr ""
+"Zakupte si Pro verzi a získejte další možnosti a pokročilé nastavení "
+"přizpůsobení."
+
+#: inc/widgets/widget-category-posts-boxed.php:11
+msgid ""
+"Displays your posts from a selected category in a boxed layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:13
+#, php-format
+msgid "Category Posts: Boxed (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:219
+#: inc/widgets/widget-category-posts-columns.php:245
+#: inc/widgets/widget-category-posts-grid.php:244
+#: inc/widgets/widget-category-posts-single.php:167
+msgid "View all posts"
+msgstr "Zobrazit všechny příspěvky"
+
+#: inc/widgets/widget-category-posts-boxed.php:231
+#: inc/widgets/widget-category-posts-columns.php:259
+#: inc/widgets/widget-category-posts-grid.php:256
+#: inc/widgets/widget-category-posts-single.php:179
+#, php-format
+msgid "View all posts from category %s"
+msgstr "Zobrazit všechny příspěvky z kategorie %s"
+
+#: inc/widgets/widget-category-posts-boxed.php:272
+#: inc/widgets/widget-category-posts-columns.php:297
+#: inc/widgets/widget-category-posts-grid.php:299
+#: inc/widgets/widget-category-posts-single.php:221
+msgid "Title:"
+msgstr "Titulek:"
+
+#: inc/widgets/widget-category-posts-boxed.php:278
+#: inc/widgets/widget-category-posts-grid.php:305
+#: inc/widgets/widget-category-posts-single.php:227
+msgid "Category:"
+msgstr "Kategorie:"
+
+#: inc/widgets/widget-category-posts-boxed.php:281
+#: inc/widgets/widget-category-posts-columns.php:306
+#: inc/widgets/widget-category-posts-columns.php:321
+#: inc/widgets/widget-category-posts-grid.php:308
+#: inc/widgets/widget-category-posts-single.php:230
+msgid "All Categories"
+msgstr "Všechny kategorie"
+
+#: inc/widgets/widget-category-posts-boxed.php:295
+#: inc/widgets/widget-category-posts-grid.php:336
+#: inc/widgets/widget-category-posts-single.php:250
+msgid "Link Widget Title to Category Archive page"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:11
+msgid ""
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:13
+#, php-format
+msgid "Category Posts: 2 Columns (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:246
+msgid "Latest Posts"
+msgstr "Poslední příspěvky"
+
+#: inc/widgets/widget-category-posts-columns.php:303
+msgid "Left Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:318
+msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:333
+#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-single.php:242
+msgid "Number of posts:"
+msgstr "Počet příspěvků:"
+
+#: inc/widgets/widget-category-posts-columns.php:341
+msgid "Highlight first post (big image + excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:348
+msgid "Display Category Titles"
+msgstr "Zobrazovat titulky kategorií"
+
+#: inc/widgets/widget-category-posts-grid.php:11
+msgid ""
+"Displays your posts from a selected category in a grid layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:13
+#, php-format
+msgid "Category Posts: Grid (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:322
+msgid "Please chose an even number (2, 4, 6, 8)."
+msgstr "Prosím, zvolte sudé číslo (2, 4, 6, 8)."
+
+#: inc/widgets/widget-category-posts-grid.php:329
+msgid "Display as small posts grid with thumbnails"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-single.php:11
+msgid ""
+"Displays a single post from a selected category. Please use this widget ONLY "
+"in the Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-single.php:13
+#, php-format
+msgid "Category Posts: Single (%s)"
+msgstr ""
