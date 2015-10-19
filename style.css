@@ -2,7 +2,7 @@
 Theme Name: Smartline Lite
 Theme URI: http://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.2.6
+Version: 1.2.7
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -530,6 +530,7 @@ input, textarea, select {
 .postmeta .meta-category:before{
 	content: '\f301';
 }
+.postmeta .meta-comments:before, 
 .postinfo .meta-comments:before{
 	content: '\f300';
 }
@@ -1242,12 +1243,6 @@ embed, iframe, object, video {
 }
 .widget-category-posts .small-post .postmeta {
 	display: inline;
-}
-.widget-category-posts .small-post .postmeta .meta-date:before{
-	content: '\f307';
-}
-.widget-category-posts .small-post .postmeta .meta-comments:before{
-	content: '\f300';
 }
 .widget-category-posts .widget-category-posts-content .small-posts .small-post:last-child,
 .widget-category-posts .category-posts-columns .small-post:last-child,

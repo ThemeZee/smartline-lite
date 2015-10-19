@@ -33,7 +33,8 @@ class Smartline_Category_Posts_Columns_Widget extends WP_Widget {
 			'category_two'		=> 0,
 			'number'			=> 3,
 			'highlight_post'	=> true,
-			'category_titles'	=> false
+			'category_titles'	=> false,
+			'postmeta'			=> 3
 		);
 		
 		return $defaults;
@@ -204,23 +205,32 @@ class Smartline_Category_Posts_Columns_Widget extends WP_Widget {
 	}
 	
 	// Display Postmeta
-	function display_postmeta($instance) { ?>
-
-		<span class="meta-date">
-		<?php printf('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>',
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
-
-	<?php if ( comments_open() ) : ?>
-		<span class="meta-comments sep">
-			<?php comments_popup_link( __('Leave a comment', 'smartline-lite'),__('One comment','smartline-lite'),__('% comments','smartline-lite') ); ?>
-		</span>
-	<?php endif;
+	function display_postmeta( $instance ) {
+	
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Display Date unless deactivated
+		if ( $postmeta > 0 ) :
+		
+			smartline_meta_date();
+					
+		endif; 
+		
+		// Display Author unless deactivated
+		if ( $postmeta == 2 ) :	
+		
+			smartline_meta_author();
+		
+		endif; 
+		
+		// Display Comments
+		if ( $postmeta == 3 and comments_open() ) :
+			
+			smartline_meta_comments();
+			
+		endif;
 
 	}
 	
@@ -280,6 +290,7 @@ class Smartline_Category_Posts_Columns_Widget extends WP_Widget {
 		$instance['number'] = (int)$new_instance['number'];
 		$instance['highlight_post'] = !empty($new_instance['highlight_post']);
 		$instance['category_titles'] = !empty($new_instance['category_titles']);
+		$instance['postmeta'] = (int)$new_instance['postmeta'];
 		
 		$this->delete_widget_cache();
 		
@@ -347,6 +358,16 @@ class Smartline_Category_Posts_Columns_Widget extends WP_Widget {
 				<input class="checkbox" type="checkbox" <?php checked( $category_titles ) ; ?> id="<?php echo $this->get_field_id('category_titles'); ?>" name="<?php echo $this->get_field_name('category_titles'); ?>" />
 				<?php _e('Display Category Titles', 'smartline-lite'); ?>
 			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php _e( 'Post Meta:', 'smartline-lite' ); ?></label><br/>
+			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
+				<option value="0" <?php selected($postmeta, 0); ?>><?php _e( 'Hide post meta', 'smartline-lite' ); ?></option>
+				<option value="1" <?php selected($postmeta, 1); ?>><?php _e( 'Display post date', 'smartline-lite' ); ?></option>
+				<option value="2" <?php selected($postmeta, 2); ?>><?php _e( 'Display date and author', 'smartline-lite' ); ?></option>
+				<option value="3" <?php selected($postmeta, 3); ?>><?php _e( 'Display date and comments', 'smartline-lite' ); ?></option>
+			</select>
 		</p>
 		
 <?php

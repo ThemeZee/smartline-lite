@@ -32,7 +32,8 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 			'number'			=> 6,
 			'category'			=> 0,
 			'thumbnails'		=> false,
-			'category_link'		=> false
+			'category_link'		=> false,
+			'postmeta'			=> 3
 		);
 		
 		return $defaults;
@@ -198,23 +199,32 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 	
 	// Display Postmeta
-	function display_postmeta($instance) { ?>
-
-		<span class="meta-date">
-		<?php printf('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>',
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
-
-	<?php if ( comments_open() ) : ?>
-		<span class="meta-comments sep">
-			<?php comments_popup_link( __('Leave a comment', 'smartline-lite'),__('One comment','smartline-lite'),__('% comments','smartline-lite') ); ?>
-		</span>
-	<?php endif;
+	function display_postmeta( $instance ) {
+	
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Display Date unless deactivated
+		if ( $postmeta > 0 ) :
+		
+			smartline_meta_date();
+					
+		endif; 
+		
+		// Display Author unless deactivated
+		if ( $postmeta == 2 ) :	
+		
+			smartline_meta_author();
+		
+		endif; 
+		
+		// Display Comments
+		if ( $postmeta == 3 and comments_open() ) :
+			
+			smartline_meta_comments();
+			
+		endif;
 
 	}
 	
@@ -282,6 +292,7 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		$instance['number'] = (int)$new_instance['number'];
 		$instance['thumbnails'] = !empty($new_instance['thumbnails']);
 		$instance['category_link'] = !empty($new_instance['category_link']);
+		$instance['postmeta'] = (int)$new_instance['postmeta'];
 		
 		$this->delete_widget_cache();
 		
@@ -335,6 +346,16 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
 				<?php _e('Link Widget Title to Category Archive page', 'smartline-lite'); ?>
 			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php _e( 'Post Meta:', 'smartline-lite' ); ?></label><br/>
+			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
+				<option value="0" <?php selected($postmeta, 0); ?>><?php _e( 'Hide post meta', 'smartline-lite' ); ?></option>
+				<option value="1" <?php selected($postmeta, 1); ?>><?php _e( 'Display post date', 'smartline-lite' ); ?></option>
+				<option value="2" <?php selected($postmeta, 2); ?>><?php _e( 'Display date and author', 'smartline-lite' ); ?></option>
+				<option value="3" <?php selected($postmeta, 3); ?>><?php _e( 'Display date and comments', 'smartline-lite' ); ?></option>
+			</select>
 		</p>
 <?php
 	}
