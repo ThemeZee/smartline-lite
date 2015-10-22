@@ -6,10 +6,10 @@
 
 			<div class="type-page">
 			
-				<h2 class="page-title"><?php _e('404: Page not found', 'smartline-lite'); ?></h2>
+				<h2 class="page-title"><?php esc_html_e( '404: Page not found', 'smartline-lite' ); ?></h2>
 				
 				<div class="entry">
-					<p><?php _e('It looks like nothing was found at this location. Maybe try a search or one of the links below?', 'smartline-lite'); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search or one of the links below?', 'smartline-lite' ); ?></p>
 					
 					<?php get_search_form(); ?>
 

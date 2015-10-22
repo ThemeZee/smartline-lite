@@ -11,9 +11,9 @@
 			else : ?>
 
 			<aside class="widget">
-				<h3 class="widgettitle"><?php _e('Sidebar', 'smartline-lite'); ?></h3>
+				<h3 class="widgettitle"><?php esc_html_e( 'Sidebar', 'smartline-lite' ); ?></h3>
 				<div class="textwidget">
-					<p><?php _e('Please go to Appearance &#8594; Widgets and add some widgets to your sidebar.', 'smartline-lite'); ?></p>
+					<p><?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add some widgets to your sidebar.', 'smartline-lite' ); ?></p>
 				</div>
 			</aside>
 		

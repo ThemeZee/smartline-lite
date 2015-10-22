@@ -7,7 +7,7 @@
  */
 
 if ( post_password_required()) : ?>
-	<p><?php _e('Enter password to view comments.', 'smartline-lite'); ?></p>
+	<p><?php esc_html_e( 'Enter password to view comments.', 'smartline-lite' ); ?></p>
 <?php return; endif; ?>
 
 
@@ -17,7 +17,7 @@ if ( post_password_required()) : ?>
 	
 		<?php if ( have_comments() ) : ?>
 
-			<h3 class="comments-title"><span><?php comments_number( '', __('One comment','smartline-lite'), __('% comments','smartline-lite') );?></span></h3>
+			<h3 class="comments-title"><span><?php comments_number( '', esc_html__( 'One comment', 'smartline-lite' ), esc_html__( '% comments', 'smartline-lite' ) );?></span></h3>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<div class="comment-pagination clearfix">

@@ -7,7 +7,7 @@
 	
 		<div class="entry clearfix">
 			<?php smartline_display_thumbnail_index(); ?>
-			<?php the_content(__('&raquo; Read more', 'smartline-lite')); ?>
+			<?php the_content( esc_html__( '&raquo; Read more', 'smartline-lite' )); ?>
 			<div class="page-links"><?php wp_link_pages(); ?></div>
 		</div>
 		

@@ -15,7 +15,7 @@
 				'depth' => 1)
 			);
 			?>
-			<h5 id="footernav-icon"><?php _e('Menu', 'smartline-lite'); ?></h5>
+			<h5 id="footernav-icon"><?php esc_html_e( 'Menu', 'smartline-lite' ); ?></h5>
 		</nav>
 		
 		<?php endif; ?>

@@ -8,9 +8,9 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'smartline_category_posts_boxed', 
-			'description' => __('Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'smartline-lite')
+			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'smartline-lite' )
 		);
-		parent::__construct('smartline_category_posts_boxed', sprintf( __('Category Posts: Boxed (%s)', 'smartline-lite'), 'Smartline' ), $widget_ops);
+		parent::__construct('smartline_category_posts_boxed', sprintf( esc_html__( 'Category Posts: Boxed (%s)', 'smartline-lite' ), 'Smartline' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -226,7 +226,7 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 				// Check if "All Categories" is selected
 				if( $category == 0 ) :
 				
-					$link_title = __('View all posts', 'smartline-lite');
+					$link_title = esc_html__( 'View all posts', 'smartline-lite' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
@@ -238,7 +238,7 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( __('View all posts from category %s', 'smartline-lite'), get_cat_name( $category ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'smartline-lite' ), get_cat_name( $category ) );
 					$link_url = esc_url( get_category_link( $category ) );
 					
 				endif;
@@ -280,16 +280,16 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'smartline-lite'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'smartline-lite' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category:', 'smartline-lite'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e( 'Category:', 'smartline-lite' ); ?></label><br/>
 			<?php // Display Category Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'smartline-lite'),
+					'show_option_all'    => esc_html__( 'All Categories', 'smartline-lite' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category,
@@ -303,17 +303,17 @@ class Smartline_Category_Posts_Boxed_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php _e('Link Widget Title to Category Archive page', 'smartline-lite'); ?>
+				<?php esc_html_e( 'Link Widget Title to Category Archive page', 'smartline-lite' ); ?>
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php _e( 'Post Meta:', 'smartline-lite' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php esc_html_e( 'Post Meta:', 'smartline-lite' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
-				<option value="0" <?php selected($postmeta, 0); ?>><?php _e( 'Hide post meta', 'smartline-lite' ); ?></option>
-				<option value="1" <?php selected($postmeta, 1); ?>><?php _e( 'Display post date', 'smartline-lite' ); ?></option>
-				<option value="2" <?php selected($postmeta, 2); ?>><?php _e( 'Display date and author', 'smartline-lite' ); ?></option>
-				<option value="3" <?php selected($postmeta, 3); ?>><?php _e( 'Display date and comments', 'smartline-lite' ); ?></option>
+				<option value="0" <?php selected($postmeta, 0); ?>><?php esc_html_e( 'Hide post meta', 'smartline-lite' ); ?></option>
+				<option value="1" <?php selected($postmeta, 1); ?>><?php esc_html_e( 'Display post date', 'smartline-lite' ); ?></option>
+				<option value="2" <?php selected($postmeta, 2); ?>><?php esc_html_e( 'Display date and author', 'smartline-lite' ); ?></option>
+				<option value="3" <?php selected($postmeta, 3); ?>><?php esc_html_e( 'Display date and comments', 'smartline-lite' ); ?></option>
 			</select>
 		</p>
 		

@@ -35,7 +35,7 @@ function smartline_enqueue_scripts() {
 	wp_enqueue_script('smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
 	// Passing Parameters to Navigation.js Javascript
-	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', __('Menu', 'smartline-lite') );
+	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', esc_html__( 'Menu', 'smartline-lite' ) );
 	
 	// Register Comment Reply Script for Threaded Comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -112,12 +112,12 @@ function smartline_setup() {
 		'flex-height' => true));
 
 	// Register Navigation Menus
-	register_nav_menu( 'primary', __('Main Navigation', 'smartline-lite') );
-	register_nav_menu( 'secondary', __('Top Navigation', 'smartline-lite') );
-	register_nav_menu( 'footer', __('Footer Navigation', 'smartline-lite') );
+	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'smartline-lite' ) );
+	register_nav_menu( 'secondary', esc_html__( 'Top Navigation', 'smartline-lite' ) );
+	register_nav_menu( 'footer', esc_html__( 'Footer Navigation', 'smartline-lite' ) );
 	
 	// Register Social Icons Menu
-	register_nav_menu( 'social', __('Social Icons', 'smartline-lite') );
+	register_nav_menu( 'social', esc_html__( 'Social Icons', 'smartline-lite' ) );
 
 }
 
@@ -154,9 +154,9 @@ function smartline_register_sidebars() {
 
 	// Register Sidebar
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'smartline-lite' ),
+		'name' => esc_html__( 'Sidebar', 'smartline-lite' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'smartline-lite' ),
+		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'smartline-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
@@ -165,9 +165,9 @@ function smartline_register_sidebars() {
 	
 	// Register Magazine Homepage
 	register_sidebar( array(
-		'name' => __( 'Magazine Homepage', 'smartline-lite' ),
+		'name' => esc_html__( 'Magazine Homepage', 'smartline-lite' ),
 		'id' => 'frontpage-magazine',
-		'description' => __( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'smartline-lite' ),
+		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'smartline-lite' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle">',

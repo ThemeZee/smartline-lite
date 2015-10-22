@@ -11,7 +11,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'smartline_section_post', array(
-        'title'    => __( 'Post Settings', 'smartline-lite' ),
+        'title'    => esc_html__( 'Post Settings', 'smartline-lite' ),
         'priority' => 30,
 		'panel' => 'smartline_options_panel' 
 		)
@@ -26,14 +26,14 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_posts_length', array(
-        'label'    => __( 'Post length on archives', 'smartline-lite' ),
+        'label'    => esc_html__( 'Post length on archives', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'index' => __( 'Show full posts', 'smartline-lite' ),
-            'excerpt' => __( 'Show post excerpts', 'smartline-lite' )
+            'index' => esc_html__( 'Show full posts', 'smartline-lite' ),
+            'excerpt' => esc_html__( 'Show post excerpts', 'smartline-lite' )
 			)
 		)
 	);
@@ -47,7 +47,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_excerpt_length', array(
-        'label'    => __( 'Excerpt Length', 'smartline-lite' ),
+        'label'    => esc_html__( 'Excerpt Length', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[excerpt_length]',
         'type'     => 'text',
@@ -66,7 +66,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_excerpt_text_headline', array(
-            'label' => __( 'Text after Excerpts', 'smartline-lite' ),
+            'label' => esc_html__( 'Text after Excerpts', 'smartline-lite' ),
             'section' => 'smartline_section_post',
             'settings' => 'smartline_theme_options[excerpt_text_headline]',
             'priority' => 3
@@ -81,7 +81,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after excerpts', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display [...] after excerpts', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[excerpt_text]',
         'type'     => 'checkbox',
@@ -99,7 +99,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_post_images', array(
-            'label' => __( 'Post Images', 'smartline-lite' ),
+            'label' => esc_html__( 'Post Images', 'smartline-lite' ),
             'section' => 'smartline_section_post',
             'settings' => 'smartline_theme_options[post_images]',
             'priority' => 5
@@ -114,7 +114,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_posts_thumbnails_index', array(
-        'label'    => __( 'Display featured images on archive pages', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display featured images on archive pages', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
@@ -130,7 +130,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_posts_thumbnails_single', array(
-        'label'    => __( 'Display featured images on single posts', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display featured images on single posts', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
@@ -148,7 +148,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_postmeta_headline', array(
-            'label' => __( 'Post Meta', 'smartline-lite' ),
+            'label' => esc_html__( 'Post Meta', 'smartline-lite' ),
             'section' => 'smartline_section_post',
             'settings' => 'smartline_theme_options[postmeta_headline]',
             'priority' => 8
@@ -163,7 +163,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_meta_date', array(
-        'label'    => __( 'Display post date', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display post date', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[meta_date]',
         'type'     => 'checkbox',
@@ -178,7 +178,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_meta_author', array(
-        'label'    => __( 'Display post author', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display post author', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[meta_author]',
         'type'     => 'checkbox',
@@ -193,7 +193,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_meta_category', array(
-        'label'    => __( 'Display post categories', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display post categories', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[meta_category]',
         'type'     => 'checkbox',
@@ -208,7 +208,7 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_meta_tags', array(
-        'label'    => __( 'Display post tags', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display post tags', 'smartline-lite' ),
         'section'  => 'smartline_section_post',
         'settings' => 'smartline_theme_options[meta_tags]',
         'type'     => 'checkbox',

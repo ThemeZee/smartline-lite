@@ -11,7 +11,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'smartline_section_slider', array(
-        'title'    => __( 'Post Slider', 'smartline-lite' ),
+        'title'    => esc_html__( 'Post Slider', 'smartline-lite' ),
         'priority' => 50,
 		'panel' => 'smartline_options_panel' 
 		)
@@ -27,7 +27,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_slider_activated', array(
-            'label' => __( 'Activate Post Slider', 'smartline-lite' ),
+            'label' => esc_html__( 'Activate Post Slider', 'smartline-lite' ),
             'section' => 'smartline_section_slider',
             'settings' => 'smartline_theme_options[slider_activated]',
             'priority' => 1
@@ -42,7 +42,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_slider_activated_frontpage', array(
-        'label'    => __( 'Show Slider on Magazine Homepage', 'smartline-lite' ),
+        'label'    => esc_html__( 'Show Slider on Magazine Homepage', 'smartline-lite' ),
         'section'  => 'smartline_section_slider',
         'settings' => 'smartline_theme_options[slider_activated_front_page]',
         'type'     => 'checkbox',
@@ -57,7 +57,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_slider_activated_blog', array(
-        'label'    => __( 'Show Slider on posts page', 'smartline-lite' ),
+        'label'    => esc_html__( 'Show Slider on posts page', 'smartline-lite' ),
         'section'  => 'smartline_section_slider',
         'settings' => 'smartline_theme_options[slider_activated_blog]',
         'type'     => 'checkbox',
@@ -75,7 +75,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_featured_posts_header', array(
-            'label' => __( 'Select Featured Posts', 'smartline-lite' ),
+            'label' => esc_html__( 'Select Featured Posts', 'smartline-lite' ),
             'section' => 'smartline_section_slider',
             'settings' => 'smartline_theme_options[featured_posts_header]',
             'priority' => 4,
@@ -92,7 +92,7 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Description_Control(
         $wp_customize, 'smartline_control_featured_posts_description', array(
-			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'smartline-lite' ),
+			'label'    => esc_html__( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'smartline-lite' ),
             'section' => 'smartline_section_slider',
             'settings' => 'smartline_theme_options[featured_posts_description]',
             'priority' => 5,
@@ -110,15 +110,15 @@ function smartline_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_slider_animation', array(
-        'label'    => __( 'Slider Animation', 'smartline-lite' ),
+        'label'    => esc_html__( 'Slider Animation', 'smartline-lite' ),
         'section'  => 'smartline_section_slider',
         'settings' => 'smartline_theme_options[slider_animation]',
         'type'     => 'radio',
 		'priority' => 9,
 		'active_callback' => 'smartline_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Slide Effect', 'smartline-lite' ),
-            'fade' => __( 'Fade Effect', 'smartline-lite' )
+            'horizontal' => esc_html__( 'Slide Effect', 'smartline-lite' ),
+            'fade' => esc_html__( 'Fade Effect', 'smartline-lite' )
 			)
 		)
 	);

@@ -2,6 +2,10 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.2.8
+-----------------------------------
+[added] escaping for translation strings for improved security
+
 Version 1.2.7
 -----------------------------------
 [added] postmeta setting to Category Posts Boxed widget

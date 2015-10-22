@@ -26,7 +26,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'smartline-lite' ),
+		'title'          => esc_html__( 'Theme Options', 'smartline-lite' ),
 		'description'    => '',
 	) );
 	
@@ -36,7 +36,7 @@ function smartline_customize_register_options( $wp_customize ) {
 	
 	// Change default background section
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image'  )->title     = __( 'Background', 'smartline-lite' );
+	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'smartline-lite' );
 	
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'smartline_theme_options[header_tagline]', array(
@@ -47,7 +47,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_header_tagline', array(
-        'label'    => __( 'Display Tagline beside site title.', 'smartline-lite' ),
+        'label'    => esc_html__( 'Display Tagline beside site title.', 'smartline-lite' ),
         'section'  => 'title_tagline',
         'settings' => 'smartline_theme_options[header_tagline]',
         'type'     => 'checkbox',

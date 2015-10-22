@@ -5,7 +5,7 @@
 
 		<div class="entry clearfix">
 			<?php the_excerpt(); ?>
-			<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php _e('&raquo; Read more', 'smartline-lite'); ?></a>	
+			<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php esc_html_e( '&raquo; Read more', 'smartline-lite' ); ?></a>	
 		</div>
 
 	</div>

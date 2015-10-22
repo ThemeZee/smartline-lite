@@ -11,7 +11,7 @@ function smartline_customize_register_general_settings( $wp_customize ) {
 
 	// Add General Section
 	$wp_customize->add_section( 'smartline_section_general', array(
-        'title'    => __( 'General Settings', 'smartline-lite' ),
+        'title'    => esc_html__( 'General Settings', 'smartline-lite' ),
         'priority' => 10,
 		'panel' => 'smartline_options_panel' 
 		)
@@ -26,14 +26,14 @@ function smartline_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_layout', array(
-        'label'    => __( 'Theme Layout', 'smartline-lite' ),
+        'label'    => esc_html__( 'Theme Layout', 'smartline-lite' ),
         'section'  => 'smartline_section_general',
         'settings' => 'smartline_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'left-sidebar' => __( 'Left Sidebar', 'smartline-lite' ),
-            'right-sidebar' => __( 'Right Sidebar', 'smartline-lite')
+            'left-sidebar' => esc_html__( 'Left Sidebar', 'smartline-lite' ),
+            'right-sidebar' => esc_html__( 'Right Sidebar', 'smartline-lite' )
 			)
 		)
 	);
@@ -48,7 +48,7 @@ function smartline_customize_register_general_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Smartline_Customize_Header_Control(
         $wp_customize, 'smartline_control_default_fonts', array(
-            'label' => __( 'Default Fonts', 'smartline-lite' ),
+            'label' => esc_html__( 'Default Fonts', 'smartline-lite' ),
             'section' => 'smartline_section_general',
             'settings' => 'smartline_theme_options[default_fonts]',
             'priority' => 2
@@ -65,7 +65,7 @@ function smartline_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'smartline_control_deactivate_google_fonts', array(
-        'label'    => __( 'Deactivate Google Fonts in case your language is not compatible.', 'smartline-lite' ),
+        'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'smartline-lite' ),
         'section'  => 'smartline_section_general',
         'settings' => 'smartline_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',
