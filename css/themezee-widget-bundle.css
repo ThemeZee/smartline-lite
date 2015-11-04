@@ -59,29 +59,29 @@
 	height: auto;
 }
 
-.tzwb-posts-list .tzwb-postmeta {
+.tzwb-posts-list .tzwb-entry-meta {
 	margin: 0.3em 0 0;
 	padding: 0;
 	font-size: 0.85em;
 	color: #555;
 }
 
-.tzwb-posts-list .tzwb-postmeta a:link, 
-.tzwb-posts-list .tzwb-postmeta a:visited {
+.tzwb-posts-list .tzwb-entry-meta a:link, 
+.tzwb-posts-list .tzwb-entry-meta a:visited {
 	color: #555;
 	text-decoration: underline;
 }
 
-.tzwb-posts-list .tzwb-postmeta a:hover, 
-.tzwb-posts-list .tzwb-postmeta a:active{
+.tzwb-posts-list .tzwb-entry-meta a:hover, 
+.tzwb-posts-list .tzwb-entry-meta a:active{
 	text-decoration: none;
 }
 
-.tzwb-posts-list  .tzwb-postmeta span {
+.tzwb-posts-list  .tzwb-entry-meta span {
 	margin-right: 0.4em;
 }
 
-.tzwb-posts-list .tzwb-postmeta span:before {
+.tzwb-posts-list .tzwb-entry-meta span:before {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px 'Genericons';
@@ -90,16 +90,16 @@
 	margin: 0.15em 0 0 0;
 }
 
-.tzwb-posts-list .tzwb-postmeta .tzwb-meta-date:before{
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-date:before{
 	content: '\f307';
 	margin-right: 0.2em;
 }
 
-.tzwb-posts-list .tzwb-postmeta .tzwb-meta-author:before{
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-author:before{
 	content: '\f304';
 }
 
-.tzwb-posts-list .tzwb-postmeta .tzwb-meta-comments:before{
+.tzwb-posts-list .tzwb-entry-meta .tzwb-meta-comments:before{
 	content: '\f300';
 }
 
@@ -223,7 +223,7 @@
 	margin: 0.3em 0.8em 0.3em 0;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-postmeta {
+.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-entry-meta {
 	margin: 0.3em 0;
 	padding: 0;
 	font-size: 0.85em;
@@ -348,13 +348,13 @@
 /*--------------------------------------------------------------
 # Widget Styling in Footer area
 ---------------------------------------------------------------- */
-#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta,
-#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta a:link, 
-#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta a:visited {
+#footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta,
+#footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:link, 
+#footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:visited {
 	color: #eee;
 }
 
-#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta span:before {
+#footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta span:before {
 	color: #fff;
 }
 
