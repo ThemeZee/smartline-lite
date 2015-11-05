@@ -2,7 +2,7 @@
 Theme Name: Smartline Lite
 Theme URI: http://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.2.8
+Version: 1.2.9
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -455,7 +455,7 @@ input, textarea, select {
 	padding: 0 0 0.5em 0;
 	border-bottom: 1px dashed #aaa;
 }
-.page-title, .post-title {
+.page-title, .entry-title {
 	font-weight: bold;
 	font-family: 'Bitter', Georgia, Arial, Tahoma;
 	color: #004488;
@@ -467,15 +467,15 @@ input, textarea, select {
     font-size: 2.3em;
 	padding: 0.1em 0;
 }
-.post-title {
+.entry-title {
     font-size: 1.5em;
 	padding: 0.3em 0;
 }
-.post-title a:link, .post-title a:visited {
+.entry-title a:link, .entry-title a:visited {
 	color: #004488;
 	text-decoration: none;
 }
-.post-title a:hover, .post-title a:active{
+.entry-title a:hover, .entry-title a:active{
 	color: #333;
 	text-decoration: underline;
 }
@@ -1213,7 +1213,7 @@ embed, iframe, object, video {
 .widget-category-posts .more-link:hover, .widget-category-posts .more-link:active {
 	text-decoration: none;
 }
-.widget-category-posts .big-post .post-title {
+.widget-category-posts .big-post .entry-title {
 	font-size: 1.35em;
 }
 .widget-category-posts .big-post .wp-post-image {
@@ -1235,7 +1235,7 @@ embed, iframe, object, video {
 .widget-category-posts .small-post .small-post-content {
 	padding: 0.4em 0.8em;
 }
-.widget-category-posts .small-post .post-title {
+.widget-category-posts .small-post .entry-title {
 	border: none;
 	margin: 0 0 0.3em;
 	padding: 0;
@@ -1395,10 +1395,10 @@ embed, iframe, object, video {
 		margin: 0.4em 0 0 0;
 		font-size: 1.2em;
 	}
-	.widget-category-posts .type-post .post-title {
+	.widget-category-posts .type-post .entry-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .small-post .post-title{
+	.widget-category-posts .small-post .entry-title{
 		font-size: 1.05em;
 	}
 }
@@ -1599,10 +1599,10 @@ embed, iframe, object, video {
 		font-size: 16px;
 	}
 	
-	.widget-category-posts .type-post .post-title {
+	.widget-category-posts .type-post .entry-title {
 		font-size: 1.4em;
 	}
-	.widget-category-posts .small-post .post-title{
+	.widget-category-posts .small-post .entry-title{
 		font-size: 1.1em;
 	}
 }
@@ -1703,10 +1703,10 @@ embed, iframe, object, video {
 	.entry tr td {
 		padding: 0.2em 0.4em;
 	}
-	.widget-category-posts .type-post .post-title {
+	.widget-category-posts .type-post .entry-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .small-post .post-title{
+	.widget-category-posts .small-post .entry-title{
 		font-size: 1.0em;
 	}
 	
@@ -1786,7 +1786,7 @@ embed, iframe, object, video {
 	.page-title {
 		font-size: 2.0em;
 	}
-	.post-title {
+	.entry-title {
 		font-size: 1.4em;
 	}
 
@@ -1843,10 +1843,10 @@ embed, iframe, object, video {
 	.postmeta span, .postinfo span {
 		display: block;
 	}
-	.widget-category-posts .type-post .post-title {
+	.widget-category-posts .type-post .entry-title {
 		font-size: 1.0em;
 	}
-	.widget-category-posts .small-post .post-title{
+	.widget-category-posts .small-post .entry-title{
 		font-size: 0.9em;
 	}
 }
