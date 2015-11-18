@@ -326,7 +326,7 @@ input, textarea, select {
 	text-decoration: none;
 }
 #mainnav-menu ul a:hover {
-	background: #444;
+	background: rgba(255,255,255,0.1);
 }
 #mainnav-menu li ul ul {
 	border: none;
@@ -1527,12 +1527,12 @@ embed, iframe, object, video {
 		padding: 1.3em;
 		text-decoration: none;
 		font-size: 1.0em;
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
 		background: #303030;
 		clear: left;
 	}
 	#mainnav-menu a:hover {
-		background: #404040; 
+		background: rgba(255,255,255,0.05); 
 	}
 	#mainnav-menu ul {
 		float: left;
@@ -1547,7 +1547,7 @@ embed, iframe, object, video {
 		width: 100%;
 		padding: 1em 1em 1em 3em;
 		font-size: 0.9em;
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -1576,7 +1576,7 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu .submenu-dropdown-toggle:hover {
 		cursor: pointer;
-		background: #404040; 
+		background: rgba(255,255,255,0.05); 
 	}
 	#mainnav-menu .submenu-dropdown-toggle:before {
 		font-size: 20px;
@@ -1860,8 +1860,8 @@ embed, iframe, object, video {
 	#mainnav-menu li.menu-item:hover a {
 		background: #303030;
 	}
-	#mainnav-menu li.menu-item:hover a:hover {
-		background: #444;
+	#mainnav-menu li.menu-item:hover ul a:hover {
+		background: rgba(255,255,255,0.1);
 	}
 }
 @media only screen and (min-width: 50em) {
