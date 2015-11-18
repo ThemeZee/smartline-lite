@@ -78,5 +78,4 @@
 	</div>
 	
 	<?php // Display Custom Header Image
-		smartline_display_custom_header(); ?>
-		
+		smartline_display_custom_header(); ?>	

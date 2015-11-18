@@ -2,6 +2,12 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.3.0
+-----------------------------------
+[removed] empty spaces at the end of template files
+[fixed] styling of 404 template
+[changed] CSS styling of navigation for custom navi hover color setting
+
 Version 1.2.9
 -----------------------------------
 [changed] all h2 post and page titles to h1 for better SEO
