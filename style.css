@@ -965,6 +965,8 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="wordpress.org"]:before,
 #social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
 #social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; }
+#social-icons-menu li a[href*="newsletter"]:before,
+#social-icons-menu li a[href*="mailto"]:before { content: '\f410'; }
 #social-icons-menu li a[href*="/feed"]:before,
 #social-icons-menu li a[href*="/feed/"]:before,
 #social-icons-menu li a[href*="?feed=rss2"]:before,
@@ -997,6 +999,8 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="wordpress.org"] { background: #21759b; }
 #social-icons-menu li a[href*="wordpress.com"] { background: #1e8cbe; }
 #social-icons-menu li a[href*="youtube.com"] { background: #c4302b; }
+#social-icons-menu li a[href*="newsletter"],
+#social-icons-menu li a[href*="mailto"] { background: #dd4444; }
 #social-icons-menu li a[href*="/feed"],
 #social-icons-menu li a[href*="/feed/"],
 #social-icons-menu li a[href*="?feed=rss2"],
