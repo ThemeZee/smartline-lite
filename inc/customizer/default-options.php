@@ -30,9 +30,11 @@ function smartline_theme_options() {
 function smartline_default_options() {
 
 	$default_options = array(
+		'header_tagline'					=> true,
+		'custom_header_link'				=> '',
+		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
 		'deactivate_google_fonts'			=> false,
-		'header_tagline' 					=> true,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
 		'posts_length' 						=> 'index',
