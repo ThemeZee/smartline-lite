@@ -9,8 +9,10 @@ Template Name: Post Slider
 		
 		<section id="content" class="primary" role="main">
 		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 		<?php // Display Featured Post Slideshow
-		get_template_part( 'featured-content-slider' );
+			get_template_part( 'featured-content-slider' );
 		?>
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post();

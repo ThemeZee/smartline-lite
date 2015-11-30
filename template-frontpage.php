@@ -10,15 +10,17 @@ Template Name: Magazine Homepage
 ?>
 	
 	<div id="wrap" class="clearfix template-frontpage">
+		
 		<section id="content" class="primary" role="main">
+		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 		<?php // Display Featured Post Slideshow if activated
 		if ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) :
 
 			get_template_part( 'featured-content-slider' );
 
 		endif; ?>
-		
-		
 		
 		<?php // Display Frontpage Widgets
 		if(is_active_sidebar('frontpage-magazine')) : ?>
