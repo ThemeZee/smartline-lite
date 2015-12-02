@@ -41,7 +41,7 @@ function smartline_display_theme_info_page() {
 		
 		<hr>
 		<div class="important-links clearfix">
-			<p><strong><?php esc_html_e( 'Important Links:', 'smartline-lite' ); ?></strong>
+			<p><strong><?php esc_html_e( 'Theme Links:', 'smartline-lite' ); ?></strong>
 				<a href="http://themezee.com/themes/smartline/" target="_blank"><?php esc_html_e( 'Theme Page', 'smartline-lite' ); ?></a>
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'smartline-lite' ); ?></a>
 				<a href="http://preview.themezee.com/smartline/" target="_blank"><?php esc_html_e( 'Theme Demo', 'smartline-lite' ); ?></a>
