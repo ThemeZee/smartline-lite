@@ -491,7 +491,7 @@ input, textarea, select {
 }
 
 /* Postmeta */
-.postmeta, .postinfo {
+.entry-meta, .postinfo {
 	color: #333;
 	margin: 0;
 	padding: 0;
@@ -502,35 +502,35 @@ input, textarea, select {
 	clear: both;
 	margin: 1em 0 0;
 }
-.postmeta span, .postinfo span{
+.entry-meta span, .postinfo span{
 	margin-right: 0.5em;
 }
-.postmeta a:link, .postmeta a:visited {
+.entry-meta a:link, .entry-meta a:visited {
 	color: #555;
 	text-decoration: underline;
 }
-.postmeta a:hover, .postmeta a:active{
+.entry-meta a:hover, .entry-meta a:active{
 	text-decoration: none;
 }
 
 /* Postmeta Icons */
-.postmeta span:before, .postinfo span:before {
+.entry-meta span:before, .postinfo span:before {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 20px/1 'Genericons';
 	vertical-align: middle;
 	color: #777;
 }
-.postmeta .meta-date:before{
+.entry-meta .meta-date:before{
 	content: '\f307';
 }
-.postmeta .meta-author:before{
+.entry-meta .meta-author:before{
 	content: '\f304';
 }
-.postmeta .meta-category:before{
+.entry-meta .meta-category:before{
 	content: '\f301';
 }
-.postmeta .meta-comments:before, 
+.entry-meta .meta-comments:before, 
 .postinfo .meta-comments:before{
 	content: '\f300';
 }
@@ -1279,7 +1279,7 @@ embed, iframe, object, video {
 	padding: 0;
 	font-size: 1.15em;
 }
-.widget-category-posts .small-post .postmeta {
+.widget-category-posts .small-post .entry-meta {
 	display: inline;
 }
 .widget-category-posts .widget-category-posts-content .small-posts .small-post:last-child,
@@ -1878,7 +1878,7 @@ embed, iframe, object, video {
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-	.postmeta span, .postinfo span {
+	.entry-meta span, .postinfo span {
 		display: block;
 	}
 	.widget-category-posts .type-post .entry-title {

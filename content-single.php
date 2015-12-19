@@ -3,7 +3,7 @@
 	
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 		
-		<div class="postmeta"><?php smartline_display_postmeta(); ?></div>
+		<div class="entry-meta postmeta"><?php smartline_display_postmeta(); ?></div>
 
 		<div class="entry clearfix">
 			<?php smartline_display_thumbnail_single(); ?>
