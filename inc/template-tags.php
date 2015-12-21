@@ -222,6 +222,25 @@ if ( ! function_exists( 'smartline_display_postinfo' ) ):
 	
 endif;
 
+
+// Display Smartline Lite plugin
+if ( ! function_exists( 'smartline_display_related_posts' ) ):
+	
+	function smartline_display_related_posts() { 
+		
+		if ( function_exists( 'themezee_related_posts' ) ) {
+
+			themezee_related_posts( array( 
+				'class' => 'related-posts type-page clearfix',
+				'before_title' => '<h2 class="archive-title related-posts-title">',
+				'after_title' => '</h2>'
+			) );
+			
+		}
+	}
+	
+endif;
+
 	
 // Display Content Pagination
 if ( ! function_exists( 'smartline_display_pagination' ) ):
