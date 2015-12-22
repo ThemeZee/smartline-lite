@@ -215,7 +215,38 @@ function smartline_customize_register_post_settings( $wp_customize ) {
 		'priority' => 12
 		)
 	);
+	
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'smartline_theme_options[post_footer_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Smartline_Customize_Header_Control(
+        $wp_customize, 'smartline_control_post_footer_headline', array(
+            'label' => esc_html__( 'Post Footer', 'smartline-lite' ),
+            'section' => 'smartline_section_post',
+            'settings' => 'smartline_theme_options[post_footer_headline]',
+            'priority' => 12
+            )
+        )
+    );
+	$wp_customize->add_setting( 'smartline_theme_options[post_navigation]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'smartline_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'smartline_control_post_navigation', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'smartline-lite' ),
+        'section'  => 'smartline_section_post',
+        'settings' => 'smartline_theme_options[post_navigation]',
+        'type'     => 'checkbox',
+		'priority' => 13
+		)
+	);
 
 }
-
-?>

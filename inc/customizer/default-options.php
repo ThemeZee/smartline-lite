@@ -48,11 +48,10 @@ function smartline_default_options() {
 		'meta_tags'							=> true,
 		'slider_activated_front_page' 		=> false,
 		'slider_activated_blog' 			=> false,
-		'slider_animation' 					=> 'horizontal'
+		'slider_animation' 					=> 'horizontal',
+		'post_navigation' 					=> false,
 	);
 	
 	return $default_options;
+	
 }
-
-
-?>
