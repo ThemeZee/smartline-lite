@@ -42,10 +42,10 @@ function smartline_display_theme_info_page() {
 		<hr>
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'smartline-lite' ); ?>:</strong>
-				<a href="<?php echo esc_url( 'http://themezee.com/themes/smartline/?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'smartline-lite' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themezee.com/themes/smartline/?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'smartline-lite' ); ?></a>
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'smartline-lite' ); ?></a>
 				<a href="<?php echo esc_url( 'http://preview.themezee.com/smartline/?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'smartline-lite' ); ?></a>
-				<a href="<?php echo esc_url( 'http://themezee.com/docs/smartline-documentation/?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'smartline-lite' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themezee.com/docs/smartline-documentation/?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'smartline-lite' ); ?></a>
 				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/smartline-lite?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'smartline-lite' ); ?></a>
 			</p>
 		</div>
@@ -66,7 +66,7 @@ function smartline_display_theme_info_page() {
 							<?php esc_html_e( 'You need help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'smartline-lite' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( 'http://themezee.com/docs/smartline-documentation/?utm_source=theme-info&utm_medium=button&utm_campaign=smartline&utm_content=documentation' ); ?>" target="_blank" class="button button-secondary">
+							<a href="<?php echo esc_url( 'https://themezee.com/docs/smartline-documentation/?utm_source=theme-info&utm_medium=button&utm_campaign=smartline&utm_content=documentation' ); ?>" target="_blank" class="button button-secondary">
 								<?php printf( esc_html__( 'View %s Documentation', 'smartline-lite' ), 'Smartline' ); ?>
 							</a>
 						</p>
@@ -92,7 +92,7 @@ function smartline_display_theme_info_page() {
 							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'smartline-lite' ), 'Smartline'); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( 'http://themezee.com/themes/smartline/?utm_source=theme-info&utm_medium=button&utm_campaign=smartline&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
+							<a href="<?php echo esc_url( 'https://themezee.com/themes/smartline/?utm_source=theme-info&utm_medium=button&utm_campaign=smartline&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
 								<?php printf( esc_html__( 'Learn more about %s Pro', 'smartline-lite' ), 'Smartline'); ?>
 							</a>
 						</p>
@@ -116,7 +116,7 @@ function smartline_display_theme_info_page() {
 			
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'smartline-lite' ), 
 				$theme->get( 'Name' ),
-				'<a target="_blank" href="http://themezee.com/?utm_source=theme-info&utm_medium=footer&utm_campaign=smartline" title="ThemeZee">ThemeZee</a>',
+				'<a target="_blank" href="https://themezee.com/?utm_source=theme-info&utm_medium=footer&utm_campaign=smartline" title="ThemeZee">ThemeZee</a>',
 				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/smartline-lite?filter=5" title="Smartline Lite Review">' . esc_html__( 'rate it', 'smartline-lite' ) . '</a>'); ?>
 			</p>
 		

@@ -302,7 +302,7 @@ function smartline_display_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'smartline-lite' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="http://themezee.com/themes/smartline/" title="Smartline WordPress Theme">Smartline</a>'
+			'<a href="https://themezee.com/themes/smartline/" title="Smartline WordPress Theme">Smartline</a>'
 		); ?>
 	</span>
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Smartline Lite\n"
-"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2015-08-31 20:04+0100\n"
 "PO-Revision-Date: 2015-10-06 15:47+0100\n"
 "Last-Translator: Administrátor <admin@sufix.cz>\n"
