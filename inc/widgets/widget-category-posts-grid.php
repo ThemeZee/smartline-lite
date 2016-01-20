@@ -41,7 +41,7 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 	
 	// Display Widget
-	function widget($args, $instance) {
+	function widget( $args, $instance ) {
 
 		$cache = array();
 				
@@ -62,30 +62,26 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		// Start Output Buffering
 		ob_start();
 		
-		// Get Sidebar Arguments
-		extract($args);
-		
 		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
+		$settings = wp_parse_args( $instance, $this->default_settings() );
 		
 		// Output
-		echo $before_widget;
+		echo $args['before_widget'];
 	?>
 		<div id="widget-category-posts-grid" class="widget-category-posts clearfix">
 		
 			<?php // Display Title
-			$this->display_widget_title($args, $instance); ?>
+			$this->display_widget_title( $args, $settings ); ?>
 			
 			<div class="widget-category-posts-content">
 			
-				<?php $this->render($instance); ?>
+				<?php $this->render( $settings ); ?>
 				
 			</div>
 			
 		</div>
 	<?php
-		echo $after_widget;
+		echo $args['after_widget'];
 		
 		// Set Cache
 		if ( ! $this->is_preview() ) {
@@ -98,19 +94,15 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 	
 	// Render Widget Content
-	function render($instance) {
+	function render( $settings ) {
 
-		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
-	
 		// Get latest posts from database
 		$query_arguments = array(
-			'posts_per_page' => (int)$number,
+			'posts_per_page' => (int)$settings['number'],
 			'ignore_sticky_posts' => true,
-			'cat' => (int)$category
+			'cat' => (int)$settings['category']
 		);
-		$posts_query = new WP_Query($query_arguments);
+		$posts_query = new WP_Query( $query_arguments );
 		$i = 0;
 		
 		// Check if there are posts
@@ -134,7 +126,7 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 				endif; ?>
 
 				<?php // Display small posts or big posts grid layout based on options
-				if( $thumbnails == true ) : ?>
+				if( $settings['thumbnails'] == true ) : ?>
 
 					<div class="small-post-wrap">
 						
@@ -146,7 +138,7 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 
 							<div class="small-post-content">
 								<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-								<div class="entry-meta postmeta"><?php $this->display_postmeta($instance); ?></div>
+								<div class="entry-meta postmeta"><?php $this->display_postmeta( $settings ); ?></div>
 							</div>
 
 						</article>
@@ -161,7 +153,7 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 
 						<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-						<div class="entry-meta postmeta"><?php $this->display_postmeta($instance); ?></div>
+						<div class="entry-meta postmeta"><?php $this->display_postmeta( $settings ); ?></div>
 
 						<div class="entry">
 							<?php the_excerpt(); ?>
@@ -199,28 +191,24 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 	
 	// Display Postmeta
-	function display_postmeta( $instance ) {
-	
-		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
+	function display_postmeta( $settings ) {
 		
 		// Display Date unless deactivated
-		if ( $postmeta > 0 ) :
+		if ( $settings['postmeta'] > 0 ) :
 		
 			smartline_meta_date();
 					
 		endif; 
 		
 		// Display Author unless deactivated
-		if ( $postmeta == 2 ) :	
+		if ( $settings['postmeta'] == 2 ) :	
 		
 			smartline_meta_author();
 		
 		endif; 
 		
 		// Display Comments
-		if ( $postmeta == 3 and comments_open() ) :
+		if ( $settings['postmeta'] == 3 and comments_open() ) :
 			
 			smartline_meta_comments();
 			
@@ -229,33 +217,26 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	}
 	
 	// Display Widget Title
-	function display_widget_title($args, $instance) {
-		
-		// Get Sidebar Arguments
-		extract($args);
-		
-		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
+	function display_widget_title( $args, $settings ) {
 		
 		// Add Widget Title Filter
-		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
+		$widget_title = apply_filters('widget_title', $settings['title'], $settings, $this->id_base);
 		
 		if( !empty( $widget_title ) ) :
 		
-			echo $before_title;
+			echo $args['before_title'];
 			
 			// Link Category Title
-			if( $category_link == true ) : 
+			if( $settings['category_link'] == true ) : 
 			
 				// Check if "All Categories" is selected
-				if( $category == 0 ) :
+				if( $settings['category'] == 0 ) :
 				
 					$link_title = esc_html__( 'View all posts', 'smartline-lite' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
-						$link_url = esc_url( get_permalink( get_option('page_for_posts' ) ) );
+						$link_url = esc_url( get_permalink( get_option( 'page_for_posts' ) ) );
 					else : 
 						$link_url =	esc_url( home_url('/') );
 					endif;
@@ -263,8 +244,8 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'smartline-lite' ), get_cat_name( $category ) );
-					$link_url = esc_url( get_category_link( $category ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'smartline-lite' ), get_cat_name( $settings['category'] ) );
+					$link_url = esc_url( get_category_link( $settings['category'] ) );
 					
 				endif;
 				
@@ -278,20 +259,20 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 			
 			endif;
 			
-			echo $after_title; 
+			echo $args['after_title']; 
 			
 		endif;
 
 	}
 
-	function update($new_instance, $old_instance) {
+	function update( $new_instance, $old_instance ) {
 
 		$instance = $old_instance;
-		$instance['title'] = sanitize_text_field($new_instance['title']);
+		$instance['title'] = sanitize_text_field($new_instance['title'] );
 		$instance['category'] = (int)$new_instance['category'];
 		$instance['number'] = (int)$new_instance['number'];
-		$instance['thumbnails'] = !empty($new_instance['thumbnails']);
-		$instance['category_link'] = !empty($new_instance['category_link']);
+		$instance['thumbnails'] = !empty($new_instance['thumbnails'] );
+		$instance['category_link'] = !empty($new_instance['category_link'] );
 		$instance['postmeta'] = (int)$new_instance['postmeta'];
 		
 		$this->delete_widget_cache();
@@ -302,13 +283,12 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 	function form( $instance ) {
 		
 		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
-
-?>
+		$settings = wp_parse_args( $instance, $this->default_settings() ); 
+		?>
+		
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'smartline-lite' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $settings['title']; ?>" />
 			</label>
 		</p>
 
@@ -319,7 +299,7 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 					'show_option_all'    => esc_html__( 'All Categories', 'smartline-lite' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
-					'selected'           => $category,
+					'selected'           => $settings['category'],
 					'name'               => $this->get_field_name('category'),
 					'id'                 => $this->get_field_id('category')
 				);
@@ -329,21 +309,21 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'smartline-lite' ); ?>
-				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $settings['number']; ?>" size="3" />
 				<br/><span class="description"><?php esc_html_e( 'Please chose an even number (2, 4, 6, 8).', 'smartline-lite' ); ?></span>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('thumbnails'); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $thumbnails ) ; ?> id="<?php echo $this->get_field_id('thumbnails'); ?>" name="<?php echo $this->get_field_name('thumbnails'); ?>" />
+				<input class="checkbox" type="checkbox" <?php checked( $settings['thumbnails'] ) ; ?> id="<?php echo $this->get_field_id('thumbnails'); ?>" name="<?php echo $this->get_field_name('thumbnails'); ?>" />
 				<?php esc_html_e( 'Display as small posts grid with thumbnails', 'smartline-lite' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
+				<input class="checkbox" type="checkbox" <?php checked( $settings['category_link'] ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
 				<?php esc_html_e( 'Link Widget Title to Category Archive page', 'smartline-lite' ); ?>
 			</label>
 		</p>
@@ -351,10 +331,10 @@ class Smartline_Category_Posts_Grid_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php esc_html_e( 'Post Meta:', 'smartline-lite' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
-				<option value="0" <?php selected($postmeta, 0); ?>><?php esc_html_e( 'Hide post meta', 'smartline-lite' ); ?></option>
-				<option value="1" <?php selected($postmeta, 1); ?>><?php esc_html_e( 'Display post date', 'smartline-lite' ); ?></option>
-				<option value="2" <?php selected($postmeta, 2); ?>><?php esc_html_e( 'Display date and author', 'smartline-lite' ); ?></option>
-				<option value="3" <?php selected($postmeta, 3); ?>><?php esc_html_e( 'Display date and comments', 'smartline-lite' ); ?></option>
+				<option value="0" <?php selected( $settings['postmeta'], 0); ?>><?php esc_html_e( 'Hide post meta', 'smartline-lite' ); ?></option>
+				<option value="1" <?php selected( $settings['postmeta'], 1); ?>><?php esc_html_e( 'Display post date', 'smartline-lite' ); ?></option>
+				<option value="2" <?php selected( $settings['postmeta'], 2); ?>><?php esc_html_e( 'Display date and author', 'smartline-lite' ); ?></option>
+				<option value="3" <?php selected( $settings['postmeta'], 3); ?>><?php esc_html_e( 'Display date and comments', 'smartline-lite' ); ?></option>
 			</select>
 		</p>
 <?php
