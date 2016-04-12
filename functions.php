@@ -11,28 +11,28 @@ function smartline_enqueue_scripts() {
 	$theme_options = smartline_theme_options();
 	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style('smartline-lite-stylesheet', get_stylesheet_uri());
+	wp_enqueue_style( 'smartline-lite-stylesheet', get_stylesheet_uri() );
 	
 	// Register Genericons
-	wp_enqueue_style('smartline-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
+	wp_enqueue_style( 'smartline-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css' );
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )
 		|| ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) ) :
 
 		// FlexSlider CSS
-		wp_enqueue_style('smartline-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
+		wp_enqueue_style( 'smartline-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS
-		wp_enqueue_script('smartline-lite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'));
+		wp_enqueue_script( 'smartline-lite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script('smartline-lite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array('smartline-lite-jquery-flexslider'));
+		wp_enqueue_script( 'smartline-lite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'smartline-lite-jquery-flexslider' ) );
 
 	endif;
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	wp_enqueue_script( 'smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
 	// Passing Parameters to Navigation.js Javascript
 	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', esc_html__( 'Menu', 'smartline-lite' ) );
@@ -43,7 +43,7 @@ function smartline_enqueue_scripts() {
 	}
 
 	// Register and Enqueue Font
-	wp_enqueue_style('smartline-lite-default-fonts', smartline_fonts_url(), array(), null );
+	wp_enqueue_style( 'smartline-lite-default-fonts', smartline_fonts_url(), array(), null );
 
 }
 

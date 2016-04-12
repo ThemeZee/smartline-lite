@@ -652,7 +652,6 @@ input, textarea, select {
 .infinite-scroll .post-pagination {
 	display: none;
 }
-
 .infinite-scroll #infinite-handle span {
 	display: inline-block;
 	margin-bottom: 1em;
@@ -664,7 +663,6 @@ input, textarea, select {
 	color: #fff;
 	background: #004488;
 }
-
 .infinite-scroll #infinite-handle span:hover {
 	background-color: #333;
 }
