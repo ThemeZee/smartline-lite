@@ -114,7 +114,7 @@ class Smartline_Category_Posts_Single_Widget extends WP_Widget {
 
 					<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'category_posts_single' ); ?></a>
 					
-					<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+					<?php the_title( sprintf( '<h2 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<div class="entry-meta postmeta"><?php $this->display_postmeta( $settings ); ?></div>
 
