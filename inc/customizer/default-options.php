@@ -30,6 +30,7 @@ function smartline_theme_options() {
 function smartline_default_options() {
 
 	$default_options = array(
+		'site_title'						=> true,
 		'header_tagline'					=> true,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
