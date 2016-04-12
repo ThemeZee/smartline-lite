@@ -46,10 +46,11 @@ function smartline_default_options() {
 		'meta_author'						=> true,
 		'meta_category'						=> true,
 		'meta_tags'							=> true,
+		'post_navigation' 					=> false,
 		'slider_activated_front_page' 		=> false,
 		'slider_activated_blog' 			=> false,
-		'slider_animation' 					=> 'horizontal',
-		'post_navigation' 					=> false,
+		'slider_animation' 					=> 'slide',
+		'slider_speed' 						=> 7000,
 	);
 	
 	return $default_options;

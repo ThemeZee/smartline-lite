@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 	/* Add flexslider to #frontpage-slider div */ 
 	$("#frontpage-slider").flexslider({
 		animation: smartline_slider_params.animation,
+		slideshowSpeed: smartline_slider_params.speed,
 		namespace: "zeeflex-",
 		selector: ".zeeslides > li",
 		smoothHeight: true,
