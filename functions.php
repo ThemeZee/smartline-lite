@@ -107,7 +107,7 @@ function smartline_setup() {
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'smartline_custom_logo_args', array(
 		'height' => 50,
-		'width' => 350,
+		'width' => 300,
 		'flex-height' => true,
 		'flex-width' => true,
 	) ) );
@@ -167,7 +167,7 @@ function smartline_register_sidebars() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'smartline-lite' ),
 		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'smartline-lite' ),
+		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'smartline-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
