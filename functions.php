@@ -10,21 +10,28 @@ function smartline_enqueue_scripts() {
 	// Get Theme Options from Database
 	$theme_options = smartline_theme_options();
 	
+	// Get Theme Version
+	$theme_version = wp_get_theme()->get( 'Version' );
+	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style( 'smartline-lite-stylesheet', get_stylesheet_uri() );
+	wp_enqueue_style( 'smartline-lite-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 	
 	// Register Genericons
-	wp_enqueue_style( 'smartline-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css' );
+	wp_enqueue_style( 'smartline-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	
+	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
+	wp_enqueue_script( 'smartline-lite-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_script_add_data( 'smartline-lite-html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )
 		|| ( isset($theme_options['slider_activated_front_page']) and $theme_options['slider_activated_front_page'] == true ) ) :
 
 		// FlexSlider CSS
-		wp_enqueue_style( 'smartline-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
+		wp_enqueue_style( 'smartline-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css', array(), '20160421' );
 
 		// FlexSlider JS
-		wp_enqueue_script( 'smartline-lite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
+		wp_enqueue_script( 'smartline-lite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider.js
 		wp_enqueue_script( 'smartline-lite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'smartline-lite-jquery-flexslider' ), '2.6.0' );
@@ -32,7 +39,7 @@ function smartline_enqueue_scripts() {
 	endif;
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'smartline-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
+	wp_enqueue_script( 'smartline-lite-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160421' );
 	
 	// Passing Parameters to Navigation.js Javascript
 	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', esc_html__( 'Menu', 'smartline-lite' ) );
