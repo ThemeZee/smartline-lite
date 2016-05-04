@@ -1970,7 +1970,7 @@ embed, iframe, object, video {
 }
 
 /* Big Screens Navi Fix | >720px */
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60.001em) {
 	/* ensure #nav is visible on desktop version */
 	#mainnav-menu {
 		display: block !important;
@@ -1982,7 +1982,7 @@ embed, iframe, object, video {
 		background: rgba(255,255,255,0.1);
 	}
 }
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 50.001em) {
 	/* ensure #topnav, #footernav is visible on desktop version */
 	#topnav-menu, #footernav-menu {
 		display: block !important;
