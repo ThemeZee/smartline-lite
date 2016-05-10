@@ -8,7 +8,8 @@ class Smartline_Category_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'smartline_category_posts_columns', 
-			'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'smartline-lite' )
+			'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'smartline-lite' ),
+			'customize_selective_refresh' => true,
 		);
 		parent::__construct('smartline_category_posts_columns', sprintf( esc_html__( 'Category Posts: 2 Columns (%s)', 'smartline-lite' ), 'Smartline' ), $widget_ops);
 		
