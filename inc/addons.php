@@ -21,8 +21,8 @@ function smartline_theme_addons_setup() {
 	
 	// Add Support for Infinite Scroll
 	add_theme_support( 'infinite-scroll', array(
-		'type' 		=> 'click',
 		'container' => 'content',
+		'footer_widgets' => array( 'footer-widgets-left', 'footer-widgets-center-left', 'footer-widgets-center-right', 'footer-widgets-right' ),
 		'render'    => 'smartline_infinite_scroll_render',
 	) );
 

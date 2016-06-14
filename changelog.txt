@@ -2,6 +2,13 @@
 Smartline Lite Changelog
 ===================================
 
+Version 1.3.7
+-----------------------------------
+[added] added alt and srcset attributes to custom header image
+[added] support for scroll method of Infinite Scroll
+[removed] theme prefixes for loading common third-party scripts
+[updated] theme tags in style.css
+
 Version 1.3.6
 -----------------------------------
 [added] selective refresh support in customizer for sidebars and widgets

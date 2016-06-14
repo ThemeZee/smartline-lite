@@ -17,11 +17,11 @@ function smartline_enqueue_scripts() {
 	wp_enqueue_style( 'smartline-lite-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 	
 	// Register Genericons
-	wp_enqueue_style( 'smartline-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
 	
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
-	wp_enqueue_script( 'smartline-lite-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
-	wp_script_add_data( 'smartline-lite-html5shiv', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( ( isset($theme_options['slider_activated_blog']) and $theme_options['slider_activated_blog'] == true )
@@ -31,10 +31,10 @@ function smartline_enqueue_scripts() {
 		wp_enqueue_style( 'smartline-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css', array(), '20160421' );
 
 		// FlexSlider JS
-		wp_enqueue_script( 'smartline-lite-jquery-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'smartline-lite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'smartline-lite-jquery-flexslider' ), '2.6.0' );
+		wp_enqueue_script( 'smartline-lite-jquery-frontpage_slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ), '2.6.0' );
 
 	endif;
 
