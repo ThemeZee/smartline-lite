@@ -5,10 +5,10 @@
  * @package Smartline Lite
  */
 
- 
+
 // Add Default Menu Fallback Function
 function smartline_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
+	echo '<ul id="mainnav-menu" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
 }
 
 
@@ -21,7 +21,7 @@ function smartline_get_featured_content() {
 // Change Excerpt Length
 add_filter('excerpt_length', 'smartline_excerpt_length');
 function smartline_excerpt_length($length) {
-    
+
 	// Get Theme Options from Database
 	$theme_options = smartline_theme_options();
 
@@ -48,7 +48,7 @@ function smartline_frontpage_category_excerpt_length($length) {
 // Change Excerpt More
 add_filter('excerpt_more', 'smartline_excerpt_more');
 function smartline_excerpt_more($more) {
-    
+
 	// Get Theme Options from Database
 	$theme_options = smartline_theme_options();
 

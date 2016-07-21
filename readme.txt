@@ -26,6 +26,9 @@ For more information about Smartline Lite please go to https://themezee.com/them
 
 == Changelog ==
 
+= 1.3.9 =
+* fixed styling of main navigation menu with default pages
+
 = 1.3.8 =
 * added readme.txt file
 * improved styling of navigation menus
