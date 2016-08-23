@@ -9,24 +9,24 @@
  * Contributing author: Tyler Smith (@mbmufffin)
  */
 
- 
+
 /* Browser Resets */
 .zeeflexslider a:active,
 .zeeflexslider a:focus  {outline: none;}
 .zeeslides,
 .zeeflex-control-nav,
-.zeeflex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.zeeflex-direction-nav {margin: 0; padding: 0; list-style: none;}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
+*********************************/
 .zeeflexslider {margin: 0; padding: 0;}
 .zeeflexslider .zeeslides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .zeeflexslider .zeeslides img {width: 100%; display: block;}
 .zeeflex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .zeeslides element */
-.zeeslides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .zeeslides {display: block;} 
+.zeeslides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .zeeslides {display: block;}
 * html .zeeslides {height: 1%;}
 
 /* No JavaScript Fallback */
@@ -93,15 +93,15 @@ html[xmlns] .zeeslides {display: block;}
 #frontpage-slider .zeeslide .slide-entry .slide-title a:hover, #frontpage-slider .zeeslide .slide-entry .slide-title a:active{
 	color: #ccc;
 }
-#frontpage-slider .zeeslide .slide-entry .slide-more-link, 
-#frontpage-slider .zeeslide .slide-entry .slide-more-link:link, 
+#frontpage-slider .zeeslide .slide-entry .slide-more-link,
+#frontpage-slider .zeeslide .slide-entry .slide-more-link:link,
 #frontpage-slider .zeeslide .slide-entry .slide-more-link:visited {
 	color: #eee;
 	font-style: italic;
 	display: inline-block;
 	margin: 0.3em 0;
 }
-#frontpage-slider .zeeslide .slide-entry.slide-more-link:hover, 
+#frontpage-slider .zeeslide .slide-entry.slide-more-link:hover,
 #frontpage-slider .zeeslide .slide-entry.slide-more-link:active{
 	text-decoration: underline;
 }
@@ -111,7 +111,7 @@ html[xmlns] .zeeslides {display: block;}
 
 /* Direction Nav */
 .frontpage-slider-controls .zeeflex-direction-nav {
-	position: absolute; 
+	position: absolute;
 	bottom: 1em;
 	right: 1em;
 	*height: 0;
@@ -124,7 +124,7 @@ html[xmlns] .zeeslides {display: block;}
 	height: 50px;
 	background: rgba(0,0,0,0.6);
 	text-align: left;
-	color #fff;
+	color: #fff;
 	font-size: 0;
 	cursor: pointer;
 	-webkit-transition: all 0.2s ease-out;
@@ -166,33 +166,33 @@ html[xmlns] .zeeslides {display: block;}
 
 /* Control Nav */
 .frontpage-slider-controls .zeeflex-control-nav {
-	position: absolute; 
+	position: absolute;
 	top: 1.2em;
 	right: 1em;
 }
 .frontpage-slider-controls .zeeflex-control-nav li {
-	margin: 0 4px; 
-	display: inline-block; 
-	zoom: 1; 
+	margin: 0 4px;
+	display: inline-block;
+	zoom: 1;
 	*display: inline;
 }
 .frontpage-slider-controls .zeeflex-control-nav li a {
-	width: 15px; 
-	height: 15px; 
-	display: block; 
+	width: 15px;
+	height: 15px;
+	display: block;
 	background: #777;
 	background: rgba(0,0,0,0.2);
-	cursor: pointer; 
-	text-indent: -9999px; 
+	cursor: pointer;
+	text-indent: -9999px;
 }
-.frontpage-slider-controls .zeeflex-control-nav li a:hover { 
+.frontpage-slider-controls .zeeflex-control-nav li a:hover {
 	background: #888;
 	background: rgba(0,0,0,0.4);
 }
-.frontpage-slider-controls .zeeflex-control-nav li a.zeeflex-active { 
+.frontpage-slider-controls .zeeflex-control-nav li a.zeeflex-active {
 	background: #888;
-	background: rgba(0,0,0,0.4); 
-	cursor: default; 
+	background: rgba(0,0,0,0.4);
+	cursor: default;
 }
 
 /* Media Queries for responsive slider */
@@ -244,7 +244,7 @@ html[xmlns] .zeeslides {display: block;}
 	#frontpage-slider .zeeslide .slide-entry .slide-title {
 		font-size: 1.1em;
 	}
-}	
+}
 /* Smartphones | <480px */
 @media only screen and (max-width: 30em) {
 	#frontpage-slider .zeeslide .slide-entry {
