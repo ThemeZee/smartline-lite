@@ -26,6 +26,9 @@ For more information about Smartline Lite please go to https://themezee.com/them
 
 == Changelog ==
 
+= 1.4.1 =
+* added Right-to-Left language support
+
 = 1.4.0 =
 * fixed dropdown menus on mobile navigation menus
 
