@@ -320,6 +320,10 @@ article .wp-post-image {
 		float: left;
 	}
 
+	.main-navigation-menu li {
+		width: 100%;
+	}
+
 	.main-navigation-menu a {
 		clear: right;
 	}
@@ -359,6 +363,10 @@ article .wp-post-image {
 
 	#topnav-toggle:after {
 		float: left;
+	}
+
+	.top-navigation-menu li {
+		width: 100%;
 	}
 
 	.top-navigation-menu a {
