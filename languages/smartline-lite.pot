@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Smartline Lite\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-04-13 15:19+0100\n"
-"PO-Revision-Date: 2016-04-13 15:19+0100\n"
+"POT-Creation-Date: 2016-09-17 12:41+0100\n"
+"PO-Revision-Date: 2016-09-17 12:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -44,7 +44,7 @@ msgid "% comments"
 msgstr ""
 
 #: content-excerpt.php:11 content-search.php:8 content.php:10
-#: inc/widgets/widget-category-posts-single.php:123
+#: inc/widgets/widget-category-posts-single.php:124
 msgid "&raquo; Read more"
 msgstr ""
 
@@ -60,39 +60,39 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
-#: footer.php:18 functions.php:38
+#: footer.php:18 functions.php:45
 msgid "Menu"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:133
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:134
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:135
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:138
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:168 sidebar.php:14
+#: functions.php:178 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:180
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:179
+#: functions.php:189
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:181
+#: functions.php:191
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
@@ -192,70 +192,71 @@ msgstr ""
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/theme-info.php:18 inc/theme-info.php:38
+#: inc/theme-info.php:19 inc/theme-info.php:40
 #, php-format
 msgid "Welcome to %1$s %2$s"
 msgstr ""
 
-#: inc/theme-info.php:19
+#: inc/theme-info.php:20
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:44 inc/customizer/customizer.php:129
+#: inc/theme-info.php:46 inc/customizer/customizer.php:138
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:130
+#: inc/theme-info.php:47 inc/customizer/customizer.php:141
 msgid "https://themezee.com/themes/smartline/"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:131
+#: inc/theme-info.php:47 inc/customizer/customizer.php:142
 msgid "Theme Page"
 msgstr ""
 
-#: inc/theme-info.php:46
-msgid "Changelog"
-msgstr ""
-
-#: inc/theme-info.php:47
+#: inc/theme-info.php:48 inc/customizer/customizer.php:148
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/theme-info.php:48 inc/theme-info.php:69
-#: inc/customizer/customizer.php:132
+#: inc/theme-info.php:49 inc/theme-info.php:70
+#: inc/customizer/customizer.php:153
 msgid "https://themezee.com/docs/smartline-documentation/"
 msgstr ""
 
-#: inc/theme-info.php:48 inc/theme-info.php:63
-#: inc/customizer/customizer.php:133
+#: inc/theme-info.php:49 inc/theme-info.php:64
+#: inc/customizer/customizer.php:154
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:135
+#: inc/theme-info.php:50 inc/theme-info.php:152
+#: inc/customizer/customizer.php:159
+msgid "https://wordpress.org/support/theme/smartline-lite/reviews/?filter=5"
+msgstr ""
+
+#: inc/theme-info.php:50 inc/customizer/customizer.php:160
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/theme-info.php:56
+#: inc/theme-info.php:57
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:66
+#: inc/theme-info.php:67
 msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:70
+#: inc/theme-info.php:71
 #, php-format
 msgid "View %s Documentation"
 msgstr ""
 
-#: inc/theme-info.php:76 inc/customizer/customizer.php:29
+#: inc/theme-info.php:77 inc/customizer/customizer.php:29
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-info.php:79
+#: inc/theme-info.php:80
 #, php-format
 msgid ""
 "%s makes use of the Customizer for all theme settings. Click on \"Customize "
@@ -266,36 +267,58 @@ msgstr ""
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:42
-msgid "Pro Version"
+#: inc/theme-info.php:103
+msgid "Get more features"
 msgstr ""
 
-#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:45
+#: inc/theme-info.php:110 inc/customizer/functions/custom-controls.php:42
+msgid "Pro Version Add-on"
+msgstr ""
+
+#: inc/theme-info.php:113 inc/customizer/functions/custom-controls.php:45
 #, php-format
 msgid ""
-"Purchase the Pro Version of %s to get additional features and advanced "
+"Purchase the %s Pro Add-on and get additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/theme-info.php:95 inc/customizer/functions/custom-controls.php:49
+#: inc/theme-info.php:116 inc/customizer/functions/custom-controls.php:49
 msgid "https://themezee.com/addons/smartline-pro/"
 msgstr ""
 
-#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
+#: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:117
+#: inc/theme-info.php:127 inc/customizer/functions/custom-controls.php:58
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/theme-info.php:130 inc/customizer/functions/custom-controls.php:61
+msgid ""
+"Extend the functionality of your WordPress website with our free and easy to "
+"use plugins."
+msgstr ""
+
+#: inc/theme-info.php:134 inc/customizer/functions/custom-controls.php:66
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/theme-info.php:149
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:119
+#: inc/theme-info.php:151
 msgid "https://themezee.com/"
 msgstr ""
 
-#: inc/theme-info.php:120
+#: inc/theme-info.php:152
+msgid "Review Smartline"
+msgstr ""
+
+#: inc/theme-info.php:152
 msgid "rate it"
 msgstr ""
 
@@ -317,28 +340,6 @@ msgstr ""
 
 #: inc/customizer/customizer.php:101
 msgid "Hide header image on front page"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:58
-msgid "ThemeZee Plugins"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:61
-msgid ""
-"Extend the functionality of your WordPress website with our customized "
-"plugins."
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:65
-msgid "https://themezee.com/plugins/"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:66
-msgid "Browse Plugins"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:69
-msgid "Install now"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -432,10 +433,10 @@ msgid "Post Meta"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:166
-#: inc/widgets/widget-category-posts-boxed.php:294
-#: inc/widgets/widget-category-posts-columns.php:343
-#: inc/widgets/widget-category-posts-grid.php:335
-#: inc/widgets/widget-category-posts-single.php:270
+#: inc/widgets/widget-category-posts-boxed.php:295
+#: inc/widgets/widget-category-posts-columns.php:344
+#: inc/widgets/widget-category-posts-grid.php:336
+#: inc/widgets/widget-category-posts-single.php:271
 msgid "Display post date"
 msgstr ""
 
@@ -511,78 +512,78 @@ msgid ""
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:13
+#: inc/widgets/widget-category-posts-boxed.php:14
 #, php-format
 msgid "Category Posts: Boxed (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:210
-#: inc/widgets/widget-category-posts-columns.php:232
-#: inc/widgets/widget-category-posts-grid.php:235
-#: inc/widgets/widget-category-posts-single.php:179
+#: inc/widgets/widget-category-posts-boxed.php:211
+#: inc/widgets/widget-category-posts-columns.php:233
+#: inc/widgets/widget-category-posts-grid.php:236
+#: inc/widgets/widget-category-posts-single.php:180
 msgid "View all posts"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:222
-#: inc/widgets/widget-category-posts-columns.php:246
-#: inc/widgets/widget-category-posts-grid.php:247
-#: inc/widgets/widget-category-posts-single.php:191
+#: inc/widgets/widget-category-posts-boxed.php:223
+#: inc/widgets/widget-category-posts-columns.php:247
+#: inc/widgets/widget-category-posts-grid.php:248
+#: inc/widgets/widget-category-posts-single.php:192
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:263
-#: inc/widgets/widget-category-posts-columns.php:284
-#: inc/widgets/widget-category-posts-grid.php:290
-#: inc/widgets/widget-category-posts-single.php:233
+#: inc/widgets/widget-category-posts-boxed.php:264
+#: inc/widgets/widget-category-posts-columns.php:285
+#: inc/widgets/widget-category-posts-grid.php:291
+#: inc/widgets/widget-category-posts-single.php:234
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:269
-#: inc/widgets/widget-category-posts-grid.php:296
-#: inc/widgets/widget-category-posts-single.php:239
+#: inc/widgets/widget-category-posts-boxed.php:270
+#: inc/widgets/widget-category-posts-grid.php:297
+#: inc/widgets/widget-category-posts-single.php:240
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:272
-#: inc/widgets/widget-category-posts-columns.php:293
-#: inc/widgets/widget-category-posts-columns.php:308
-#: inc/widgets/widget-category-posts-grid.php:299
-#: inc/widgets/widget-category-posts-single.php:242
+#: inc/widgets/widget-category-posts-boxed.php:273
+#: inc/widgets/widget-category-posts-columns.php:294
+#: inc/widgets/widget-category-posts-columns.php:309
+#: inc/widgets/widget-category-posts-grid.php:300
+#: inc/widgets/widget-category-posts-single.php:243
 msgid "All Categories"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:286
-#: inc/widgets/widget-category-posts-grid.php:327
-#: inc/widgets/widget-category-posts-single.php:262
+#: inc/widgets/widget-category-posts-boxed.php:287
+#: inc/widgets/widget-category-posts-grid.php:328
+#: inc/widgets/widget-category-posts-single.php:263
 msgid "Link Widget Title to Category Archive page"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:291
-#: inc/widgets/widget-category-posts-columns.php:340
-#: inc/widgets/widget-category-posts-grid.php:332
-#: inc/widgets/widget-category-posts-single.php:267
+#: inc/widgets/widget-category-posts-boxed.php:292
+#: inc/widgets/widget-category-posts-columns.php:341
+#: inc/widgets/widget-category-posts-grid.php:333
+#: inc/widgets/widget-category-posts-single.php:268
 msgid "Post Meta:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:293
-#: inc/widgets/widget-category-posts-columns.php:342
-#: inc/widgets/widget-category-posts-grid.php:334
-#: inc/widgets/widget-category-posts-single.php:269
+#: inc/widgets/widget-category-posts-boxed.php:294
+#: inc/widgets/widget-category-posts-columns.php:343
+#: inc/widgets/widget-category-posts-grid.php:335
+#: inc/widgets/widget-category-posts-single.php:270
 msgid "Hide post meta"
-msgstr ""
-
-#: inc/widgets/widget-category-posts-boxed.php:295
-#: inc/widgets/widget-category-posts-columns.php:344
-#: inc/widgets/widget-category-posts-grid.php:336
-#: inc/widgets/widget-category-posts-single.php:271
-msgid "Display date and author"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:296
 #: inc/widgets/widget-category-posts-columns.php:345
 #: inc/widgets/widget-category-posts-grid.php:337
 #: inc/widgets/widget-category-posts-single.php:272
+msgid "Display date and author"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:297
+#: inc/widgets/widget-category-posts-columns.php:346
+#: inc/widgets/widget-category-posts-grid.php:338
+#: inc/widgets/widget-category-posts-single.php:273
 msgid "Display date and comments"
 msgstr ""
 
@@ -592,34 +593,34 @@ msgid ""
 "ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:13
+#: inc/widgets/widget-category-posts-columns.php:14
 #, php-format
 msgid "Category Posts: 2 Columns (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:233
+#: inc/widgets/widget-category-posts-columns.php:234
 msgid "Latest Posts"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:290
+#: inc/widgets/widget-category-posts-columns.php:291
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:305
+#: inc/widgets/widget-category-posts-columns.php:306
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:320
-#: inc/widgets/widget-category-posts-grid.php:311
-#: inc/widgets/widget-category-posts-single.php:254
+#: inc/widgets/widget-category-posts-columns.php:321
+#: inc/widgets/widget-category-posts-grid.php:312
+#: inc/widgets/widget-category-posts-single.php:255
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:328
+#: inc/widgets/widget-category-posts-columns.php:329
 msgid "Highlight first post (big image + excerpt)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:335
+#: inc/widgets/widget-category-posts-columns.php:336
 msgid "Display Category Titles"
 msgstr ""
 
@@ -629,16 +630,16 @@ msgid ""
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:13
+#: inc/widgets/widget-category-posts-grid.php:14
 #, php-format
 msgid "Category Posts: Grid (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:313
+#: inc/widgets/widget-category-posts-grid.php:314
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-grid.php:321
 msgid "Display as small posts grid with thumbnails"
 msgstr ""
 
@@ -648,11 +649,11 @@ msgid ""
 "in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-single.php:13
+#: inc/widgets/widget-category-posts-single.php:14
 #, php-format
 msgid "Category Posts: Single (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-single.php:273
+#: inc/widgets/widget-category-posts-single.php:274
 msgid "Display date, author and comments"
 msgstr ""

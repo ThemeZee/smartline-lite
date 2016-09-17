@@ -27,17 +27,17 @@ function smartline_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'smartline-lite' ),
-		'description'    => '',
+		'description'    => smartline_customize_theme_links(),
 	) );
-	
+
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	
+
 	// Change default background section
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'smartline-lite' );
-	
+
 	// Add Display Site Title Setting
 	$wp_customize->add_setting( 'smartline_theme_options[site_title]', array(
         'default'           => true,
@@ -54,7 +54,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		'priority' => 10
 		)
 	);
-	
+
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'smartline_theme_options[header_tagline]', array(
         'default'           => true,
@@ -71,7 +71,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		'priority' => 11
 		)
 	);
-	
+
 	// Add Header Image Link
 	$wp_customize->add_setting( 'smartline_theme_options[custom_header_link]', array(
         'default'           => '',
@@ -88,7 +88,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		'priority' => 10
 		)
 	);
-	
+
 	// Add Custom Header Hide Checkbox
 	$wp_customize->add_setting( 'smartline_theme_options[custom_header_hide]', array(
         'default'           => false,
@@ -105,7 +105,7 @@ function smartline_customize_register_options( $wp_customize ) {
 		'priority' => 15
 		)
 	);
-	
+
 }
 
 
@@ -117,32 +117,55 @@ function smartline_customize_preview_js() {
 }
 
 
-// Embed JS file for Customizer Controls
-add_action( 'customize_controls_enqueue_scripts', 'smartline_customize_controls_js' );
-
-function smartline_customize_controls_js() {
-	
-	wp_enqueue_script( 'smartline-lite-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-	
-	// Localize the script
-	wp_localize_script( 'smartline-lite-customizer-controls', 'smartline_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'smartline-lite' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/smartline/', 'smartline-lite' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=smartline&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'smartline-lite' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/smartline-documentation/', 'smartline-lite' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=smartline&utm_content=documentation' ),
-		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'smartline-lite' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/smartline-lite?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'smartline-lite' ),
-		)
-	);
-
-}
-
-
 // Embed CSS styles for Theme Customizer
 add_action( 'customize_controls_print_styles', 'smartline_customize_preview_css' );
 
 function smartline_customize_preview_css() {
-	wp_enqueue_style( 'smartline-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'smartline-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 
+}
+
+/**
+ * Returns Theme Links
+ */
+function smartline_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'smartline-lite' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/smartline/', 'smartline-lite' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=smartline&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'smartline-lite' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/smartline/?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'smartline-lite' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/smartline-documentation/', 'smartline-lite' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=smartline&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'smartline-lite' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/smartline-lite/reviews/?filter=5', 'smartline-lite' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'smartline-lite' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
 }
