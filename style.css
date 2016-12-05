@@ -194,6 +194,7 @@ input, textarea, select {
 #logo {
 	float: left;
 	max-width: 100%;
+	overflow: hidden;
 }
 #logo .site-title {
 	display: inline-block;
