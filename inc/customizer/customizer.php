@@ -170,7 +170,7 @@ function smartline_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=smartline&utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=smartline&utm_source=customizer&utm_campaign=smartline" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'smartline-lite' ); ?>
 				</a>
 			</p>

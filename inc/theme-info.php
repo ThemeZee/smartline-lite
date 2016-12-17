@@ -45,7 +45,7 @@ function smartline_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'smartline-lite' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/smartline/', 'smartline-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'smartline-lite' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=smartline&utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'smartline-lite' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=smartline&utm_source=theme-info&utm_campaign=smartline" target="_blank"><?php esc_html_e( 'Theme Demo', 'smartline-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/smartline-documentation/', 'smartline-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=smartline&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'smartline-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/smartline-lite/reviews/?filter=5', 'smartline-lite' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'smartline-lite' ); ?></a>
 			</p>
