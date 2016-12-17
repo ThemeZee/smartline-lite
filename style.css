@@ -2,10 +2,10 @@
 Theme Name: Smartline Lite
 Theme URI: https://themezee.com/themes/smartline/
 Description: Smartline Lite is a perfect theme for news and magazine websites as well as simple blogs. The responsive design with bold colors and smart lines looks great on any device. The main highlight of Smartline is the flexible and widgetized front page template which allows you to create a magazine-styled homepage with ease.
-Version: 1.4.2
+Version: 1.4.3
 Author: ThemeZee
 Author URI: https://themezee.com
-Tags: two-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu,  editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
+Tags: two-columns, custom-background, custom-colors, custom-header, custom-menu,  editor-style, rtl-language-support, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Text Domain: smartline-lite
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1781,6 +1781,30 @@ embed, iframe, object, video {
 	.widget-category-posts .small-post .entry-title{
 		font-size: 1.1em;
 	}
+
+	/* Footer */
+	#footer {
+		text-align: center;
+	}
+
+	#footer #footer-text {
+		float: none;
+	}
+
+	/* Footer Navigation Menu */
+	#footernav {
+		float: none;
+	}
+	#footernav-menu {
+		float: none;
+	}
+	#footernav-menu li {
+		float: none;
+		display: inline-block;
+		padding: 0;
+		border: none;
+		margin: 0 1em 1.5em;
+	}
 }
 
 /* Tablets (portrait) | <800px */
@@ -1885,70 +1909,6 @@ embed, iframe, object, video {
 	.widget-category-posts .small-post .entry-title{
 		font-size: 1.0em;
 	}
-
-	/* Mobile Footer Navigation */
-	#footer #footer-text {
-		margin-top: -1.2em;
-	}
-
-	/* Reset */
-	#footernav, #footernav-menu, #footernav-menu li, #footernav-menu a, #footernav-menu ul {
-		margin: 0;
-		padding: 0;
-		position: static;
-		float: none;
-		display: inline;
-		font-size: 1.0em;
-		border: none;
-		box-shadow: none;
-		background: none;
-		top: 0;
-		left: 0;
-	}
-	#footernav {
-		float: none;
-	}
-	#footernav-icon {
-		display: block;
-		text-decoration: none;
-		font-size: 0.9em;
-		color: #fff;
-	}
-	#footernav-icon:hover {
-		cursor: pointer;
-		text-decoration: underline;
-	}
-	#footernav-icon:after {
-		margin: 0.05em 0 0 1em;
-		-webkit-font-smoothing: antialiased;
-		display: inline-block;
-		content: '\f419';
-		font: normal 14px/1 Genericons;
-		text-decoration: inherit;
-		vertical-align: text-bottom;
-	}
-	#footernav-icon:hover:after {
-		text-decoration: none;
-	}
-	#footernav-menu {
-		display: none;
-		width: 100%;
-		padding-bottom: 1em;
-	}
-	#footernav-menu li {
-		display: block;
-		padding: 0.8em 0.4em;
-		border-top: 1px dashed #aaa;
-	}
-	#footernav-menu a {
-		display: inline-block;
-		text-decoration: none;
-		font-size: 0.9em;
-	}
-	#footernav-menu a:hover {
-		text-decoration: underline;
-	}
-
 }
 
 /* Phablets (portrait) | <640px */
@@ -2016,7 +1976,12 @@ embed, iframe, object, video {
 	}
 	#footer #footer-text {
 		margin-top: 1.2em;
-		float: none;
+	}
+
+	/* Footer Navigation Menu */
+	#footernav-menu li {
+		display: block;
+		margin: 0 0 1.5em;
 	}
 }
 
@@ -2047,8 +2012,8 @@ embed, iframe, object, video {
 	}
 }
 @media only screen and (min-width: 50.001em) {
-	/* ensure #topnav, #footernav is visible on desktop version */
-	.top-navigation-menu, #footernav-menu {
+	/* ensure top navigation is visible on desktop version */
+	.top-navigation-menu {
 		display: block !important;
 	}
 }
