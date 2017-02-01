@@ -26,6 +26,9 @@ For more information about Smartline Lite please go to https://themezee.com/them
 
 == Changelog ==
 
+= 1.4.4 =
+* added Magazine Homepage widgets to blog index
+
 = 1.4.3 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * improved styling of footer navigation menu
