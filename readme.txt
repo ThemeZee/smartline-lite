@@ -26,6 +26,9 @@ For more information about Smartline Lite please go to https://themezee.com/them
 
 == Changelog ==
 
+= 1.4.5 =
+* fixed RTL stylesheet when Sidebar Left is enabled
+
 = 1.4.4 =
 * added Magazine Homepage widgets to blog index
 

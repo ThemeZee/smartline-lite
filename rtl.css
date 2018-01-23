@@ -60,10 +60,6 @@ body {
 	border-left: none;
 }
 
-#sidebar .widget {
-	float: right;
-}
-
 .widget ul .children {
 	margin: 0.5em 1em 0.5em 0;
 }
@@ -283,14 +279,13 @@ article .wp-post-image {
 	border-left: 1px dashed #aaa;
 }
 
-@media only screen and (max-width: 70em) {
-	#sidebar {
-		margin-right: 67%;
-		margin-left: 0;
-	}
-}
-
 @media only screen and (max-width: 60em) {
+	#sidebar {
+		clear: both;
+		margin: 2em 0 0 !important;
+		width: 100%;
+	}
+
 	#header-content #social-icons-menu li {
 		margin: 0 0 2px 1px;
 	}
