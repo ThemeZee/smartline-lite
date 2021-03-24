@@ -39,10 +39,10 @@ function smartline_enqueue_scripts() {
 	endif;
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'smartline-lite-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160719' );
+	wp_enqueue_script( 'smartline-lite-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20210324' );
 
 	// Passing Parameters to Navigation.js Javascript
-	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', esc_html__( 'Menu', 'smartline-lite' ) );
+	wp_localize_script( 'smartline-lite-jquery-navigation', 'smartline_menu_title', array( 'text' => esc_html__( 'Menu', 'smartline-lite' ) ) );
 
 	// Register Comment Reply Script for Threaded Comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

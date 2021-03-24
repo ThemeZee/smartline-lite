@@ -108,7 +108,7 @@
 			menuID: "mainnav-menu",
 			toggleID: "mainnav-toggle",
 			toggleClass: "nav-toggle",
-			toggleText: smartline_menu_title,
+			toggleText: smartline_menu_title.text,
 			maxWidth: "60em"
 		});
 
@@ -117,7 +117,7 @@
 			menuID: "topnav-menu",
 			toggleID: "topnav-toggle",
 			toggleClass: "nav-toggle",
-			toggleText: smartline_menu_title,
+			toggleText: smartline_menu_title.text,
 			maxWidth: "50em"
 		});
 
